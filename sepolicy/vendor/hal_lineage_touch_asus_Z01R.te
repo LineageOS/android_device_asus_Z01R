@@ -1,7 +1,0 @@
-type hal_lineage_touch_asus_Z01R, domain;
-hal_server_domain(hal_lineage_touch_asus_Z01R, hal_lineage_touch)
-
-type hal_lineage_touch_asus_Z01R_exec, vendor_file_type, exec_type, file_type;
-init_daemon_domain(hal_lineage_touch_asus_Z01R)
-
-allow hal_lineage_touch_asus_Z01R proc_touchscreen:file rw_file_perms;

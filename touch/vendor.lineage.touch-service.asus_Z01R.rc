@@ -1,0 +1,4 @@
+service vendor.touch-hal /vendor/bin/hw/vendor.lineage.touch-service.asus_Z01R
+    class hal
+    user system
+    group system
