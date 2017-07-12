@@ -112,6 +112,7 @@ BOARD_HAVE_QCOM_FM := true
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Network Routing
 TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
