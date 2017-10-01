@@ -41,6 +41,7 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.asus.camera,com.google.
 
 # Charger
 ro.charger.disable_init_blank=true
+ro.charger.enable_suspend=true
 
 # Data modules
 persist.data.df.agg.dl_pkt=10
