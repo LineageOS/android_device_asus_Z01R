@@ -371,6 +371,13 @@ PRODUCT_PACKAGES += \
     vendor_factory_mountpoint \
     vendor_firmware_mnt_mountpoint
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2-service.Z01R-libperfmgr
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/perf/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
