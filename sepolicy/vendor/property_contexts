@@ -59,6 +59,9 @@ ro.vendor.camera.                                   u:object_r:camera_ro_prop:s0
 persist.nfc.core_reset_debug_info                   u:object_r:nfc_nq_prop:s0
 persist.nfc.hci_network_reset_req                   u:object_r:nfc_nq_prop:s0
 
+# PowerHAL
+vendor.powerhal.state      u:object_r:power_prop:s0
+
 # RIL
 persist.data.iwlan.enable                           u:object_r:vendor_default_prop:s0
 
