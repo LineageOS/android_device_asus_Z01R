@@ -13,3 +13,4 @@ dontaudit vendor_init adf_file:dir setattr;
 dontaudit vendor_init fac_file:dir setattr;
 
 allow vendor_init proc_sysctl_autogroup:file w_file_perms;
+allow vendor_init proc_sysctl_schedboost:file w_file_perms;
