@@ -52,6 +52,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.console=ttyMSM0 \
     androidboot.hardware=qcom \
     androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.vbmeta.avb_version=1.0 \
     buildv=WW_100.10.107.123 \
     buildvariant=$(TARGET_BUILD_VARIANT) \
     ehci-hcd.park=3 \
