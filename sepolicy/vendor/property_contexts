@@ -76,6 +76,10 @@ persist.hal.Proximity.hardcode                      u:object_r:sensors_prop:s0
 persist.vendor.sensors.diag_buffer_mode             u:object_r:vendor_sensors_prop:s0
 persist.vendor.sensors.enable.mag_filter            u:object_r:vendor_sensors_prop:s0
 
+# System
+persist.factoryota.reboot                           u:object_r:exported_system_prop:s0
+persist.radio.bootwithlpm                           u:object_r:exported_system_prop:s0
+
 # Thermal
 sys.asus.tempc                                      u:object_r:thermal_prop:s0
 sys.restart.thermal                                 u:object_r:thermal_prop:s0
