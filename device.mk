@@ -183,7 +183,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.sdm845 \
     libcutils \
-    libgptutils \
+    libgptutils.asus_sdm845 \
     libz \
 
 PRODUCT_PACKAGES_DEBUG += \
