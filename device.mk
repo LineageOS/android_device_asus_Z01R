@@ -60,6 +60,10 @@ PRODUCT_COPY_FILES += \
 
 # Boot control
 PRODUCT_PACKAGES_DEBUG += \
+    android.hardware.boot@1.0-impl.recovery \
+    bootctrl.sdm845.recovery
+
+PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 # Bluetooth
@@ -179,12 +183,6 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.sdm845 \
-    libcutils \
-    libgptutils.asus_sdm845 \
-    libz \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
