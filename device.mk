@@ -154,6 +154,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.1 \
     android.hardware.radio@1.2
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
