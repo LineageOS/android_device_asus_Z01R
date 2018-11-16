@@ -2,3 +2,6 @@ allow rild proc:file { getattr open read write };
 allow rild proc_evtlog:file write;
 
 set_prop(rild, customize_prop)
+
+dontaudit rild tombstone_data_file:dir search;
+dontaudit rild vendor_file:file ioctl;
