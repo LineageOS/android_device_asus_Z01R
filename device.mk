@@ -156,11 +156,9 @@ PRODUCT_PACKAGES += \
 # RIL
 # Interface library needed by odm blobs:
 PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.0 \
-    android.hardware.secure_element@1.0 \
-    android.hardware.radio.deprecated@1.0 \
-    android.hardware.radio@1.1 \
-    android.hardware.radio@1.2
+    ims-ext-common \
+    ims_ext_common.xml \
+    telephony-ext
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
