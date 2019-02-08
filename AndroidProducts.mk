@@ -14,8 +14,5 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := $(call my-dir)
-
-ifneq ($(filter Z01R,$(TARGET_DEVICE)),)
-include $(call all-makefiles-under,$(LOCAL_PATH))
-endif
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/lineage_Z01R.mk
