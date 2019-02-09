@@ -62,6 +62,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Common init scripts
+PRODUCT_PACKAGES += \
+    init.qcom.rc \
+	init.recovery.qcom.rc
+
 # Display
 PRODUCT_PACKAGES += \
     libvulkan
