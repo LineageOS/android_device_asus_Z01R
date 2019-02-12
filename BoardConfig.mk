@@ -97,9 +97,6 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
-# Display
-TARGET_USES_HWC2 := true
-
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
@@ -109,6 +106,11 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 # FM
 BOARD_HAS_QCA_FM_SOC := "cherokee"
 BOARD_HAVE_QCOM_FM := true
+
+# Graphics
+MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
+TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+TARGET_USES_HWC2 := true
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
