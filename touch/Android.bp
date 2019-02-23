@@ -23,6 +23,7 @@ cc_binary {
         "GloveMode.cpp",
         "service.cpp",
     ],
+    vendor: true,
     shared_libs: [
         "libbase",
         "libbinder",

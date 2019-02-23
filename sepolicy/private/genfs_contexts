@@ -1,4 +1,0 @@
-# Gesture
-genfscon proc /driver/dclick							u:object_r:proc_touchscreen:s0
-genfscon proc /driver/gesture_type						u:object_r:proc_touchscreen:s0
-genfscon proc /driver/glove							u:object_r:proc_touchscreen:s0
