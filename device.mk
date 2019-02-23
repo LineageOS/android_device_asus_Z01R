@@ -277,7 +277,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service \
     android.hardware.power@1.0-impl \
-    power.qcom:64
+    power.sdm845
 
 # QTI
 PRODUCT_PACKAGES += \
@@ -325,7 +325,7 @@ PRODUCT_PACKAGES += \
 
 # Trust HAL
 PRODUCT_PACKAGES += \
-    lineage.trust@1.0-service
+    vendor.lineage.trust@1.0-service
 
 # Touch
 PRODUCT_PACKAGES += \
