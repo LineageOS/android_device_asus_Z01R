@@ -109,6 +109,9 @@ BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := product
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/platform/soc/894000.i2c/i2c-3/3-0038/fts_dclick_mode"
+
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true

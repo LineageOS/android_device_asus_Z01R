@@ -104,6 +104,10 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Power
+PRODUCT_PACKAGES += \
+	power.qcom:64
+
 # RIL
 # Interface library needed by odm blobs:
 PRODUCT_PACKAGES += \
