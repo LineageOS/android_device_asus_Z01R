@@ -1,0 +1,2 @@
+# Fingerprint related nodes
+/sys/devices/platform/soc/0.goodix_gf5228/proximity_state        u:object_r:sysfs_fp_proximity:s0

@@ -153,15 +153,11 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/factory:factory
 
 # Sepolicy
+include device/qcom/sepolicy/sepolicy.mk
+
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/qcom/sepolicy/generic/private \
-    device/qcom/sepolicy/qva/private
-
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/qcom/sepolicy/generic/public \
-    device/qcom/sepolicy/qva/public
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Telephony
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true

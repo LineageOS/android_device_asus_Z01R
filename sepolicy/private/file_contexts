@@ -8,9 +8,6 @@
 # Lights
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.light@2\.0-service    u:object_r:hal_light_default_exec:s0
 
-# Fingerprint related nodes
-/sys/devices/platform/soc/0.goodix_gf5228/proximity_state        u:object_r:sysfs_fp_proximity:s0
-
 # HALs
 /system/bin/hw/lineage\.touch@1\.0-service\.asus_Z01R	u:object_r:hal_lineage_touch_asus_Z01R_exec:s0
 
