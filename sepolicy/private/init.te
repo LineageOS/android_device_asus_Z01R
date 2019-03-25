@@ -6,5 +6,5 @@ allow init vendor_configs_file:dir mounton;
 
 # Allow init to chown/chmod on pseudo files in /sys
 allow init {
-    sysfs_fp_proximity
+    sysfs_fingerprint
 }:file { open read setattr };
