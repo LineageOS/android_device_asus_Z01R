@@ -75,6 +75,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvulkan
 
+# Doze
+PRODUCT_PACKAGES += \
+    AsusParts \
+	AsusPocketMode
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
