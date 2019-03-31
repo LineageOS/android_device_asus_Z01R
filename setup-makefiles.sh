@@ -17,6 +17,11 @@
 
 set -e
 
+export DEVICE_COMMON=Z01R
+export VENDOR=asus
+
+export DEVICE_BRINGUP_YEAR=2018
+
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
@@ -34,7 +39,7 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards
-write_headers "enchilada fajita"
+write_headers "Z01R"
 
 # The standard common blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt true
