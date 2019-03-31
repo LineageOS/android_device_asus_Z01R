@@ -124,6 +124,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
 	power.qcom:64
 
+# Properties
+-include $(LOCAL_PATH)/system_prop.mk
+
 # RIL
 # Interface library needed by odm blobs:
 PRODUCT_PACKAGES += \
