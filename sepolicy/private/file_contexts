@@ -1,0 +1,16 @@
+# Files in rootfs
+/bt_firmware(/.*)?       u:object_r:bt_firmware_file:s0
+/dsp(/.*)?               u:object_r:adsprpcd_file:s0
+/firmware(/.*)?          u:object_r:firmware_file:s0
+/persist(/.*)?           u:object_r:persist_file:s0
+/factory(/.*)?           u:object_r:fac_file:s0
+
+# Audio
+/system/etc/audio_policy_configuration.xml    u:object_r:vendor_configs_file:s0
+
+# Lights
+/system/bin/hw/android\.hardware\.light@2\.0-service\.asus_Z01R    u:object_r:hal_light_Z01R_exec:s0
+
+# Power HAL
+/system/lib64/hw/power\.qcom\.so    u:object_r:vendor_file:s0
+/system/lib/hw/power\.qcom\.so      u:object_r:vendor_file:s0

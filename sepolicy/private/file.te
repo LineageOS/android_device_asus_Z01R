@@ -1,0 +1,6 @@
+type adsprpcd_file, file_type;
+type bt_firmware_file, file_type;
+type firmware_file, file_type;
+type persist_file, file_type;
+type fac_file, file_type;
+type proc_touchpanel, fs_type;
