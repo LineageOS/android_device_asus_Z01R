@@ -62,6 +62,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    BluetoothResCommon
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap
