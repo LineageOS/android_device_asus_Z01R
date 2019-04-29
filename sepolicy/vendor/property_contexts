@@ -57,6 +57,10 @@ fp.version.driver                                   u:object_r:fingerprint_goodi
 # FM
 ro.vendor.fm.use_audio_session                      u:object_r:vendor_fm_prop:s0
 
+# Google camera hal read only props
+ro.camera.                                          u:object_r:camera_ro_prop:s0
+ro.vendor.camera.                                   u:object_r:camera_ro_prop:s0
+
 # NFC
 persist.nfc.core_reset_debug_info                   u:object_r:nfc_nq_prop:s0
 persist.nfc.hci_network_reset_req                   u:object_r:nfc_nq_prop:s0
