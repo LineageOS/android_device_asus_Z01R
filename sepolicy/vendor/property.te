@@ -1,3 +1,4 @@
+type camera_ro_prop, property_type;
 type customize_prop, property_type;
 type fingerprint_goodix_prop, property_type;
 type thermal_prop, property_type;
