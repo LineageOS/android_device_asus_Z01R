@@ -88,7 +88,6 @@ on property:init.svc.vendor.charger=running
     chmod 0771 /mnt/vendor/persist
     mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev barrier=1
 
-    start vendor.hvdcp_opti
     start vendor.power_off_alarm
     start vendor.poweroffm64
     mount tmpfs tmpfs /data
