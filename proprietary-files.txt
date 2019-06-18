@@ -142,7 +142,7 @@ framework/com.qualcomm.qti.uceservice-V2.0-java.jar
 framework/embmslibrary.jar
 framework/oem-services.jar
 framework/qtiNetworkLib.jar
-framework/qti-telephony-common.jar
+framework/qti-telephony-common.jar|db4419a9189daa6f2bc67d9714cb74f0e82cf1dc
 framework/uimremotesimlocklibrary.jar
 framework/uimservicelibrary.jar
 etc/permissions/embms.xml
