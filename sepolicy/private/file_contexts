@@ -14,3 +14,6 @@
 # Power HAL
 /system/lib64/hw/power\.qcom\.so    u:object_r:vendor_file:s0
 /system/lib/hw/power\.qcom\.so      u:object_r:vendor_file:s0
+
+# HALs
+/system/bin/hw/lineage\.trust@1\.0-service                    u:object_r:hal_trust_default_exec:s0

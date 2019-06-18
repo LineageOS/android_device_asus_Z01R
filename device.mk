@@ -151,7 +151,7 @@ PRODUCT_BOOT_JARS += \
 
 # Trust HAL
 PRODUCT_PACKAGES += \
-    lineage.trust@1.0-service.asus_sdm845
+    lineage.trust@1.0-service
 
 # Update engine
 PRODUCT_PACKAGES += \
