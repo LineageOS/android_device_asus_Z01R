@@ -138,6 +138,9 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/firmware_mnt:/firmware \
     /vendor/factory:factory
 
+# RIL
+TARGET_RIL_VARIANT := caf
+
 # Telephony
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
