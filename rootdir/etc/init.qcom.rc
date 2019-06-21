@@ -1,7 +1,9 @@
 on init
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
     mount none /system/lib64/hw/power.qcom.so /vendor/lib64/hw/power.qcom.so bind
-    chmod 0440 /proc/cmdline
+
+    # default is root radio 0440
+    chmod 0644 /proc/cmdline
 
 on boot
 on charger
