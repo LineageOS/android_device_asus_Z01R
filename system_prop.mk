@@ -75,5 +75,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ril.qcril_pre_init_lock_held=0 \
     ril.subscription.types=NV,RUIM \
     telephony.lteOnCdmaDevice=1 \
-    DEVICE_PROVISIONED=1 \
-    ro.telephony.default_network=20,20
+    DEVICE_PROVISIONED=1
