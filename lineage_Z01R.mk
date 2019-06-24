@@ -27,8 +27,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_NAME := lineage_Z01R
 PRODUCT_DEVICE := Z01R
+PRODUCT_MANUFACTURER := unknown
 PRODUCT_BRAND := asus
-PRODUCT_MODEL := Zenfone 5z
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
@@ -41,6 +41,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="Z01R-user 9 PPR1.180610.009 WW_user_90.10.138.181 release-keys"
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
-    ro.product.manufacturer
+    ro.product.model
 
 BUILD_FINGERPRINT := asus/WW_Z01R/Z01R:9/PPR1.180610.009/WW_90.10.138.181:user/release-keys
