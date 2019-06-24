@@ -76,4 +76,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ril.subscription.types=NV,RUIM \
     telephony.lteOnCdmaDevice=1 \
     DEVICE_PROVISIONED=1 \
-    ro.telephony.default_network=20,20
+    ro.telephony.default_network=22,22
