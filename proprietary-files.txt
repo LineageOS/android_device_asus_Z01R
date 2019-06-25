@@ -109,7 +109,7 @@ lib/vendor.qti.hardware.radio.ims@1.0.so
 lib/vendor.qti.hardware.radio.ims@1.1.so
 lib/vendor.qti.hardware.radio.ims@1.2.so
 lib/vendor.qti.hardware.radio.ims@1.3.so
--priv-app/ims/ims.apk
+-priv-app/ims/ims.apk|06d6c890647b51c05b948e945dd019ed43b8075f
 
 # QMI
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
@@ -142,7 +142,7 @@ framework/com.qualcomm.qti.uceservice-V2.0-java.jar
 framework/embmslibrary.jar
 framework/oem-services.jar
 framework/qtiNetworkLib.jar
-framework/qti-telephony-common.jar|db4419a9189daa6f2bc67d9714cb74f0e82cf1dc
+framework/qti-telephony-common.jar|b1953a3599255f08f1785c677d22810f65e0167b
 framework/uimremotesimlocklibrary.jar
 framework/uimservicelibrary.jar
 etc/permissions/embms.xml
