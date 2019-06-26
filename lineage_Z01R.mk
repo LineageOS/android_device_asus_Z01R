@@ -27,7 +27,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_NAME := lineage_Z01R
 PRODUCT_DEVICE := Z01R
-PRODUCT_MANUFACTURER := unknown
+PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus

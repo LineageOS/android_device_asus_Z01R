@@ -77,3 +77,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnCdmaDevice=1 \
     DEVICE_PROVISIONED=1 \
     ro.telephony.default_network=22,22
+
+# Asus RIL Hax
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hexedit.manufacturer=unknown
