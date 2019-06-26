@@ -680,7 +680,6 @@
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
 
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">M -218,0 L -218,87 L 218,87 L 218,0 Z</string>
     <string name="config_defaultNetworkRecommendationProviderPackage">com.google.android.gms</string>
 
     <!-- Whether device ignores the RSSNR signal implementation -->
