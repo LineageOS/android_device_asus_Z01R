@@ -64,12 +64,12 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-	Snap
+    Snap
 
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.qcom.rc \
-	init.recovery.qcom.rc
+    init.recovery.qcom.rc
 
 # Display
 PRODUCT_PACKAGES += \
@@ -78,28 +78,33 @@ PRODUCT_PACKAGES += \
 # Doze
 PRODUCT_PACKAGES += \
     AsusParts \
-	AsusPocketMode
+    AsusPocketMode
 
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
-	qcom.fmradio
+    qcom.fmradio
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/goodixfp.kl:system/usr/keylayout/goodixfp.kl \
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayout/gf_input.kl:system/usr/keylayout/gf_input.kl
 
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0 \
-	android.hidl.manager@1.0_system
+    android.hidl.manager@1.0_system
 
 # Lights
 PRODUCT_PACKAGES += \
-	android.hardware.light@2.0-service.asus_Z01R
+    android.hardware.light@2.0-service.asus_Z01R
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -115,16 +120,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
-	com.android.nfc_extras
+    com.android.nfc_extras
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-	$(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lineage
 
 # Power
 PRODUCT_PACKAGES += \
-	power.qcom:64
+    power.qcom:64
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
@@ -136,7 +141,7 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0 \
     android.hardware.radio.deprecated@1.0 \
     android.hardware.radio@1.1 \
-	android.hardware.radio@1.2
+    android.hardware.radio@1.2
 
 # TextClassifier
 PRODUCT_PACKAGES += \
@@ -147,7 +152,7 @@ PRODUCT_PACKAGES += \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
-	telephony-ext
+    telephony-ext
 
 # Trust HAL
 PRODUCT_PACKAGES += \
