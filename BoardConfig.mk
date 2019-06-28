@@ -109,6 +109,10 @@ TARGET_ENABLE_MEDIADRM_64 := true
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 
+# Lineage hardware
+BOARD_HARDWARE_CLASS += \
+    $(DEVICE_PATH)/lineagehw
+
 # Network Routing
 TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
 
