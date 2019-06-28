@@ -210,21 +210,7 @@ lib/vendor.qti.gnss@1.2.so
 lib/vendor.qti.gnss@2.0.so
 lib/vendor.qti.gnss@2.1.so
 
-# wcg
--app/aptxui/aptxui.apk
--app/AsusSplendidCommandAgent/AsusSplendidCommandAgent.apk
-etc/permissions/asus.hardware.display.pq_chip.xml
-etc/permissions/asus.hardware.display.splendid.reading_mode.xml
-etc/permissions/asus.hardware.display.splendid.xml
-etc/permissions/asus.hardware.fingerprint_earlywakeup.xml
-etc/permissions/asus.hardware.glove.xml
-etc/permissions/asus.hardware.touchgesture.double_tap.xml
-etc/permissions/asus.hardware.touchgesture.launch_app.xml
-etc/permissions/asus.hardware.touchgesture.swipe_up.xml
-etc/permissions/asus.software.smart.reading.xml
-etc/permissions/asus.software.smartgallery.xml
-etc/permissions/asus.software.vibration.intensity.xml
-etc/permissions/asus.software.zenimoji.obj.xml
+# WCG
 lib/libarcsoft_beautyshot.so
 lib/libarcsoft_face_detection.so
 lib/libarcsoft_face_tracking.so
@@ -287,8 +273,6 @@ lib64/libjni_stillmore.so
 lib64/libjni_trueportrait.so
 lib64/libjni_truescanner_v2.so
 lib64/libjni_ubifocus.so
--priv-app/AsusSplendid/AsusSplendid.apk
--priv-app/AsusVisualMaster/AsusVisualMaster.apk
 
 # WFD
 bin/wfdservice
