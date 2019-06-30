@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 The LineageOS Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,33 +18,105 @@
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
+#include <utils/Errors.h>
 
 #include "Light.h"
 
+// libhwbinder:
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
 
+// Generated HIDL files
 using android::hardware::light::V2_0::ILight;
 using android::hardware::light::V2_0::implementation::Light;
 
-using android::OK;
-using android::status_t;
+const static std::string kLcdBacklightPath = "/sys/class/backlight/panel0-backlight/brightness";
+const static std::string kLcdMaxBacklightPath = "/sys/class/backlight/panel0-backlight/max_brightness";
+const static std::string kRedLedPath = "/sys/class/leds/red/brightness";
+const static std::string kGreenLedPath = "/sys/class/leds/green/brightness";
+const static std::string kBlueLedPath = "/sys/class/leds/blue/brightness";
+const static std::string kRedBlinkPath = "/sys/class/leds/red/pwm_us";
+const static std::string kGreenBlinkPath = "/sys/class/leds/green/pwm_us";
+const static std::string kBlueBlinkPath = "/sys/class/leds/blue/pwm_us";
 
 int main() {
-    android::sp<ILight> service = new Light();
+    uint32_t lcdMaxBrightness = 255;
+
+    std::ofstream lcdBacklight(kLcdBacklightPath);
+    if (!lcdBacklight) {
+        LOG(ERROR) << "Failed to open " << kLcdBacklightPath << ", error=" << errno
+                   << " (" << strerror(errno) << ")";
+        return -errno;
+    }
+
+    std::ifstream lcdMaxBacklight(kLcdMaxBacklightPath);
+    if (!lcdMaxBacklight) {
+        LOG(ERROR) << "Failed to open " << kLcdMaxBacklightPath << ", error=" << errno
+                   << " (" << strerror(errno) << ")";
+        return -errno;
+    } else {
+        lcdMaxBacklight >> lcdMaxBrightness;
+    }
+
+    std::ofstream redLed(kRedLedPath);
+    if (!redLed) {
+        LOG(ERROR) << "Failed to open " << kRedLedPath << ", error=" << errno
+                   << " (" << strerror(errno) << ")";
+        return -errno;
+    }
+
+    std::ofstream greenLed(kGreenLedPath);
+    if (!greenLed) {
+        LOG(ERROR) << "Failed to open " << kGreenLedPath << ", error=" << errno
+                   << " (" << strerror(errno) << ")";
+        return -errno;
+    }
+
+    std::ofstream blueLed(kBlueLedPath);
+    if (!blueLed) {
+        LOG(ERROR) << "Failed to open " << kBlueLedPath << ", error=" << errno
+                   << " (" << strerror(errno) << ")";
+        return -errno;
+    }
+
+    std::ofstream redBlink(kRedBlinkPath);
+    if (!redBlink) {
+        LOG(ERROR) << "Failed to open " << kRedBlinkPath << ", error=" << errno
+                   << " (" << strerror(errno) << ")";
+        return -errno;
+    }
+
+    std::ofstream greenBlink(kGreenBlinkPath);
+    if (!greenBlink) {
+        LOG(ERROR) << "Failed to open " << kGreenBlinkPath << ", error=" << errno
+                   << " (" << strerror(errno) << ")";
+        return -errno;
+    }
+
+    std::ofstream blueBlink(kBlueBlinkPath);
+    if (!blueBlink) {
+        LOG(ERROR) << "Failed to open " << kBlueBlinkPath << ", error=" << errno
+                   << " (" << strerror(errno) << ")";
+        return -errno;
+    }
+
+    android::sp<ILight> service = new Light(
+            {std::move(lcdBacklight), lcdMaxBrightness},
+            std::move(redLed), std::move(greenLed), std::move(blueLed),
+            std::move(redBlink), std::move(greenBlink), std::move(blueBlink));
 
     configureRpcThreadpool(1, true);
 
-    status_t status = service->registerAsService();
-    if (status != OK) {
-        LOG(ERROR) << "Cannot register Light HAL service.";
+    android::status_t status = service->registerAsService();
+
+    if (status != android::OK) {
+        LOG(ERROR) << "Cannot register Light HAL service";
         return 1;
     }
 
-    LOG(INFO) << "Light HAL service ready.";
-
+    LOG(INFO) << "Light HAL Ready.";
     joinRpcThreadpool();
-
-    LOG(ERROR) << "Light HAL service failed to join thread pool.";
+    // Under normal cases, execution will not reach this line.
+    LOG(ERROR) << "Light HAL failed to join thread pool.";
     return 1;
 }
