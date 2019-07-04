@@ -81,3 +81,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Asus RIL Hax
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hexedit.manufacturer=unknown
+
+# Expose AUX
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam
