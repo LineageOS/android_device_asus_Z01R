@@ -1,2 +1,1 @@
-allow hal_power proc_touchpanel:dir search;
-allow hal_power proc_touchpanel:file w_file_perms;
+allow hal_power sysfs_touchpanel:file w_file_perms;
