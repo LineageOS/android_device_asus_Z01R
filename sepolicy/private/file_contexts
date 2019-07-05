@@ -14,3 +14,8 @@
 # Power HAL
 /system/lib64/hw/power\.qcom\.so    u:object_r:vendor_file:s0
 /system/lib/hw/power\.qcom\.so      u:object_r:vendor_file:s0
+
+# Gesture
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_buf        u:object_r:fts_gesture:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_mode        u:object_r:fts_gesture:s0
+

@@ -10,6 +10,39 @@ on init
 on boot
     mount none /system/overlay/BluetoothResCommon.apk /vendor/overlay/BluetoothResCommon.apk bind
 
+    # FocalTech Gesture
+    # /sys/devices/platform/soc/894000.i2c/i2c-3/3-0038/
+    chown system system /sys/bus/i2c/devices/3-0038/fts_dclick_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_dclick_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_swipe_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_swipe_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_buf
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_buf
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_glove_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_glove_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_cover_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_cover_mode
+
+# Gesture properties
+on property:persist.dclick.on=0
+    write /sys/bus/i2c/devices/3-0038/fts_dclick_mode 0
+
+on property:persist.dclick.on=1
+    write /sys/bus/i2c/devices/3-0038/fts_dclick_mode 1
+
+on property:persist.screengesture=0
+    write /sys/bus/i2c/devices/3-0038/fts_gesture_mode 0
+
+on property:persist.screengesture=1
+    write /sys/bus/i2c/devices/3-0038/fts_gesture_mode 1
+
 on charger
     write /sys/class/backlight/panel0-backlight/brightness 150
 

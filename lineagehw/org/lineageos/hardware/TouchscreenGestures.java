@@ -20,6 +20,8 @@ import org.lineageos.internal.util.FileUtils;
 
 import lineageos.hardware.TouchscreenGesture;
 
+import android.util.Log;
+
 /**
  * Touchscreen gestures API
  *
@@ -37,8 +39,17 @@ import lineageos.hardware.TouchscreenGesture;
  */
 public class TouchscreenGestures {
 
-    private static final String GESTURE_PATH =
+    private static final String GESTURE_TAG = "TouchScreenGesture";
+
+    private static final String GESTURE_BUF_PATH =
             "/sys/bus/i2c/devices/3-0038/fts_gesture_buf";
+
+    private static final String GESTURE_MODE_PATH =
+            "/sys/bus/i2c/devices/3-0038/fts_gesture_mode";
+
+    private static String getGestureValue(String value) {
+        return value.substring(value.lastIndexOf(":") + 2);
+    }
 
     // Id, name, keycode
     private static final TouchscreenGesture[] TOUCHSCREEN_GESTURES = {
@@ -66,8 +77,16 @@ public class TouchscreenGestures {
      * @return boolean Supported devices must return always true
      */
     public static boolean isSupported() {
-        return FileUtils.isFileWritable(GESTURE_PATH) &&
-                FileUtils.isFileReadable(GESTURE_PATH);
+        String modeLine = FileUtils.readOneLine(GESTURE_MODE_PATH);
+        String currentMode = getGestureValue(modeLine);
+
+        Log.d(GESTURE_TAG, "currentMode : " + currentMode);
+
+        if (currentMode.equals("On")) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /*
@@ -91,7 +110,9 @@ public class TouchscreenGestures {
      */
     public static boolean setGestureEnabled(
             final TouchscreenGesture gesture, final boolean state) {
-        int gestureMode = Integer.parseInt(FileUtils.readOneLine(GESTURE_PATH));
+        String bufLine = FileUtils.readOneLine(GESTURE_BUF_PATH);
+        String hexBuf = getGestureValue(bufLine);
+        int gestureMode = Integer.decode(hexBuf);
         int mask = ALL_GESTURE_MASKS[gesture.id];
 
         if (state)
@@ -102,7 +123,9 @@ public class TouchscreenGestures {
         if (gestureMode != 0)
             gestureMode |= KEY_MASK_GESTURE_CONTROL;
 
-        return FileUtils.writeLine(GESTURE_PATH, String.format("%7s",
-                Integer.toBinaryString(gestureMode)).replace(' ', '0'));
+        String gestureType = String.format("%7s", Integer.toBinaryString(gestureMode)).replace(' ', '0');
+        Log.d(GESTURE_TAG, "persist.gesture.type : " + gestureType);
+
+        return FileUtils.writeLine(GESTURE_BUF_PATH, gestureType);
     }
 }
