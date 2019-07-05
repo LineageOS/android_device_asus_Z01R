@@ -124,7 +124,6 @@ public class TouchscreenGestures {
             gestureMode |= KEY_MASK_GESTURE_CONTROL;
 
         String gestureType = String.format("%7s", Integer.toBinaryString(gestureMode)).replace(' ', '0');
-        Log.d(GESTURE_TAG, "persist.gesture.type : " + gestureType);
 
         return FileUtils.writeLine(GESTURE_BUF_PATH, gestureType);
     }

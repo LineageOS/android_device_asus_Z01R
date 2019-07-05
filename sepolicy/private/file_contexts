@@ -18,4 +18,5 @@
 # Gesture
 /sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_buf        u:object_r:fts_gesture:s0
 /sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_mode        u:object_r:fts_gesture:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_dclick_mode        u:object_r:fts_gesture:s0
 

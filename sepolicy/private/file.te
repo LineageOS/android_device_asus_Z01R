@@ -9,4 +9,3 @@ type sysfs_touchpanel, sysfs_type, fs_type;
 # FTS Gesture
 type fts_gesture, file_type;
 allow system_server fts_gesture:file { getattr open read write };
-

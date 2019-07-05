@@ -31,6 +31,7 @@ on boot
     chmod 0660 /sys/bus/i2c/devices/3-0038/fts_cover_mode
 
 # Gesture properties
+# Temp (dclick)
 on property:persist.dclick.on=0
     write /sys/bus/i2c/devices/3-0038/fts_dclick_mode 0
 
