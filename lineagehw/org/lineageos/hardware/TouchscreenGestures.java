@@ -77,16 +77,8 @@ public class TouchscreenGestures {
      * @return boolean Supported devices must return always true
      */
     public static boolean isSupported() {
-        String modeLine = FileUtils.readOneLine(GESTURE_MODE_PATH);
-        String currentMode = getGestureValue(modeLine);
-
-        Log.d(GESTURE_TAG, "currentMode : " + currentMode);
-
-        if (currentMode.equals("On")) {
-            return true;
-        } else {
-            return false;
-        }
+        return FileUtils.isFileWritable(GESTURE_MODE_PATH) &&
+                FileUtils.isFileReadable(GESTURE_MODE_PATH);
     }
 
     /*
