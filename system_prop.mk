@@ -15,8 +15,6 @@
 #
 
 # Audio
-
-# Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.voicecall=true \
     persist.audio.fluence.voicerec=false \
@@ -42,6 +40,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.dev_name=rmnet_usb0 \
     ro.vendor.use_data_netmgrd=true \
     persist.vendor.data.mode=concurrent
+
+# FM
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.bluetooth.soc=cherokee
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
