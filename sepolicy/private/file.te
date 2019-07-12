@@ -5,6 +5,8 @@ type firmware_file, file_type;
 type persist_file, file_type;
 type fac_file, file_type;
 type sysfs_touchpanel, sysfs_type, fs_type;
+type proc_touchpanel, fs_type;
+type sysfs_graphics, sysfs_type, fs_type;
 
 # FTS Gesture
 type fts_gesture, file_type;

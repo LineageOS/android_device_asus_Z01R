@@ -15,6 +15,7 @@ allow hal_light_client hal_light_hwservice:hwservice_manager find;
 type hal_light_Z01R_exec, exec_type, file_type;
 init_daemon_domain(hal_light_Z01R)
 
-# Allow sysfs
+# Light Hal
 allow hal_light_Z01R sysfs_graphics:dir search;
-allow hal_light_Z01R sysfs_graphics:file { getattr open read write };
+allow hal_light_Z01R sysfs_graphics:file rw_file_perms;
+allow hal_light_Z01R sysfs_leds:dir search;
