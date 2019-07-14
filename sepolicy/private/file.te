@@ -2,8 +2,8 @@
 type adsprpcd_file, file_type;
 type demoapp_file, file_type;
 type fac_file, file_type;
-type fts_sysfs, sysfs_type, fs_type;
 type log_file, file_type;
 type sysfs_graphics, sysfs_type, fs_type;
 type sysfs_fp_proximity, sysfs_type, fs_type;
+type sysfs_touchscreen, sysfs_type, fs_type;
 type xrom_file, file_type;
