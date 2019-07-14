@@ -8,5 +8,5 @@ allow init vendor_overlay_file:file mounton;
 # Allow init to chown/chmod on pseudo files in /sys
 allow init {
     sysfs_fp_proximity
-    fts_sysfs
+    sysfs_touchscreen
 }:file { open read setattr };

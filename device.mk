@@ -166,6 +166,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
 
+# Touch
+PRODUCT_PACKAGES += \
+    lineage.touch@1.0-service.asus_Z01R
+
 # Update engine
 PRODUCT_PACKAGES += \
     brillo_update_payload \
