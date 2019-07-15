@@ -39,6 +39,9 @@ ro.asus.camera.use_frame_processor=0
 ro.asus.camera.video_beauty=0:1;1:1;2:1;3:0
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.asus.camera,com.google.android.GoogleCamera
 
+# Charger
+ro.charger.disable_init_blank=true
+
 # Data modules
 persist.data.df.agg.dl_pkt=10
 persist.data.df.agg.dl_size=4096
