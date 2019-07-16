@@ -4,9 +4,6 @@ on init
     mount none /system/lib/libril-qc-hal-qmi.so /vendor/lib/libril-qc-hal-qmi.so bind
     mount none /system/lib64/libril-qc-hal-qmi.so /vendor/lib64/libril-qc-hal-qmi.so bind
 
-    # default is root radio 0440
-    chmod 0440 /proc/cmdline
-
 on boot
     mount none /system/overlay/BluetoothResCommon.apk /vendor/overlay/BluetoothResCommon.apk bind
 
