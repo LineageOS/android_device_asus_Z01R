@@ -6,3 +6,5 @@ type persist_file, file_type;
 type fac_file, file_type;
 type sysfs_graphics, sysfs_type, fs_type;
 type fts_sysfs, sysfs_type, fs_type;
+type sysfs_fp_proximity, sysfs_type, fs_type;
+
