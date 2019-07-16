@@ -30,6 +30,9 @@ on boot
     chown system system /sys/bus/i2c/devices/3-0038/fts_cover_mode
     chmod 0660 /sys/bus/i2c/devices/3-0038/fts_cover_mode
 
+    chown system system /sys/devices/platform/soc/0.goodix_gf5228/proximity_state
+    chmod 0660 /sys/devices/platform/soc/0.goodix_gf5228/proximity_state
+
 # Gesture properties
 # Temp (dclick)
 on property:persist.dclick.on=0
