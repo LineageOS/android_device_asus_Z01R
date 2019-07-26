@@ -22,13 +22,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Inherit from Z01R device
 $(call inherit-product, device/asus/Z01R/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common DU stuff.
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_Z01R
+PRODUCT_NAME := du_Z01R
 PRODUCT_DEVICE := Z01R
 PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
+PRODUCT_MODEL := 5z
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
@@ -39,8 +41,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=Z01R \
     PRODUCT_NAME=Z01R \
     PRIVATE_BUILD_DESC="Z01R-user 9 PPR1.180610.009 WW_user_90.11.162.72_20190531 release-keys"
-
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
-    ro.product.model
 
 BUILD_FINGERPRINT := asus/WW_Z01R/Z01R:9/PPR1.180610.009/WW_90.11.162.72_20190531:user/release-keys
