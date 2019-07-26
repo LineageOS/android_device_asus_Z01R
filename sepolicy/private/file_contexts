@@ -21,8 +21,5 @@
 /sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_dclick_mode        u:object_r:fts_sysfs:s0
 /sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_glove_mode         u:object_r:fts_sysfs:s0
 
-# Trust HAL
-/system/bin/hw/lineage\.trust@1\.0-service                       u:object_r:shal_lineage_trust_default_exec:s0
-
 # Fingerprint related nodes
 /sys/devices/platform/soc/0.goodix_gf5228/proximity_state        u:object_r:sysfs_fp_proximity:s0
