@@ -39,6 +39,12 @@ TARGET_USES_64_BIT_BINDER := true
 TARGET_BOOTLOADER_BOARD_NAME := sdm845
 TARGET_NO_BOOTLOADER := true
 
+# Use Snapdragon LLVM, if available
+TARGET_USE_SDCLANG := true
+
+# QCOM hardware
+BOARD_USES_QCOM_HARDWARE := true
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
