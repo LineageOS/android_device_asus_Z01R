@@ -140,11 +140,11 @@ TARGET_USES_MKE2FS := true
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := odm oem
 BOARD_ROOT_EXTRA_SYMLINKS := \
-    /mnt/vendor/persist:/persist \
-    /vendor/bt_firmware:/bt_firmware \
-    /vendor/dsp:/dsp \
-    /vendor/firmware_mnt:/firmware \
-    /vendor/factory:factory
+    /vendor/ADF:/ADF \
+    /vendor/APD:/APD \
+    /vendor/asdf:/asdf \
+    /vendor/factory:factory \
+    /vendor/xrom:xrom
 
 # RIL
 TARGET_RIL_VARIANT := caf
