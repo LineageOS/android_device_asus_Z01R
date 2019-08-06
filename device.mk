@@ -77,7 +77,10 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libvulkan
+    libdisplayconfig \
+    libqdMetaData.system \
+    libvulkan \
+    vendor.display.config@1.0
 
 # Doze
 PRODUCT_PACKAGES += \
