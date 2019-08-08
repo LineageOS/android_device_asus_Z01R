@@ -13,3 +13,5 @@ allow kernel log_file:dir rw_dir_perms;
 allow kernel log_file:file create_file_perms;
 allow kernel sysfs_battery_supply:dir search;
 allow kernel sysfs_battery_supply:file r_file_perms;
+
+allow kernel debugfs_wlan:dir search;
