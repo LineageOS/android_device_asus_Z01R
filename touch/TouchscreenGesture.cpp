@@ -41,12 +41,12 @@ const std::string kGesturePath =
 
 const std::map<int32_t, TouchscreenGesture::GestureInfo> TouchscreenGesture::kGestureInfoMap = {
     // clang-format off
-    {0, {269, "Letter C"}},
-    {1, {263, "Letter e"}},
-    {2, {267, "Letter S"}},
-    {3, {268, "Letter V"}},
-    {4, {266, "Letter W"}},
-    {5, {270, "Letter Z"}},
+    {0, {46, "Letter C"}},
+    {1, {18, "Letter e"}},
+    {2, {31, "Letter S"}},
+    {3, {47, "Letter V"}},
+    {4, {17, "Letter W"}},
+    {5, {44, "Letter Z"}},
     // clang-format on
 };
 
