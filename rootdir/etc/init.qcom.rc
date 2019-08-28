@@ -4,6 +4,11 @@ on init
     mount none /system/lib/libril-qc-hal-qmi.so /vendor/lib/libril-qc-hal-qmi.so bind
     mount none /system/lib64/libril-qc-hal-qmi.so /vendor/lib64/libril-qc-hal-qmi.so bind
 
+on fs
+    mount ext4 /dev/block/bootdevice/by-name/asdf /vendor/asdf nosuid noatime nodev barrier=1
+    chown root root /vendor/asdf
+    chmod 0777 /vendor/asdf
+
 on boot
     mount none /system/overlay/BluetoothResCommon.apk /vendor/overlay/BluetoothResCommon.apk bind
 
