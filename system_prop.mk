@@ -25,21 +25,37 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_steps=7
 
-# Camera
+# Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    camera.disable_zsl_mode=true
+    persist.vendor.btstack.enable.splita2dp=true \
+    persist.vendor.btstack.aac_frm_ctl.enabled=true \
+    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+
+# Camera
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    camera.disable_zsl_mode=true
 
 # CNE and DPM
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.cne.feature=1 \
-    persist.vendor.dpm.feature=10 \
-    persist.vendor.dpm.tcm=2
+    persist.vendor.cne.feature=1
 
 # Data modules
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.rmnet.data.enable=true \
+    persist.data.wda.enable=true \
+    persist.data.df.dl_mode=5 \
+    persist.data.df.ul_mode=5 \
+    persist.data.df.agg.dl_pkt=10 \
+    persist.data.df.agg.dl_size=4096 \
+    persist.data.df.mux_count=8 \
+    persist.data.df.iwlan_mux=9 \
     persist.data.df.dev_name=rmnet_usb0 \
     ro.vendor.use_data_netmgrd=true \
     persist.vendor.data.mode=concurrent
+
+# Disable SPU
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.gatekeeper.disable_spu=true
 
 # FM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -51,7 +67,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.enable_hwc_vds=1
+    debug.sf.enable_hwc_vds=1 \
+    debug.sf.latch_unsignaled=1
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -67,30 +84,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q845-14477-1
 
-# Perf
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.core_ctl_min_cpu=2 \
-    ro.vendor.qti.core_ctl_max_cpu=4 \
-    vendor.iop.enable_uxe=0 \
-    vendor.perf.iop_v3.enable=1
-
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.rcs.supported=0 \
-    persist.vendor.radio.sglte_target=0 \
-    ril.qcril_pre_init_lock_held=0 \
     ril.subscription.types=NV,RUIM \
     telephony.lteOnCdmaDevice=1 \
     DEVICE_PROVISIONED=1 \
     ro.telephony.default_network=22,22
 
-# Asus RIL Hax
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hexedit.manufacturer=unknown
-
 # Expose AUX
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.asus.camera
+
+#Property to enable Mag filter
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.sensors.enable.mag_filter=true
 
 # Gesture
 PRODUCT_PROPERTY_OVERRIDES += \
