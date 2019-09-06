@@ -596,7 +596,7 @@
          appended after the path string to interpret coordinates in dp instead of px units.
          Note that a physical cutout should be configured in pixels for the best results.
          -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">M-221.5,2.2c5,2.5 9.2,6.4 11.2,10.3 0.9,1.6 5.8,13.7 10.9,26.8 9.7,24.6 12.4,29.8 19.3,36 5.3,4.8 10.6,7.4 19.8,9.8 7.4,1.8 12.5,1.9 158.2,1.9 98,0 152.9,-0.4 157.1,-1 9.9,-1.6 15.4,-3.7 22,-8.6 8.7,-6.4 12.3,-12.7 23,-40.3 10.2,-26.4 12.6,-30.3 20.9,-34.6l4.6,-2.4 -225.5,0 -225.5,0 4,2.1z</string>
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M3.5,2 v0 H1.33 C0.6,2 0,2.6 0,3.33 V13v5.67 C0,19.4 0.6,20 1.33,20 h9.33 C11.4,20 12,19.4 12,18.67 V13V3.33 C12,2.6 11.4,2 10.67,2 H8.5 V0 H3.5 z M2,18v-7V4h8v9v5H2L2,18z</string>
 
     <!-- Whether the display cutout region of the main built-in display should be forced to
          black in software (to avoid aliasing or emulate a cutout that is not physically existent).
