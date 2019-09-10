@@ -1,5 +1,6 @@
-on init
+on post-fs
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
+    mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio_policy_configuration.xml bind
     mount none /system/lib64/hw/power.qcom.so /vendor/lib64/hw/power.qcom.so bind
     mount none /system/lib/libril-qc-hal-qmi.so /vendor/lib/libril-qc-hal-qmi.so bind
     mount none /system/lib64/libril-qc-hal-qmi.so /vendor/lib64/libril-qc-hal-qmi.so bind
