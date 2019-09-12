@@ -43,6 +43,7 @@ write_headers "Z01R"
 
 # The standard common blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt true
+write_makefiles "$MY_DIR"/proprietary-files_product.txt true
 
 # We are done!
 write_footers
