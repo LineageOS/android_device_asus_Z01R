@@ -124,8 +124,6 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2986344448
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 52554575872
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
-TARGET_COPY_OUT_VENDOR := vendor
-TARGET_COPY_OUT_PRODUCT := product
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/platform/soc/894000.i2c/i2c-3/3-0038/fts_dclick_mode"
@@ -141,12 +139,12 @@ TARGET_USES_MKE2FS := true
 
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := odm oem
+
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/ADF:/ADF \
     /vendor/APD:/APD \
     /vendor/asdf:/asdf \
-    /vendor/factory:factory \
-    /vendor/xrom:xrom
+    /vendor/factory:factory
 
 # RIL
 TARGET_RIL_VARIANT := caf
