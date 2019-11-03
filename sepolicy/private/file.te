@@ -7,3 +7,5 @@ type sysfs_graphics, sysfs_type, fs_type;
 type sysfs_fp_proximity, sysfs_type, fs_type;
 type sysfs_touchscreen, sysfs_type, fs_type;
 type xrom_file, file_type;
+
+type proc_touchscreen, proc_type, sysfs_type, fs_type;
