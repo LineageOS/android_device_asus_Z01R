@@ -17,6 +17,7 @@
 #define LOG_TAG "TouchscreenGestureService"
 
 #include "TouchscreenGesture.h"
+
 #include <bitset>
 #include <fstream>
 #include <map>
@@ -36,8 +37,7 @@ namespace touch {
 namespace V1_0 {
 namespace implementation {
 
-const std::string kGesturePath =
-    "/sys/devices/platform/soc/894000.i2c/i2c-3/3-0038/fts_gesture_buf";
+const std::string kGesturePath = "/proc/driver/gesture_type";
 
 const std::map<int32_t, TouchscreenGesture::GestureInfo> TouchscreenGesture::kGestureInfoMap = {
     // clang-format off
@@ -77,16 +77,13 @@ Return<bool> TouchscreenGesture::setGestureEnabled(
     uint8_t mask = kGestureMasks[gesture.id];
     std::fstream file(kGesturePath);
     file >> gestureMode;
-
     if (enabled)
         gestureMode |= mask;
     else
         gestureMode &= ~mask;
-
     if (gestureMode != 0) gestureMode |= kKeyMaskGestureControl;
-
-    file << encode_binary(gestureMode).substr(2);
-
+    // Strip first digit
+    file << encode_binary(gestureMode).substr(1);
     return !file.fail();
 }
 

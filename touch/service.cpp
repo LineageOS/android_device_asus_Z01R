@@ -18,6 +18,7 @@
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
+
 #include "GloveMode.h"
 #include "TouchscreenGesture.h"
 

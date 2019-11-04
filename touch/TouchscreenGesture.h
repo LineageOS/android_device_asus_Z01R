@@ -17,6 +17,7 @@
 #pragma once
 
 #include <vendor/lineage/touch/1.0/ITouchscreenGesture.h>
+
 #include <map>
 
 namespace vendor {

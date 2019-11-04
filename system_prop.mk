@@ -99,11 +99,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.sensors.enable.mag_filter=true
 
-# Gesture
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.dclick.on=1 \
-    persist.screengesture=1
-
 # Vendor
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.va_aosp.support=1
