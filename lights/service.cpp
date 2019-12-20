@@ -34,10 +34,8 @@ const static std::string kLcdBacklightPath = "/sys/class/backlight/panel0-backli
 const static std::string kLcdMaxBacklightPath = "/sys/class/backlight/panel0-backlight/max_brightness";
 const static std::string kRedLedPath = "/sys/class/leds/red/brightness";
 const static std::string kGreenLedPath = "/sys/class/leds/green/brightness";
-const static std::string kBlueLedPath = "/sys/class/leds/blue/brightness";
 const static std::string kRedBlinkPath = "/sys/class/leds/red/pwm_us";
 const static std::string kGreenBlinkPath = "/sys/class/leds/green/pwm_us";
-const static std::string kBlueBlinkPath = "/sys/class/leds/blue/pwm_us";
 
 int main() {
     uint32_t lcdMaxBrightness = 255;
@@ -72,13 +70,6 @@ int main() {
         return -errno;
     }
 
-    std::ofstream blueLed(kBlueLedPath);
-    if (!blueLed) {
-        LOG(ERROR) << "Failed to open " << kBlueLedPath << ", error=" << errno
-                   << " (" << strerror(errno) << ")";
-        return -errno;
-    }
-
     std::ofstream redBlink(kRedBlinkPath);
     if (!redBlink) {
         LOG(ERROR) << "Failed to open " << kRedBlinkPath << ", error=" << errno
@@ -93,17 +84,10 @@ int main() {
         return -errno;
     }
 
-    std::ofstream blueBlink(kBlueBlinkPath);
-    if (!blueBlink) {
-        LOG(ERROR) << "Failed to open " << kBlueBlinkPath << ", error=" << errno
-                   << " (" << strerror(errno) << ")";
-        return -errno;
-    }
-
     android::sp<ILight> service = new Light(
             {std::move(lcdBacklight), lcdMaxBrightness},
-            std::move(redLed), std::move(greenLed), std::move(blueLed),
-            std::move(redBlink), std::move(greenBlink), std::move(blueBlink));
+            std::move(redLed), std::move(greenLed),
+            std::move(redBlink), std::move(greenBlink));
 
     configureRpcThreadpool(1, true);
 

@@ -44,15 +44,13 @@ namespace V2_0 {
 namespace implementation {
 
 Light::Light(std::pair<std::ofstream, uint32_t>&& lcd_backlight,
-             std::ofstream&& red_led, std::ofstream&& green_led, std::ofstream&& blue_led,
-             std::ofstream&& red_blink, std::ofstream&& green_blink, std::ofstream&& blue_blink)
+             std::ofstream&& red_led, std::ofstream&& green_led,
+             std::ofstream&& red_blink, std::ofstream&& green_blink)
     : mLcdBacklight(std::move(lcd_backlight)),
       mRedLed(std::move(red_led)),
       mGreenLed(std::move(green_led)),
-      mBlueLed(std::move(blue_led)),
       mRedBlink(std::move(red_blink)),
-      mGreenBlink(std::move(green_blink)),
-      mBlueBlink(std::move(blue_blink)) {
+      mGreenBlink(std::move(green_blink)) {
     auto attnFn(std::bind(&Light::setAttentionLight, this, std::placeholders::_1));
     auto backlightFn(std::bind(&Light::setLcdBacklight, this, std::placeholders::_1));
     auto batteryFn(std::bind(&Light::setBatteryLight, this, std::placeholders::_1));
@@ -133,22 +131,19 @@ void Light::setSpeakerBatteryLightLocked() {
         // Lights off
         mRedLed << 0 << std::endl;
         mGreenLed << 0 << std::endl;
-        mBlueLed << 0 << std::endl;
         mRedBlink << 0 << std::endl;
         mGreenBlink << 0 << std::endl;
-        mBlueBlink << 0 << std::endl;
     }
 }
 
 void Light::setSpeakerLightLocked(const LightState& state) {
-    int red, green, blue, blink;
+    int red, green, blink;
     int onMs, offMs;
     int totalMs, pwm, fake_pwm;
-    
+
     // Retrieve each of the RGB colors
     red = (state.color >> 16) & 0xff;
     green = (state.color >> 8) & 0xff;
-    blue = state.color & 0xff;
 
     switch (state.flashMode) {
         case Flash::TIMED:
@@ -166,11 +161,10 @@ void Light::setSpeakerLightLocked(const LightState& state) {
     // Disable all blinking to start
     mRedBlink << 0 << std::endl;
     mGreenBlink << 0 << std::endl;
-    mBlueBlink << 0 << std::endl;
 
     if (blink) {
         totalMs = onMs + offMs;
-        
+
         // pwm specifies the ratio of ON versus OFF
         // pwm = 0 -> always off
         // pwm = 255 -> always on
@@ -181,29 +175,23 @@ void Light::setSpeakerLightLocked(const LightState& state) {
             fake_pwm = 16;
 
         pwm = offMs * 1000;
-		
+
 		if (red) {
             mRedLed << fake_pwm << std::endl;
             mRedBlink << pwm << std::endl;
 		} else if (green) {
             mGreenLed << fake_pwm << std::endl;
             mGreenBlink << pwm << std::endl;
-		} else { 
-            mBlueLed << fake_pwm << std::endl;
-            mBlueBlink << pwm << std::endl;
 		}
-		
+
     } else {
         mRedBlink << 100 << std::endl;
         mGreenBlink << 100 << std::endl;
-        mBlueBlink << 100 << std::endl;
 
-        if (!red || (red && green && blue)) {
+        if (!red || (red && green)) {
             mRedLed << red << std::endl;
             mGreenLed << green << std::endl;
-            mBlueLed << blue << std::endl;            
         } else {
-            mBlueLed << blue << std::endl;
             mGreenLed << green << std::endl;
             mRedLed << red << std::endl;
         }
