@@ -183,5 +183,8 @@ ro.telephony.iwlan_operation_mode=legacy
 # Sensor
 rsist.vendor.sensors.enable.mag_filter=true
 
+# USB
+vendor.usb.diag.func.name=diag
+
 # Vendor
 ro.vendor.qti.va_aosp.support=1
