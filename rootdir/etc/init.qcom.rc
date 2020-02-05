@@ -1,6 +1,4 @@
 on boot
-    mount none /system/overlay/BluetoothResCommon.apk /vendor/overlay/BluetoothResCommon.apk bind
-
     # FocalTech Gesture
     # /sys/devices/platform/soc/894000.i2c/i2c-3/3-0038/
     chown system system /sys/bus/i2c/devices/3-0038/fts_dclick_mode
