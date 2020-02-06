@@ -147,7 +147,7 @@ product/lib64/vendor.qti.imsrtpservice@2.1.so
 lib64/libdiag_system.so|f73d15f8bba7d2b037093c87367d6e7bfdc71173
 lib/libdiag_system.so|455234eb4ea2e970c1f83836b1a3032032ce053a
 # Smali edit: https://gist.github.com/luca020400/b0152c9b77e55f50eee0513cf666f61c
--product/priv-app/ims/ims.apk|7665c3a2369168b90aa15808224bb169d37c3327
+-product/priv-app/ims/ims.apk|f74648a769b73b331b29460b0bfb0ad857d03d65
 
 # Telephony
 -product/app/QtiTelephonyService/QtiTelephonyService.apk
