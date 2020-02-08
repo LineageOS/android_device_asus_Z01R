@@ -1,16 +1,15 @@
 # ANT+
--lib/libantradio.so
--lib64/libantradio.so
 product/lib/com.qualcomm.qti.ant@1.0.so
 product/lib64/com.qualcomm.qti.ant@1.0.so
+-system/lib/libantradio.so
+-system/lib64/libantradio.so
 
 # Bluetooth (aptX)
--app/aptxals/aptxals.apk
-lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+-system/app/aptxals/aptxals.apk
+system/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+system/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
 # camera
-lib/DataSet/ispDB/ParameterDB.db
 product/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
 product/lib64/libseccam-ipc.so
 product/lib64/libseccam.so
@@ -54,11 +53,9 @@ product/lib/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so
 product/lib/vendor.qti.hardware.scve.panorama@1.0.so
 product/lib/vendor.qti.hardware.seccam@1.0.so
 product/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
+system/lib/DataSet/ispDB/ParameterDB.db
 
 # CNE
-etc/cne/Nexus/ATT/ATT_profiles.xml
-etc/cne/Nexus/ROW/ROW_profiles.xml
-etc/cne/Nexus/VZW/VZW_profiles.xml
 product/framework/com.quicinc.cne.api-V1.1-java.jar
 product/framework/com.quicinc.cne.constants-V1.0-java.jar
 product/framework/com.quicinc.cne.constants-V2.0-java.jar
@@ -81,9 +78,11 @@ product/lib/com.quicinc.cne.constants@2.1.so
 product/lib/vendor.qti.hardware.data.cne.internal.api@1.0.so
 product/lib/vendor.qti.hardware.data.cne.internal.constants@1.0.so
 product/lib/vendor.qti.hardware.data.cne.internal.server@1.0.so
+system/etc/cne/Nexus/ATT/ATT_profiles.xml
+system/etc/cne/Nexus/ROW/ROW_profiles.xml
+system/etc/cne/Nexus/VZW/VZW_profiles.xml
 
 # DPM
-framework/tcmclient.jar
 product/bin/dpmd
 product/etc/dpm/dpm.conf
 product/etc/init/dpmd.rc
@@ -102,31 +101,32 @@ product/lib/libdpmfdmgr.so
 product/lib/libdpmframework.so
 product/lib/libdpmtcm.so
 -product/priv-app/dpmserviceapp/dpmserviceapp.apk
+system/framework/tcmclient.jar
 
 # FM
-lib64/fm_helium.so
-lib64/libfm-hci.so
-lib/fm_helium.so
-lib/libfm-hci.so
 product/lib64/vendor.qti.hardware.fm@1.0.so
 product/lib/vendor.qti.hardware.fm@1.0.so
+system/lib64/fm_helium.so
+system/lib64/libfm-hci.so
+system/lib/fm_helium.so
+system/lib/libfm-hci.so
 
 # GPS
-etc/permissions/com.qti.location.sdk.xml
-etc/permissions/com.qualcomm.location.xml
-etc/permissions/izat.xt.srv.xml
-etc/permissions/privapp-permissions-com.qualcomm.location.xml
-framework/com.qti.location.sdk.jar
-framework/izat.xt.srv.jar
-lib64/liblocationservice_jni.so
-lib64/libxt_native.so
--priv-app/com.qualcomm.location/com.qualcomm.location.apk
 product/lib64/vendor.qti.gnss@1.0.so
 product/lib64/vendor.qti.gnss@1.1.so
 product/lib64/vendor.qti.gnss@1.2.so
 product/lib64/vendor.qti.gnss@2.0.so
 product/lib64/vendor.qti.gnss@2.1.so
 product/lib64/vendor.qti.gnss@3.0.so
+system/etc/permissions/com.qti.location.sdk.xml
+system/etc/permissions/com.qualcomm.location.xml
+system/etc/permissions/izat.xt.srv.xml
+system/etc/permissions/privapp-permissions-com.qualcomm.location.xml
+system/framework/com.qti.location.sdk.jar
+system/framework/izat.xt.srv.jar
+system/lib64/liblocationservice_jni.so
+system/lib64/libxt_native.so
+-system/priv-app/com.qualcomm.location/com.qualcomm.location.apk
 
 # HotwordEnrollment
 -product/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk
@@ -141,20 +141,21 @@ product/lib64/lib-imsvt.so
 product/lib64/lib-imsvtutils.so
 product/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
-lib64/libdiag_system.so|f73d15f8bba7d2b037093c87367d6e7bfdc71173
-lib/libdiag_system.so|455234eb4ea2e970c1f83836b1a3032032ce053a
-# Smali edit: https://gist.github.com/luca020400/b0152c9b77e55f50eee0513cf666f61c
 -product/priv-app/ims/ims.apk|f74648a769b73b331b29460b0bfb0ad857d03d65
+system/lib64/libdiag_system.so|f73d15f8bba7d2b037093c87367d6e7bfdc71173
+system/lib/libdiag_system.so|455234eb4ea2e970c1f83836b1a3032032ce053a
+
+# QMI
+system/etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
+system/etc/permissions/privapp-permissions-qti.xml
+system/etc/permissions/qti_permissions.xml
+system/etc/sysconfig/qti_whitelist.xml
 
 # Telephony
 -product/app/QtiTelephonyService/QtiTelephonyService.apk
 -product/app/embms/embms.apk
 -product/priv-app/QAS_DVC_MSP/QAS_DVC_MSP.apk
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-etc/permissions/privapp-permissions-qti.xml
-etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
-etc/permissions/qti_permissions.xml
-etc/sysconfig/qti_whitelist.xml
 product/etc/permissions/embms.xml
 product/etc/permissions/embms-noship_product_privapp_permissions_qti.xml
 product/etc/permissions/qcrilhook.xml
@@ -165,57 +166,57 @@ product/framework/embmslibrary.jar
 product/framework/qcrilhook.jar
 
 # WFD
-bin/wfdservice
-etc/init/wfdservice.rc
-etc/wfdconfigsink.xml
--framework/WfdCommon.jar
-lib/com.qualcomm.qti.wifidisplayhal@1.0.so
-lib64/libFileMux.so
-lib64/libdisplayconfig.so
-lib64/libmmparser_lite.so
-lib64/libmmrtpdecoder.so
-lib64/libmmrtpencoder.so
-lib64/libmmosal.so
-lib64/libqdMetaData.system.so
-lib64/libwfdclient.so
-lib64/libwfdcommonutils.so
-lib64/libwfdconfigutils.so
-lib64/libwfdmminterface.so
-lib64/libwfdmmsink.so
-lib64/libwfdnative.so|b141873d1ffaba18703ac0e6148ecc9169b1f2a2
-lib64/libwfdrtsp.so
-lib64/libwfdsinksm.so
-lib64/libwfdsm.so
-lib64/libwfds.so
-lib64/libwfduibcinterface.so
-lib64/libwfduibcsinkinterface.so
-lib64/libwfduibcsink.so
-lib64/libwfduibcsrcinterface.so
-lib64/libwfduibcsrc.so
-lib/libFileMux.so
-lib/libdisplayconfig.so
-lib/libmmparser_lite.so
-lib/libmmosal.so
-lib/libmmrtpdecoder.so
-lib/libmmrtpencoder.so
-lib/libOmxMux.so
-lib/libqdMetaData.system.so
-lib/libwfdaac.so
-lib/libwfdavenhancements.so
-lib/libwfdcommonutils.so
-lib/libwfdconfigutils.so
-lib/libwfdclient.so
-lib/libwfdmmsrc_system.so
-lib/libwfdsinksm.so
-lib/libwfdmminterface.so
-lib/libwfdmmsink.so
-lib/libwfdrtsp.so
-lib/libwfdservice.so
-lib/libwfdsm.so
-lib/libwfduibcinterface.so
-lib/libwfduibcsink.so
-lib/libwfduibcsinkinterface.so
-lib/libwfduibcsrc.so
-lib/libwfduibcsrcinterface.so
 product/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
--priv-app/WfdService/WfdService.apk
+system/bin/wfdservice
+system/etc/init/wfdservice.rc
+system/etc/wfdconfigsink.xml
+-system/framework/WfdCommon.jar
+system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
+system/lib64/libFileMux.so
+system/lib64/libdisplayconfig.so
+system/lib64/libmmparser_lite.so
+system/lib64/libmmrtpdecoder.so
+system/lib64/libmmrtpencoder.so
+system/lib64/libmmosal.so
+system/lib64/libqdMetaData.system.so
+system/lib64/libwfdclient.so
+system/lib64/libwfdcommonutils.so
+system/lib64/libwfdconfigutils.so
+system/lib64/libwfdmminterface.so
+system/lib64/libwfdmmsink.so
+system/lib64/libwfdnative.so|b141873d1ffaba18703ac0e6148ecc9169b1f2a2
+system/lib64/libwfdrtsp.so
+system/lib64/libwfdsinksm.so
+system/lib64/libwfdsm.so
+system/lib64/libwfds.so
+system/lib64/libwfduibcinterface.so
+system/lib64/libwfduibcsinkinterface.so
+system/lib64/libwfduibcsink.so
+system/lib64/libwfduibcsrcinterface.so
+system/lib64/libwfduibcsrc.so
+system/lib/libFileMux.so
+system/lib/libdisplayconfig.so
+system/lib/libmmparser_lite.so
+system/lib/libmmosal.so
+system/lib/libmmrtpdecoder.so
+system/lib/libmmrtpencoder.so
+system/lib/libOmxMux.so
+system/lib/libqdMetaData.system.so
+system/lib/libwfdaac.so
+system/lib/libwfdavenhancements.so
+system/lib/libwfdcommonutils.so
+system/lib/libwfdconfigutils.so
+system/lib/libwfdclient.so
+system/lib/libwfdmmsrc_system.so
+system/lib/libwfdsinksm.so
+system/lib/libwfdmminterface.so
+system/lib/libwfdmmsink.so
+system/lib/libwfdrtsp.so
+system/lib/libwfdservice.so
+system/lib/libwfdsm.so
+system/lib/libwfduibcinterface.so
+system/lib/libwfduibcsink.so
+system/lib/libwfduibcsinkinterface.so
+system/lib/libwfduibcsrc.so
+system/lib/libwfduibcsrcinterface.so
+-system/priv-app/WfdService/WfdService.apk
