@@ -6,3 +6,6 @@ on boot
 
 on charger
     write /sys/class/backlight/panel0-backlight/brightness 150
+
+service cvphalservice /system/bin/true
+    disabled
