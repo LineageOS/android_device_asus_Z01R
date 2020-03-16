@@ -185,6 +185,7 @@ rsist.vendor.sensors.enable.mag_filter=true
 
 # USB
 vendor.usb.diag.func.name=diag
+vendor.usb.use_ffs_mtp=0
 
 # Vendor
 ro.vendor.qti.va_aosp.support=1
