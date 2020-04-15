@@ -160,6 +160,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/factory:factory
 
 # RIL
+ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_RIL_VARIANT := caf
 
 # Security patch level
