@@ -9,3 +9,5 @@ libOpenCL.so
 libnpu.so
 libhta_hexagon_runtime.so
 unnhal-acc-hta.so
+libprotobuf-cpp-full.so
+libprotobuf-cpp-lite.so

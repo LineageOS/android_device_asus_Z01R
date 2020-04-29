@@ -380,6 +380,11 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service-qti \
     power.sdm845
 
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-vendorcompat \
+    libprotobuf-cpp-lite-vendorcompat
+
 # QTI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
