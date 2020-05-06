@@ -42,3 +42,9 @@
 # Sysfs
 /sys/devices/platform/soc/18800000.qcom,icnss/fw_version                    u:object_r:sysfs_firmware:s0
 /sys/devices/platform/soc/894000.i2c/i2c-3/3-0038/fts_fw_version            u:object_r:sysfs_firmware:s0
+
+# Hexagon DSP-side executable needed for Halide operation
+# This is labeled as public_adsprpcd_file as it needs to be read by apps
+# (e.g. Google Camera App)
+/mnt/vendor/dsp/fastrpc_shell_3                 u:object_r:public_adsprpcd_file:s0
+
