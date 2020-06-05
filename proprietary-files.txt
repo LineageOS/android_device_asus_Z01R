@@ -147,8 +147,6 @@ vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
 
 # Bluetooth
-system/lib64/libbtconfigstore.so
-system/lib/libbtconfigstore.so
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/audio.bluetooth_qti.default.so
@@ -161,7 +159,6 @@ vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbt-hidlclient.so
 vendor/lib64/libbtnv.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so
 vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
@@ -173,7 +170,6 @@ vendor/lib/libbt-hidlclient.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbtnv.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib/vendor.qti.hardware.btconfigstore@1.0.so
 
 # Bluetooth (aptX)
 -system/app/aptxals/aptxals.apk

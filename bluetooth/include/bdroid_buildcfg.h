@@ -1,10 +1,9 @@
 /*
  *  Copyright (c) 2013, The Linux Foundation. All rights reserved.
- *  Not a Contribution, Apache license notifications and license are retained
- *  for attribution purposes only.
+ *  Not a Contribution.
  *
  * Copyright (C) 2012 The Android Open Source Project
- * Copyright (C) 2018 The LineageOS Project
+ * Copyright (C) 2018-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,8 +24,8 @@
 #define BTM_DEF_LOCAL_NAME "Asus Zenfone 5z"
 // Disables read remote device feature
 #define MAX_ACL_CONNECTIONS   16
-#define MAX_L2CAP_CHANNELS    16
+#define MAX_L2CAP_CHANNELS    32
 #define BLE_VND_INCLUDED   TRUE
-/* Increasing SEPs to 12 from 6 to support SHO/MCast i.e. two streams per codec */
-#define AVDT_NUM_SEPS 12
+#define GATT_MAX_PHY_CHANNEL  10
+#define AVDT_NUM_SEPS 35
 #endif
