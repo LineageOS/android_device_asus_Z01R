@@ -13,6 +13,11 @@ tunnel.audio.encode=true
 ro.kernel.ebpf.supported=true
 
 # Bluetooth
+persist.bluetooth.a2dp_offload.disabled=false
+persist.vendor.btstack.enable.twsplus=true
+persist.vendor.btstack.enable.twsplussho=true
+ro.bluetooth.a2dp_offload.supported=true
+ro.bluetooth.library_name=libbluetooth_qti.so
 vendor.bluetooth.soc=cherokee
 
 # Data modules
