@@ -162,6 +162,9 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 # RIL
 TARGET_RIL_VARIANT := caf
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2020-05-05
+
 # Sepolicy
 include device/qcom/sepolicy/sepolicy.mk
 
