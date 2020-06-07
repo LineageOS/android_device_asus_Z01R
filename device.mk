@@ -315,7 +315,13 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
     android.hardware.secure_element@1.0 \
     com.android.nfc_extras \
-    NfcNci \
+    com.gsma.services.nfc \
+    com.nxp.nfc.nq \
+    libnqnfc_nci_jni \
+    nfc_nci.nqx.default.hw \
+    nqnfcee_access.xml \
+    NQNfcNci \
+    nqnfcse_access.xml \
     Tag \
     vendor.nxp.hardware.nfc@1.2-service
 
@@ -349,7 +355,8 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    vendor/nxp/opensource/pn5xx
 
 # Telephony
 PRODUCT_PACKAGES += \
