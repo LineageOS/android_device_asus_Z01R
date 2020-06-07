@@ -125,6 +125,9 @@ TARGET_USES_ION := true
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
+# Media
+TARGET_PROVIDES_LIBPLATFORMCONFIG := true
+
 # Network Routing
 TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
 
