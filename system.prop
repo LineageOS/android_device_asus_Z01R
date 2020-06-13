@@ -60,3 +60,6 @@ telephony.lteOnCdmaDevice=1
 
 # RCS
 persist.rcs.supported=0
+
+# Zygote
+persist.device_config.runtime_native.usap_pool_enabled=true
