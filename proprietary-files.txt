@@ -176,6 +176,8 @@ lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 lib64/libFileMux.so
 lib64/libdisplayconfig.so
 lib64/libmmparser_lite.so
+lib64/libmmrtpdecoder.so
+lib64/libmmrtpencoder.so
 lib64/libmmosal.so
 lib64/libqdMetaData.system.so
 lib64/libwfdclient.so
@@ -183,7 +185,7 @@ lib64/libwfdcommonutils.so
 lib64/libwfdconfigutils.so
 lib64/libwfdmminterface.so
 lib64/libwfdmmsink.so
-lib64/libwfdnative.so
+lib64/libwfdnative.so|b141873d1ffaba18703ac0e6148ecc9169b1f2a2
 lib64/libwfdrtsp.so
 lib64/libwfdsinksm.so
 lib64/libwfdsm.so
@@ -206,6 +208,8 @@ lib/libwfdavenhancements.so
 lib/libwfdcommonutils.so
 lib/libwfdconfigutils.so
 lib/libwfdclient.so
+lib/libwfdmmsrc_system.so
+lib/libwfdsinksm.so
 lib/libwfdmminterface.so
 lib/libwfdmmsink.so
 lib/libwfdrtsp.so
@@ -216,4 +220,5 @@ lib/libwfduibcsink.so
 lib/libwfduibcsinkinterface.so
 lib/libwfduibcsrc.so
 lib/libwfduibcsrcinterface.so
+product/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 -priv-app/WfdService/WfdService.apk
