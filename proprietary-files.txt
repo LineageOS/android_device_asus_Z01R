@@ -13,7 +13,6 @@ lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 lib/DataSet/ispDB/ParameterDB.db
 product/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
 product/lib64/libseccam-ipc.so
-product/lib64/libseccamservice.so
 product/lib64/libseccam.so
 product/lib64/vendor.display.postproc@1.0.so
 product/lib64/vendor.qti.hardware.camera.device@1.0.so
@@ -37,7 +36,6 @@ product/lib/libmorpho_image_stab4.so
 product/lib/libmorpho_video_refiner.so
 product/lib/libQTEEConnector_system.so
 product/lib/libseccam-ipc.so
-product/lib/libseccamservice.so
 product/lib/libseccam.so
 product/lib/libxditk_arch.so
 product/lib/libxditk_DITAECInit.so
@@ -56,7 +54,6 @@ product/lib/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so
 product/lib/vendor.qti.hardware.scve.panorama@1.0.so
 product/lib/vendor.qti.hardware.seccam@1.0.so
 product/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
--product/priv-app/seccamservice/seccamservice.apk
 
 # CNE
 etc/cne/Nexus/ATT/ATT_profiles.xml
