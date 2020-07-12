@@ -2,6 +2,7 @@
 persist.audio.fluence.speaker=true
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
+qcom.hw.aac.encoder=true
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=7
 ro.qc.sdk.audio.fluencetype=none
@@ -39,3 +40,6 @@ DEVICE_PROVISIONED=1
 ril.subscription.types=NV,RUIM
 ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
+
+# RCS
+persist.rcs.supported=0
