@@ -266,9 +266,6 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
     power.qcom:64
 
-# Properties
--include $(LOCAL_PATH)/system_prop.mk
-
 # QTI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor
