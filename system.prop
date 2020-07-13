@@ -30,7 +30,6 @@ persist.dbg.vt_avail_ovr=1
 
 # Media
 audio.offload.video=true
-media.settings.xml=/system/etc/media_profiles_vendor.xml
 
 # Netflix custom property
 ro.netflix.bsp_rev=Q845-14477-1
