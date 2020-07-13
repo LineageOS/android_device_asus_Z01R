@@ -28,12 +28,7 @@
 #
 
 on early-init
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules pinctrl-wcd wcd-dsp-glink snd-soc-wcd-spi snd-soc-sdm845
     write /proc/sys/kernel/sched_boost 1
-    mkdir /dsp 0771 media media
-    mkdir /firmware 0771 system system
-    mkdir /bt_firmware 0771 system system
-    symlink /data/tombstones /tombstones
 
 on init
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1
@@ -53,6 +48,8 @@ on init
     chown cameraserver cameraserver /dev/cpuset/camera-daemon
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
+    chown cameraserver cameraserver /dev/cpuset/camera-daemon/cpus
+    chmod 0660 /dev/cpuset/camera-daemon/cpus
 
 on fs
     wait /dev/block/platform/soc/1d84000.ufshc
@@ -60,9 +57,13 @@ on fs
     mount_all /vendor/etc/fstab.qcom
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
-    swapon_all /vendor/etc/fstab.qcom
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
+
+on property:sys.boot_completed=1
+    # Enable ZRAM on boot_complete
+    swapon_all /vendor/etc/fstab.qcom
+
 
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
@@ -70,28 +71,16 @@ on post-fs
 
     write /dev/ipa 1
 
-service sec_nvm /vendor/bin/sec_nvm
-    class core
-    user system
-    group system
 
 on post-fs-data
-    mkdir /data/tombstones 0771 system system
-    mkdir /tombstones/modem 0771 system system
-    mkdir /tombstones/lpass 0771 system system
-    mkdir /tombstones/wcnss 0771 system system
-    mkdir /tombstones/dsps 0771 system system
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /data/vendor/nnhal 0700 system system
 
 # For cpusets initialize for Silver Only first and then Silver + Gold
 # Silver Only configuration cannot work with 0-7
 on boot
-    chown system system /sys/kernel/hbtp/display_pwr
-    start rmt_storage
-    start rfs_access
+    write /proc/sys/net/ipv4/tcp_mtu_probing 2
     write /dev/cpuset/top-app/cpus 0-3
-    write /dev/cpuset/audio-app/cpus 1-2
     write /dev/cpuset/foreground/cpus 0-3
     write /dev/cpuset/foreground/boost/cpus 0-3
     write /dev/cpuset/background/cpus 0-3
@@ -116,9 +105,6 @@ on boot && property:persist.vendor.usb.controller.default=*
 
 on property:vendor.usb.controller=*
     setprop sys.usb.controller ${vendor.usb.controller}
-
-#Load WLAN driver
-    insmod /vendor/lib/modules/qca_cld3_wlan.ko
 
 #start camera server as daemon
 #service qcamerasvr /system/bin/mm-qcamera-daemon
@@ -153,6 +139,13 @@ on property:sys.shutdown.requested=*
 on charger
     start vendor.power_off_alarm
     setprop sys.usb.configfs 1
+    mkdir /mnt/vendor/persist 0777 root system
+    wait /dev/block/platform/soc/1d84000.ufshc
+    symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
+    wait /dev/block/bootdevice/by-name/asdf
+    mount ext4 /dev/block/bootdevice/by-name/asdf /vendor/asdf nosuid noatime nodev barrier=1
+    chown root root /vendor/asdf
+    chmod 0775 /vendor/asdf
 
 ## import cne init file
 #on post-fs
@@ -164,11 +157,6 @@ on charger
 #
 #on property:persist.usb.chgdisabled=0
 #    write /sys/class/power_supply/battery/charging_enabled 1
-
-service spdaemon /vendor/bin/spdaemon
-    class core
-    user system
-    group system
 
 service hdcp_srm /vendor/bin/hdcp_srm
     class core

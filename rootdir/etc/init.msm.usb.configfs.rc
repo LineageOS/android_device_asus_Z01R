@@ -173,8 +173,8 @@ on property:sys.usb.config=rndis,none && property:sys.usb.configfs=1
     rm /config/usb_gadget/g1/configs/b.1/f7
     rm /config/usb_gadget/g1/configs/b.1/f8
     rm /config/usb_gadget/g1/configs/b.1/f9
-    write /config/usb_gadget/g1/idVendor 0x05C6
-    write /config/usb_gadget/g1/idProduct 0xF00E
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x5602
     symlink /config/usb_gadget/g1/functions/${vendor.usb.rndis.func.name}.rndis /config/usb_gadget/g1/configs/b.1/f1
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state rndis
@@ -205,8 +205,8 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=rndis,none,adb && pro
     rm /config/usb_gadget/g1/configs/b.1/f7
     rm /config/usb_gadget/g1/configs/b.1/f8
     rm /config/usb_gadget/g1/configs/b.1/f9
-    write /config/usb_gadget/g1/idVendor 0x05C6
-    write /config/usb_gadget/g1/idProduct 0x9024
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x5603
     symlink /config/usb_gadget/g1/functions/${vendor.usb.rndis.func.name}.rndis /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
@@ -1329,24 +1329,40 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=diag,diag_mdm,adb,cci
     setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
-    write /config/usb_gadget/g1/idVendor 0x18d1
-    write /config/usb_gadget/g1/idProduct 0x4ee7
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x7770
 
 on property:sys.usb.config=mtp && property:sys.usb.configfs=1
-    write /config/usb_gadget/g1/idVendor 0x18d1
-    write /config/usb_gadget/g1/idProduct 0x4ee1
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x5600
 
 on property:sys.usb.config=mtp,adb && property:sys.usb.configfs=1
-    write /config/usb_gadget/g1/idVendor 0x18d1
-    write /config/usb_gadget/g1/idProduct 0x4ee2
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x5601
+
+on property:sys.usb.config=mtp,mass_storage && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x5600
+
+on property:sys.usb.config=mtp,adb,mass_storage && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x5601
 
 on property:sys.usb.config=ptp && property:sys.usb.configfs=1
-    write /config/usb_gadget/g1/idVendor 0x18d1
-    write /config/usb_gadget/g1/idProduct 0x4ee5
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x5604
 
 on property:sys.usb.config=ptp,adb && property:sys.usb.configfs=1
-    write /config/usb_gadget/g1/idVendor 0x18d1
-    write /config/usb_gadget/g1/idProduct 0x4ee6
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x5605
+
+on property:sys.usb.config=ptp,mass_storage && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x5604
+
+on property:sys.usb.config=ptp,adb,mass_storage && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x5605
 
 on property:sys.usb.config=accessory && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor 0x18d1
@@ -1373,12 +1389,12 @@ on property:sys.usb.config=accessory,audio_source,adb && property:sys.usb.config
     write /config/usb_gadget/g1/idProduct 0x2d05
 
 on property:sys.usb.config=midi && property:sys.usb.configfs=1
-    write /config/usb_gadget/g1/idVendor 0x18d1
-    write /config/usb_gadget/g1/idProduct 0x4ee8
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x7778
 
 on property:sys.usb.config=midi,adb && property:sys.usb.configfs=1
-    write /config/usb_gadget/g1/idVendor 0x18d1
-    write /config/usb_gadget/g1/idProduct 0x4ee9
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x7779
 
 on property:vendor.usb.eud=1
     write /config/usb_gadget/g1/configs/b.1/MaxPower 1
@@ -1391,3 +1407,7 @@ on property:vendor.usb.eud=0
     write /sys/kernel/debug/pmic-votable/USB_ICL/force_val 0
     write /config/usb_gadget/g1/configs/b.1/MaxPower 0
     write /sys/module/eud/parameters/enable 0
+
+on property:sys.usb.config=midi,adb,mass_storage && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0b05
+    write /config/usb_gadget/g1/idProduct 0x7779

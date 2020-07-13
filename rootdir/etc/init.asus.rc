@@ -1,3 +1,5 @@
+#This is init.asus.rc for user build.
+
 # Custom ROM changes - start
 on boot
     # FocalTech Gesture
@@ -11,3 +13,233 @@ on charger
 service cvphalservice /system/bin/true
     disabled
 # Custom ROM changes - end
+
+on late-init
+    #set heavy-load thread into this cpuset for performance
+    mkdir /dev/cpuset/asus-boost
+    write /dev/cpuset/asus-boost/mems 0
+    write /dev/cpuset/asus-boost/cpus 4-7
+    chown system system /dev/cpuset/asus-boost
+    chown system system /dev/cpuset/asus-boost/tasks
+    chown system system /dev/cpuset/asus-boost/cgroup.procs
+    chmod 0660 /dev/cpuset/asus-boost/tasks
+    chmod 0660 /dev/cpuset/asus-boost/cgroup.procs
+
+on post-fs-data
+    # Permissions for Sensors
+    chown system system /dev/cm3602
+    chmod 0660 /dev/cm3602
+
+    chown system system /dev/proximitySensor
+    chmod 0660 /dev/proximitySensor
+
+    chown system system /dev/lightsensor
+    chmod 0660 /dev/lightsensor
+
+    chown system system /dev/asusRgbSensor
+    chmod 0660 /dev/asusRgbSensor
+
+    chown system system /sys/class/i2c-adapter/i2c-6/6-001c/mode
+    chmod 0774 /sys/class/i2c-adapter/i2c-6/6-001c/mode
+
+    chown system system /sys/class/timed_output/vibrator/vmax
+    chown system system /sys/class/capella_sensors/lightsensor/ls_rgbratio
+
+   # ASUS_BSP keybox
+    mkdir /mnt/vendor/persist/data/app_g 0700 system system
+
+    # ASUS_BSP ultrabatterylife mode
+    chmod 0777 /vendor/asdf/CHGLimit
+    chmod 0777 /vendor/asdf/CHGLimit_kernel
+
+    # Permissions for Sensors
+    chmod 0666 /sys/class/drm/hdr_mode
+
+    # DTS_EAGLE START
+    mkdir /data/vendor/audio/dts 0771 media audio
+
+    copy /data/misc/dts/dts_hpx_settings /data/vendor/audio/dts/dts_hpx_settings
+    chown audioserver audio /data/vendor/audio/dts/dts_hpx_settings
+    rm /data/misc/dts/dts_hpx_settings
+    rmdir /data/misc/dts
+
+    setprop ro.vendor.dts.licensepath "/vendor/etc/dts/"
+    setprop ro.vendor.dts.cfgpath "/vendor/etc/dts/"
+    # DTS_EAGLE END
+
+    # add for calibration
+    mkdir /data/vendor/misc/amp 0777 audio audio
+    write /data/vendor/misc/amp/tfa98xx-sysfs.lck 0
+
+    write /data/vendor/misc/amp/cal_self_speaker0_data_tmp.txt 0
+    write /data/vendor/misc/amp/cal_self_receiver0_data_tmp.txt 0
+    write /data/vendor/misc/amp/cal_mtpex_data_tmp.txt 0
+    write /data/vendor/misc/amp/cal_s_speaker0_log.txt 0
+    write /data/vendor/misc/amp/SPK_REC_calibration_value_range 0
+
+    restorecon_recursive /data/vendor/misc/amp/cal_self_speaker0_data_tmp.txt
+    restorecon_recursive /data/vendor/misc/amp/cal_self_receiver0_data_tmp.txt
+    restorecon_recursive /data/vendor/misc/amp/cal_mtpex_data_tmp.txt
+    restorecon_recursive /data/vendor/misc/amp/tfa98xx-sysfs.lck
+    restorecon_recursive /data/vendor/misc/amp/cal_s_speaker0_log.txt
+    restorecon_recursive /data/vendor/misc/amp/SPK_REC_calibration_value_range
+
+    chmod 0777 /data/vendor/misc/amp/cal_self_speaker0_data_tmp.txt
+    chmod 0777 /data/vendor/misc/amp/cal_self_receiver0_data_tmp.txt
+    chmod 0777 /data/vendor/misc/amp/cal_mtpex_data_tmp.txt
+    chmod 0777 /data/vendor/misc/amp/tfa98xx-sysfs.lck
+    chmod 0777 /data/vendor/misc/amp/cal_s_speaker0_log.txt
+    chmod 0777 /data/vendor/misc/amp/SPK_REC_calibration_value_range
+
+    chmod 0777 /sys/bus/i2c/devices/i2c-2/2-0034/reg
+    chmod 0777 /sys/bus/i2c/devices/i2c-2/2-0034/rw
+    chmod 0777 /sys/bus/i2c/devices/i2c-2/2-0035/reg
+    chmod 0777 /sys/bus/i2c/devices/i2c-2/2-0035/rw
+    chmod 0777 /dev/i2c-2
+
+    chown system system /sys/bus/i2c/devices/i2c-2/2-0034/reg
+    chown system system /sys/bus/i2c/devices/i2c-2/2-0034/rw
+    chown system system /sys/bus/i2c/devices/i2c-2/2-0035/reg
+    chown system system /sys/bus/i2c/devices/i2c-2/2-0035/rw
+    chown system system /dev/i2c-2
+
+    # ASUS_IMS
+    mkdir /data/vendor/camera 0777 camera camera
+    chmod 0777 /data/vendor/camera
+
+# for ASUS speaker&receiver calibration service
+on property:persist.odm.asus.audiocalibration=1
+    start calibration
+
+service calibration /vendor/bin/sh /vendor/bin/amp_calibration.sh
+    class late_start
+    disabled
+    user system
+    oneshot
+    group system audio root sdcard_rw sdcard_r media_rw shell
+    seclabel u:r:amp_calibration:s0
+
+on load_persist_props_action
+    class_start pre-core
+
+on fs
+    # Start HW service manager early
+    start hwservicemanager
+    chmod 0770 /vendor/factory
+    restorecon_recursive /vendor/factory
+
+    chmod 770 /mnt/vendor/persist
+	chmod 770 /mnt/vendor/persist/data
+
+    # Mount ADF
+    wait /dev/block/bootdevice/by-name/ADF
+    mount ext4 /dev/block/bootdevice/by-name/ADF /vendor/ADF rw noatime
+    chown system system /vendor/ADF
+    chmod 0775 /vendor/ADF
+    restorecon_recursive /vendor/ADF
+
+    # We don't use Asus Product Demo, so we don't import that script and just disable charger limit
+    write /proc/driver/charger_limit_enable 0
+
+
+on boot
+    chown system system /sys/class/leds/red/pwm_us
+    chown system system /sys/class/leds/green/pwm_us
+    chown system system /sys/class/leds/blue/pwm_us
+    chown system system /sys/class/leds/vibrator/vmax_mv
+
+#ASUS_BSP tyree_liu Permission for Touch dclick Mode
+    chown system system /sys/bus/i2c/devices/3-0038/fts_dclick_mode
+#ASUS_BSP tyree_liu Permission for Touch swipeup Mode
+    chown system system /sys/bus/i2c/devices/3-0038/fts_swipe_mode
+#ASUS_BSP tyree_liu Permissions for Touch Gesture Mode
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_mode
+# Permissions for Touch glove Mode
+    chown system system /sys/bus/i2c/devices/3-0038/fts_glove_mode
+# Permissions for Touch Cover Mode
+    chown system system /sys/bus/i2c/devices/3-0038/fts_cover_mode
+
+    # ASUS_BSP +++ jeff_gu add timer to dump wakeup_sources
+    chown system system /sys/power/dump_wakeup_sources_timer
+    # ASUS_BSP --- jeff_gu add timer to dump wakeup_sources
+
+    # "GPU performance mode"
+    chown system system /sys/class/kgsl/kgsl-3d0/bus_split
+    chmod 0660 /sys/class/kgsl/kgsl-3d0/bus_split
+    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/governor
+    chmod 0660 /sys/class/kgsl/kgsl-3d0/devfreq/governor
+    chown system system /sys/class/kgsl/kgsl-3d0/force_bus_on
+    chmod 0660 /sys/class/kgsl/kgsl-3d0/force_bus_on
+    chown system system /sys/class/kgsl/kgsl-3d0/force_rail_on
+    chmod 0660 /sys/class/kgsl/kgsl-3d0/force_rail_on
+    chown system system /sys/class/kgsl/kgsl-3d0/force_clk_on
+    chmod 0660 /sys/class/kgsl/kgsl-3d0/force_clk_on
+    chown system system /sys/class/kgsl/kgsl-3d0/idle_timer
+    chmod 0660 /sys/class/kgsl/kgsl-3d0/idle_timer
+
+    # "clkscale_enable"
+    chown system system /sys/class/scsi_host/host0/../../../clkscale_enable
+    chmod 0660 /sys/class/scsi_host/host0/../../../clkscale_enable
+
+
+service customize_early /vendor/bin/customize_early
+    user root
+    group radio system
+    disabled
+    oneshot
+
+service customize_mount /vendor/bin/customize_mount
+    class pre-core
+    user root
+    group system
+    oneshot
+
+# import customize service late
+service customize_late /vendor/bin/customize_late
+    user root
+    group system
+    disabled
+    oneshot
+
+
+on property:sys.boot_completed=1
+    start customize_late
+    start VerifyVoucher
+    write /proc/boot_completed_prop 1
+    write /sys/block/sda/queue/write_cache "write through"
+    start vold_coldboot
+
+
+#ASUS_BSP guochang thermal engine +++
+on property:sys.restart.thermal=1
+	restart thermal-engine
+
+on property:sys.boot_completed=1
+#ASUS_BSP bob_mode_switch +++
+setprop persist.odm.asus.receiverEnable "0"
+setprop asus.sensor.proximity_status "-1"
+#ASUS_BSP bob_mode_switch ---
+
+on charger
+    wait /dev/block/bootdevice/by-name/factory
+    mount ext4 /dev/block/bootdevice/by-name/factory /factory ro context=u:object_r:fac_file:s0
+    chown system system /vendor/factory
+    chmod 0770 /vendor/factory
+    start customize_early
+    wait /dev/block/bootdevice/by-name/asdf
+    mount ext4 /dev/block/bootdevice/by-name/asdf /vendor/asdf nosuid noatime nodev barrier=1
+    chown root root /vendor/asdf
+    chmod 0775 /vendor/asdf
+	write /vendor/asdf/CHGLimit 0
+	write /vendor/asdf/CHGLimit_kernel 0
+    write /proc/boot_completed_prop 1
+
+# ASUS_BSP +++ bob_mode_switch
+# persist.odm.asus.receiverEnable: 0 - only receiver on, 1 - receiver off
+on property:persist.odm.asus.receiverEnable=1
+    write /proc/bob_mode_switch 1
+
+on property:persist.odm.asus.receiverEnable=0
+    write /proc/bob_mode_switch 0
+# ASUS_BSP --- bob_mode_switch
+
