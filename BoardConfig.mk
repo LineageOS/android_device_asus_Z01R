@@ -19,6 +19,9 @@ DEVICE_PATH := device/asus/Z01R
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := ASUS_Z01R_1
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
