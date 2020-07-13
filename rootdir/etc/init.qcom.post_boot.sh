@@ -488,6 +488,7 @@ else
         # Calculate vmpressure_file_min as below & set for 64 bit:
         # vmpressure_file_min = last_lmk_bin + (last_lmk_bin - last_but_one_lmk_bin)
         if [ "$arch_type" == "aarch64" ]; then
+            echo "48432,63040,70648,95256,140296,155640" > /sys/module/lowmemorykiller/parameters/minfree
             minfree_series=`cat /sys/module/lowmemorykiller/parameters/minfree`
             minfree_1="${minfree_series#*,}" ; rem_minfree_1="${minfree_1%%,*}"
             minfree_2="${minfree_1#*,}" ; rem_minfree_2="${minfree_2%%,*}"
@@ -510,7 +511,7 @@ else
 
         # Enable adaptive LMK for all targets &
         # use Google default LMK series for all 64-bit targets >=2GB.
-        echo 1 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
+        echo 0 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
 
         # Enable oom_reaper
         if [ -f /sys/module/lowmemorykiller/parameters/oom_reaper ]; then
@@ -580,9 +581,6 @@ function start_hbtp()
 {
         # Start the Host based Touch processing but not in the power off mode.
         bootmode=`getprop ro.bootmode`
-        if [ "charger" != $bootmode ]; then
-                start vendor.hbtp
-        fi
 }
 
 case "$target" in
@@ -4285,6 +4283,9 @@ case "$target" in
 
         # Enable oom_reaper
         echo 1 > /sys/module/lowmemorykiller/parameters/oom_reaper
+
+       # Set Memory parameters
+       configure_memory_parameters
 
         # Enable bus-dcvs
         for cpubw in /sys/class/devfreq/*qcom,cpubw*

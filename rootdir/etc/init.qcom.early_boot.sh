@@ -58,7 +58,7 @@ elif [ -f /sys/class/graphics/fb0/virtual_size ]; then
     fb_width=${res%,*}
 fi
 
-log -t BOOT -p i "MSM target '$1', SoC '$soc_hwplatform', HwID '$soc_hwid', SoC ver '$soc_hwver'"
+#log -t BOOT -p i "MSM target '$1', SoC '$soc_hwplatform', HwID '$soc_hwid', SoC ver '$soc_hwver'"
 
 #For drm based display driver
 vbfile=/sys/module/drm/parameters/vblankoffdelay
@@ -78,7 +78,7 @@ function set_density_by_fb() {
         elif [ $fb_width -ge 1440 ]; then
            setprop vendor.display.lcd_density 560
         elif [ $fb_width -ge 1080 ]; then
-           setprop vendor.display.lcd_density 480
+           setprop vendor.display.lcd_density 420
         elif [ $fb_width -ge 720 ]; then
            setprop vendor.display.lcd_density 320 #for 720X1280 resolution
         elif [ $fb_width -ge 480 ]; then
@@ -290,7 +290,7 @@ case "$target" in
         case "$soc_hwplatform" in
             *)
                 if [ $fb_width -le 1600 ]; then
-                    setprop vendor.display.lcd_density 560
+                    setprop vendor.display.lcd_density 480
                 else
                     setprop vendor.display.lcd_density 640
                 fi
@@ -376,45 +376,6 @@ esac
 #property if any target is setting forcefully.
 set_density_by_fb
 
-
-# set Lilliput LCD density for ADP
-product=`getprop ro.build.product`
-
-case "$product" in
-        "msmnile_au")
-         setprop vendor.display.lcd_density 160
-         echo 902400000 > /sys/class/devfreq/soc:qcom,cpu0-cpu-l3-lat/min_freq
-         echo 1612800000 > /sys/class/devfreq/soc:qcom,cpu0-cpu-l3-lat/max_freq
-         echo 902400000 > /sys/class/devfreq/soc:qcom,cpu4-cpu-l3-lat/min_freq
-         echo 1612800000 > /sys/class/devfreq/soc:qcom,cpu4-cpu-l3-lat/max_freq
-         ;;
-        *)
-        ;;
-esac
-case "$product" in
-        "sm6150_au")
-         setprop vendor.display.lcd_density 160
-         ;;
-        *)
-        ;;
-esac
-case "$product" in
-        "sdmshrike_au")
-         setprop vendor.display.lcd_density 160
-         echo 940800000 > /sys/class/devfreq/soc:qcom,cpu0-cpu-l3-lat/min_freq
-         echo 940800000 > /sys/class/devfreq/soc:qcom,cpu4-cpu-l3-lat/min_freq
-         ;;
-        *)
-        ;;
-esac
-
-case "$product" in
-        "msmnile_gvmq")
-         setprop vendor.display.lcd_density 160
-         ;;
-        *)
-        ;;
-esac
 # Setup display nodes & permissions
 # HDMI can be fb1 or fb2
 # Loop through the sysfs nodes and determine
@@ -429,21 +390,6 @@ function set_perms() {
 # check for the type of driver FB or DRM
 fb_driver=/sys/class/graphics/fb0
 if [ -e "$fb_driver" ]
-then
-    # check for mdp caps
-    file=/sys/class/graphics/fb0/mdp/caps
-    if [ -f "$file" ]
-    then
-        setprop vendor.gralloc.disable_ubwc 1
-        cat $file | while read line; do
-          case "$line" in
-                    *"ubwc"*)
-                    setprop vendor.gralloc.enable_fb_ubwc 1
-                    setprop vendor.gralloc.disable_ubwc 0
-                esac
-        done
-    fi
-else
     set_perms /sys/devices/virtual/hdcp/msm_hdcp/min_level_change system.graphics 0660
 fi
 
