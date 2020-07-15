@@ -34,6 +34,10 @@ audio.offload.video=true
 # Netflix custom property
 ro.netflix.bsp_rev=Q845-14477-1
 
+# Platform
+ro.board.platform=sdm845
+ro.product.board=sdm845
+
 # Radio
 DEVICE_PROVISIONED=1
 ril.subscription.types=NV,RUIM
