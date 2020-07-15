@@ -300,7 +300,8 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.asus_Z01R
+    android.hardware.light@2.0-service.asus_Z01R \
+    lights.sdm845
 
 # Media
 PRODUCT_PACKAGES += \
@@ -409,7 +410,8 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service
+    android.hardware.thermal@1.0-service \
+    thermal.sdm845
 
 # Trust HAL
 PRODUCT_PACKAGES += \
@@ -443,7 +445,8 @@ PRODUCT_TARGET_VNDK_VERSION := 29
 # VR
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-impl \
-    android.hardware.vr@1.0-service
+    android.hardware.vr@1.0-service \
+    vr.sdm845
 
 # WiFi
 PRODUCT_PACKAGES += \
