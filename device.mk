@@ -371,6 +371,10 @@ PRODUCT_PACKAGES += \
     vendor_factory_mountpoint \
     vendor_firmware_mnt_mountpoint
 
+# Perfd (dummy)
+PRODUCT_PACKAGES += \
+    libqti-perfd-client
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3-service.Z01R-libperfmgr
