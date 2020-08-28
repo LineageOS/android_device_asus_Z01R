@@ -56,6 +56,21 @@ if [ -z "$SRC" ]; then
     SRC=adb
 fi
 
+
+function blob_fixup() {
+    case "${1}" in
+
+    # Remove unused dependencies
+    vendor/lib64/hw/fingerprint.default.so | vendor/lib64/libgoodixhwfingerprint.so | vendor/lib64/libgoodixfingerprintd_binder.so | vendor/lib64/libvendor.goodix.hardware.fingerprintextension@1.0.so)
+        patchelf --remove-needed libbacktrace.so "${2}"
+        patchelf --remove-needed libunwind.so "${2}"
+        patchelf --remove-needed libkeystore_binder.so "${2}"
+        patchelf --remove-needed libkeymaster_messages.so "${2}"
+        ;;
+
+    esac
+}
+
 # Initialize the helper for common device
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true "$CLEAN_VENDOR"
 
