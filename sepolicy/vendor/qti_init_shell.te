@@ -1,0 +1,2 @@
+allow qti_init_shell configfs:dir { add_name write };
+allow qti_init_shell configfs:file create;

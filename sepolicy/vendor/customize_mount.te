@@ -1,0 +1,19 @@
+type customize_mount, domain;
+type customize_mount_exec, exec_type, vendor_file_type, file_type;
+
+#Allow for transition from init domain to customize_mount
+init_daemon_domain(customize_mount)
+
+allow customize_mount proc:file read;
+
+allow customize_mount block_device:dir search;
+allow customize_mount sysconf_block_device:blk_file { open read write };
+allow customize_mount init:unix_stream_socket connectto;
+allow customize_mount kmsg_device:chr_file { getattr open write };
+allow customize_mount proc:file { open read };
+allow customize_mount proc_cmdline:file { open read };
+allow customize_mount proc_meminfo:file { open read };
+allow customize_mount property_socket:sock_file write;
+allow customize_mount sysfs:file { open read };
+
+get_prop(customize_mount, customize_prop)

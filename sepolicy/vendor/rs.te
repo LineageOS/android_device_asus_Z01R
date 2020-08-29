@@ -1,0 +1,10 @@
+allow rs hal_graphics_allocator_default:fd use;
+allow rs mediaswcodec:fd use;
+allow rs surfaceflinger:fd use;
+allow rs system_server:fd use;
+
+allow rs surfaceflinger:unix_stream_socket { read write };
+allow rs system_server:unix_stream_socket { read write };
+
+allow rs app_data_file:file r_file_perms;
+allow rs sdcardfs:file r_file_perms;
