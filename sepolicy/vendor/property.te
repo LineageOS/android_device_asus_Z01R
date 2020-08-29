@@ -1,0 +1,5 @@
+type customize_prop, property_type;
+type fingerprint_goodix_prop, property_type;
+type thermal_prop, property_type;
+type vendor_fm_prop, property_type;
+type vendor_sensors_prop, property_type;

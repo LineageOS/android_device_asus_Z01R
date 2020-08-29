@@ -1,0 +1,83 @@
+# ASUS Customize
+asus.                                               u:object_r:customize_prop:s0
+asuscontacts.adn.init.done                          u:object_r:customize_prop:s0
+atd.keybox.ready                                    u:object_r:customize_prop:s0
+atd.keymaster.ready                                 u:object_r:customize_prop:s0
+factory.adbon                                       u:object_r:customize_prop:s0
+ril.ftm.mode                                        u:object_r:customize_prop:s0
+ro.asus                                             u:object_r:customize_prop:s0
+ro.auth.on                                          u:object_r:customize_prop:s0
+ro.btmac                                            u:object_r:customize_prop:s0
+ro.build.asus.                                      u:object_r:customize_prop:s0
+ro.build.csc.version                                u:object_r:customize_prop:s0
+ro.config.CID                                       u:object_r:customize_prop:s0
+ro.config.idcode                                    u:object_r:customize_prop:s0
+ro.config.revenuecountry                            u:object_r:customize_prop:s0
+ro.config.SIM_ID                                    u:object_r:customize_prop:s0
+ro.config.versatility                               u:object_r:customize_prop:s0
+ro.contact.name                                     u:object_r:customize_prop:s0
+ro.cpufreq                                          u:object_r:customize_prop:s0
+ro.deviceid                                         u:object_r:customize_prop:s0
+ro.fsn                                              u:object_r:customize_prop:s0
+ro.isn                                              u:object_r:customize_prop:s0
+ro.memsize                                          u:object_r:customize_prop:s0
+ro.product.carrier                                  u:object_r:customize_prop:s0
+ro.product.system.brand                             u:object_r:customize_prop:s0
+ro.wifimac                                          u:object_r:customize_prop:s0
+persist.asus.                                       u:object_r:customize_prop:s0
+persist.gps.debug_nmea                              u:object_r:customize_prop:s0
+persist.sys.cta.security                            u:object_r:customize_prop:s0
+persist.sys.setupwizard.active                      u:object_r:customize_prop:s0
+sys.asus.                                           u:object_r:customize_prop:s0
+touch.version.driver                                u:object_r:customize_prop:s0
+vendor.wlan.firmware.version                        u:object_r:customize_prop:s0
+vendor.wlan.driver.version                          u:object_r:customize_prop:s0
+wifi.version.driver                                 u:object_r:customize_prop:s0
+
+# Audio
+audio.sys.noisy.broadcast.delay                     u:object_r:vendor_audio_prop:s0
+audio.sys.offload.pstimeout.secs                    u:object_r:vendor_audio_prop:s0
+persist.audio.fluence.voicecomm                     u:object_r:vendor_audio_prop:s0
+use.audio.eu.parameters                             u:object_r:vendor_audio_prop:s0
+
+# Camera
+camera.                                             u:object_r:camera_prop:s0
+camera.qcom.misc.disable                            u:object_r:default_prop:s0
+media.camera.debug.loglevel                         u:object_r:camera_prop:s0
+persist.camera.                                     u:object_r:camera_prop:s0
+persist.vendor.camera.                              u:object_r:camera_prop:s0
+vendor.debug.camera.                                u:object_r:camera_prop:s0
+
+# Fingerprint
+gf.debug.dump_data                                  u:object_r:fingerprint_goodix_prop:s0
+goodix.fp.service.ready                             u:object_r:fingerprint_goodix_prop:s0
+goodix.version.                                     u:object_r:fingerprint_goodix_prop:s0
+fp.version.driver                                   u:object_r:fingerprint_goodix_prop:s0
+
+# FM
+ro.vendor.fm.use_audio_session                      u:object_r:vendor_fm_prop:s0
+
+# NFC
+persist.nfc.core_reset_debug_info                   u:object_r:nfc_nq_prop:s0
+persist.nfc.hci_network_reset_req                   u:object_r:nfc_nq_prop:s0
+
+# RIL
+persist.data.iwlan.enable                           u:object_r:vendor_default_prop:s0
+
+# Sensor
+asus.sensor.                                        u:object_r:sensors_prop:s0
+persist.hal.light.hardcode                          u:object_r:sensors_prop:s0
+persist.hal.Proximity.hardcode                      u:object_r:sensors_prop:s0
+persist.vendor.sensors.diag_buffer_mode             u:object_r:vendor_sensors_prop:s0
+persist.vendor.sensors.enable.mag_filter            u:object_r:vendor_sensors_prop:s0
+
+# Thermal
+sys.asus.tempc                                      u:object_r:thermal_prop:s0
+sys.restart.thermal                                 u:object_r:thermal_prop:s0
+sys.thermald.bchmode                                u:object_r:thermal_prop:s0
+sys.thermald.bchmode.log.on                         u:object_r:thermal_prop:s0
+sys.thermald.charging.limited                       u:object_r:thermal_prop:s0
+sys.thermald.cpu.offline                            u:object_r:thermal_prop:s0
+sys.thermald.disabled                               u:object_r:thermal_prop:s0
+sys.thermald.mode                                   u:object_r:thermal_prop:s0
+sys.thermald.profile                                u:object_r:thermal_prop:s0

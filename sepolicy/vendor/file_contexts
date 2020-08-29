@@ -1,16 +1,37 @@
+# Camera
+/vendor/lib/DataSet(/.*)?                                                   u:object_r:dataset_file:s0
+
+# Devices
+/dev/block/platform/soc/1d84000.ufshc/by-name/batinfo                       u:object_r:batinfo_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/factory		                u:object_r:factory_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/sysconf                       u:object_r:sysconf_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/xrom_[ab]		                u:object_r:system_block_device:s0
+/dev/goodix_fp                                                              u:object_r:fingerprint_device:s0
+/dev/lightsensor                                                            u:object_r:sensor_device:s0
+/dev/proximitySensor                                                        u:object_r:sensor_device:s0
+
+# Executables
+/vendor/bin/customize_late                                                  u:object_r:customize_late_exec:s0
+/vendor/bin/customize_mount		                                            u:object_r:customize_mount_exec:s0
+
 # Files in rootfs
-/ADF(/.*)?		        u:object_r:demoapp_file:s0
-/APD(/.*)?		        u:object_r:demoapp_file:s0
-/asdf(/.*)?		        u:object_r:log_file:s0
-/factory(/.*)?          u:object_r:fac_file:s0
-/xrom(/.*)?		        u:object_r:xrom_file:s0
+/ADF(/.*)?		                                                            u:object_r:demoapp_file:s0
+/APD(/.*)?		                                                            u:object_r:demoapp_file:s0
+/asdf(/.*)?		                                                            u:object_r:log_file:s0
+/(factory|vendor/factory)(/.*)?		                                        u:object_r:fac_file:s0
+/xrom(/.*)?		                                                            u:object_r:system_file:s0
 
 # Fingerprint related nodes
-/sys/devices/platform/soc/0.goodix_gf5228/proximity_state        u:object_r:sysfs_fp_proximity:s0
+/sys/devices/platform/soc/0.goodix_gf5228/proximity_state                   u:object_r:sysfs_fp_proximity:s0
 
 # Graphics nodes
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/hbm_status        u:object_r:sysfs_graphics:s0
 
 # HALs
-/vendor/bin/hw/android\.hardware\.light@2\.0-service\.asus_sdm845                                       u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/android\.hardware\.light@2\.0-service\.asus_Z01R                                         u:object_r:hal_light_default_exec:s0
 /vendor/bin/hw/lineage\.touch@1\.0-service\.asus_Z01R	                                                u:object_r:hal_lineage_touch_asus_Z01R_exec:s0
+/vendor/bin/hw/android\.hardware\.power@1\.3-service\.asus_Z01R-libperfmgr                              u:object_r:hal_power_default_exec:s0
+
+# Sysfs
+/sys/devices/platform/soc/18800000.qcom,icnss/fw_version                    u:object_r:sysfs_firmware:s0
+/sys/devices/platform/soc/894000.i2c/i2c-3/3-0038/fts_fw_version            u:object_r:sysfs_firmware:s0

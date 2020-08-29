@@ -1,0 +1,4 @@
+allow rild proc:file { getattr open read write };
+allow rild proc_evtlog:file write;
+
+set_prop(rild, customize_prop)
