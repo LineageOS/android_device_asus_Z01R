@@ -371,6 +371,10 @@ PRODUCT_PACKAGES += \
     Tag \
     vendor.nxp.hardware.nfc@1.2-service
 
+# Privapp-permissions for Z01R
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-Z01R.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-Z01R.xml
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3-service.asus_Z01R-libperfmgr \
