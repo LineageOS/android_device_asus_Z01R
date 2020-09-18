@@ -184,8 +184,8 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-01-05
 
-# Sepolicy
-include device/qcom/sepolicy/sepolicy.mk
+# SELinux
+include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
