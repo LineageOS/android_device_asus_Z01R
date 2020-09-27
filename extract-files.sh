@@ -62,6 +62,11 @@ function blob_fixup() {
         "${PATCHELF}" --remove-needed libkeystore_binder.so "${2}"
         "${PATCHELF}" --remove-needed libkeymaster_messages.so "${2}"
         ;;
+
+    product/lib/libdpmframework.so | product/lib64/libdpmframework.so)
+        # Use libcutils-v29.so for libdpmframework.so
+        sed -i "s/libhidltransport.so/libcutils-v29.so\x00\x00\x00/" "${2}"
+        ;;
     esac
 }
 
