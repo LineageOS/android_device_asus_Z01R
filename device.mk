@@ -368,7 +368,7 @@ PRODUCT_PACKAGES += \
     NQNfcNci \
     nqnfcse_access.xml \
     Tag \
-    vendor.nxp.hardware.nfc@1.2-service
+    vendor.nxp.hardware.nfc@2.0-service
 
 # Power
 PRODUCT_PACKAGES += \
