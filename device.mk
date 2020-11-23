@@ -125,7 +125,6 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
-    libcirrusspkrprot \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
@@ -226,7 +225,6 @@ PRODUCT_PACKAGES += \
     hwcomposer.sdm845 \
     libdisplayconfig.qti \
     libqdMetaData \
-    libqdMetaData.system \
     libtinyxml \
     memtrack.sdm845 \
     vendor.display.config@1.0.vendor \
@@ -253,7 +251,6 @@ PRODUCT_PACKAGES += \
 # FM
 PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl \
-    android.hardware.broadcastradio@1.0-service \
     FM2 \
     libqcomfm_jni \
     qcom.fmradio
@@ -262,7 +259,6 @@ PRODUCT_BOOT_JARS += qcom.fmradio
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti
 
 PRODUCT_COPY_FILES += \
@@ -317,7 +313,6 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-impl \
     libavservices_minijail \
     libavservices_minijail.vendor \
     libc2dcolorconvert \
@@ -365,13 +360,10 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
     android.hardware.secure_element@1.2 \
     com.android.nfc_extras \
-    com.gsma.services.nfc \
     com.nxp.nfc.nq \
     libnqnfc_nci_jni \
     nfc_nci.nqx.default.hw \
-    nqnfcee_access.xml \
     NQNfcNci \
-    nqnfcse_access.xml \
     Tag \
     vendor.nxp.hardware.nfc@2.0-service
 
@@ -443,7 +435,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl:64 \
     android.hardware.thermal@1.0-service \
-    thermal.sdm845
 
 # Treble
 PRODUCT_USE_VNDK_OVERRIDE := true
