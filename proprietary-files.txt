@@ -1,4 +1,4 @@
-# Common proprietary files - from Z01R's WW_user_100.10.107.99_20200906 version, unless pinned
+# Common proprietary files - from Z01R's WW_user_100.10.107.110_20201118 version, unless pinned
 
 # ACDB
 vendor/etc/acdbdata/MTP/ER2/MTP_Bluetooth_cal_ER2.acdb
