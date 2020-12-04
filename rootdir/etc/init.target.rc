@@ -142,8 +142,6 @@ on charger
     mkdir /mnt/vendor/persist 0777 root system
     wait /dev/block/platform/soc/1d84000.ufshc
     symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
-    wait /dev/block/bootdevice/by-name/asdf
-    mount ext4 /dev/block/bootdevice/by-name/asdf /vendor/asdf nosuid noatime nodev barrier=1
     chown root root /vendor/asdf
     chmod 0775 /vendor/asdf
 
