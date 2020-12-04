@@ -131,9 +131,6 @@ on fs
     chmod 770 /mnt/vendor/persist
 	chmod 770 /mnt/vendor/persist/data
 
-    # Mount ADF
-    wait /dev/block/bootdevice/by-name/ADF
-    mount ext4 /dev/block/bootdevice/by-name/ADF /vendor/ADF rw noatime
     chown system system /vendor/ADF
     chmod 0775 /vendor/ADF
     restorecon_recursive /vendor/ADF
@@ -221,13 +218,9 @@ setprop asus.sensor.proximity_status "-1"
 #ASUS_BSP bob_mode_switch ---
 
 on charger
-    wait /dev/block/bootdevice/by-name/factory
-    mount ext4 /dev/block/bootdevice/by-name/factory /factory ro context=u:object_r:fac_file:s0
     chown system system /vendor/factory
     chmod 0770 /vendor/factory
     start customize_early
-    wait /dev/block/bootdevice/by-name/asdf
-    mount ext4 /dev/block/bootdevice/by-name/asdf /vendor/asdf nosuid noatime nodev barrier=1
     chown root root /vendor/asdf
     chmod 0775 /vendor/asdf
 	write /vendor/asdf/CHGLimit 0
@@ -242,4 +235,3 @@ on property:persist.odm.asus.receiverEnable=1
 on property:persist.odm.asus.receiverEnable=0
     write /proc/bob_mode_switch 0
 # ASUS_BSP --- bob_mode_switch
-
