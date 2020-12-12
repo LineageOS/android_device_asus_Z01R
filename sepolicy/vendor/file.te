@@ -6,6 +6,7 @@ type proc_evtlog, proc_type, sysfs_type, fs_type;
 type proc_touchscreen, proc_type, sysfs_type, fs_type;
 
 # Files in rootfs
+type batinfo_file, file_type;
 type demoapp_file, file_type;
 type fac_file, vendor_file_type, file_type;
 allow fac_file self:filesystem associate;
