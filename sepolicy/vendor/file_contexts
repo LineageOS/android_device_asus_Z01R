@@ -18,6 +18,7 @@
 /ADF(/.*)?		                                                            u:object_r:demoapp_file:s0
 /APD(/.*)?		                                                            u:object_r:demoapp_file:s0
 /asdf(/.*)?		                                                            u:object_r:log_file:s0
+/batinfo		                                                            u:object_r:batinfo_file:s0
 /(factory|vendor/factory)(/.*)?		                                        u:object_r:fac_file:s0
 /xrom(/.*)?		                                                            u:object_r:system_file:s0
 
