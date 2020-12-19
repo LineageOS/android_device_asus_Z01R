@@ -554,12 +554,12 @@ vendor/etc/firmware/goodixfp.b07
 vendor/etc/firmware/goodixfp.mdt
 
 # FM
--product/lib/vendor.qti.hardware.fm@1.0.so
--product/lib64/vendor.qti.hardware.fm@1.0.so
-system/lib/fm_helium.so
-system/lib/libfm-hci.so
-system/lib64/fm_helium.so
-system/lib64/libfm-hci.so
+-product/lib/vendor.qti.hardware.fm@1.0.so:system_ext/lib/vendor.qti.hardware.fm@1.0.so
+-product/lib64/vendor.qti.hardware.fm@1.0.so:system_ext/lib64/vendor.qti.hardware.fm@1.0.so
+system/lib/fm_helium.so:system_ext/lib/fm_helium.so
+system/lib/libfm-hci.so:system_ext/lib/libfm-hci.so
+system/lib64/fm_helium.so:system_ext/lib64/fm_helium.so
+system/lib64/libfm-hci.so:system_ext/lib64/libfm-hci.so
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
