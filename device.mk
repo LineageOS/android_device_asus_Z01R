@@ -314,6 +314,7 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-impl \
+    libavservices_minijail \
     libc2dcolorconvert \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
@@ -386,7 +387,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
-    $(LOCAL_PATH)/configs/permissions/product-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/permissions/system_ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml
 
 # Radio
