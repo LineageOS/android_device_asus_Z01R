@@ -466,10 +466,6 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
 
-# VNDK-SP
-PRODUCT_PACKAGES += \
-    vndk-sp
-
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
 
