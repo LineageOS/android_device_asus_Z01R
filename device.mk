@@ -375,7 +375,7 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
-    power.sdm845
+    vendor.qti.hardware.perf@2.0.vendor
 
 # Protobuf
 PRODUCT_PACKAGES += \
