@@ -90,6 +90,10 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=cherokee
 
+# Chipset
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SDM845
+
 # CNE
 persist.vendor.cne.feature=1
 
