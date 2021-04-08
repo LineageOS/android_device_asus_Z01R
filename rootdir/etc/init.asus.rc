@@ -7,6 +7,11 @@ on boot
     chown system system /sys/devices/platform/soc/0.goodix_gf5228/proximity_state
     chmod 0660 /sys/devices/platform/soc/0.goodix_gf5228/proximity_state
 
+on init
+    # permission for dt2w
+    chown system system /proc/driver/dclick
+    chmod 0660 /proc/driver/dclick
+
 on charger
     write /sys/class/backlight/panel0-backlight/brightness 150
 
