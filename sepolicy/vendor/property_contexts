@@ -30,8 +30,6 @@ persist.sys.cta.security                            u:object_r:customize_prop:s0
 persist.sys.setupwizard.active                      u:object_r:customize_prop:s0
 sys.asus.                                           u:object_r:customize_prop:s0
 touch.version.driver                                u:object_r:customize_prop:s0
-vendor.wlan.firmware.version                        u:object_r:customize_prop:s0
-vendor.wlan.driver.version                          u:object_r:customize_prop:s0
 wifi.version.driver                                 u:object_r:customize_prop:s0
 
 # Audio
