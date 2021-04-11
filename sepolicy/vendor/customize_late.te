@@ -12,4 +12,4 @@ allow customize_late persist_drm_file:file { open read };
 allow customize_late property_socket:sock_file write;
 allow customize_late sysfs_firmware:file { getattr open read };
 
-get_prop(customize_late, customize_prop)
+set_prop(customize_late, customize_prop)
