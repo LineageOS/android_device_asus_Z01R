@@ -4,3 +4,6 @@ vendor.goodix.hardware.fingerprintextension::IGoodixBiometricsFingerprint       
 # NFC
 vendor.nxp.nxpese::INxpEse                                                      u:object_r:nxpese_hwservice:s0
 vendor.nxp.nxpnfc::INxpNfc                                                      u:object_r:nxpnfc_hwservice:s0
+
+# RIL
+vendor.qti.hardware.slmadapter::ISlmAdapter                                     u:object_r:vendor_hal_slmadapter_hwservice:s0
