@@ -16,4 +16,4 @@ allow customize_mount proc_meminfo:file { open read };
 allow customize_mount property_socket:sock_file write;
 allow customize_mount sysfs:file { open read };
 
-get_prop(customize_mount, customize_prop)
+set_prop(customize_mount, customize_prop)

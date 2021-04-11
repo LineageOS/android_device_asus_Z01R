@@ -14,4 +14,3 @@ type log_file, file_type;
 
 # Sysfs
 type sysfs_firmware, sysfs_type, fs_type;
-type sysfs_fp_proximity, sysfs_type, fs_type;
