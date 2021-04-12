@@ -1,0 +1,2 @@
+#Allow access to smcinvoke device
+allow ssgtzd smcinvoke_device:chr_file rw_file_perms;
