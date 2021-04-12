@@ -391,10 +391,6 @@ PRODUCT_COPY_FILES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.2 \
-    android.hardware.radio.config@1.0 \
-    android.hardware.radio@1.4 \
-    android.hardware.radio.config@1.2 \
     libjson \
     libprotobuf-cpp-full \
     librmnetctl \
@@ -426,7 +422,11 @@ PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
-    qti_telephony_utils.xml
+    qti_telephony_utils.xml \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Tethering
 PRODUCT_PACKAGES += \
