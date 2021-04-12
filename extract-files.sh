@@ -62,10 +62,6 @@ function blob_fixup() {
         "${PATCHELF}" --remove-needed libkeystore_binder.so "${2}"
         "${PATCHELF}" --remove-needed libkeymaster_messages.so "${2}"
         ;;
-    system_ext/etc/permissions/qcrilhook.xml | system_ext/etc/permissions/telephonyservice.xml)
-        # Move telephony packages to /system_ext
-        sed -i "s/\/product\/framework\//\/system_ext\/framework\//g" "${2}"
-        ;;
     esac
 }
 
