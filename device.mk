@@ -311,6 +311,10 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.asus_Z01R \
     lights.sdm845
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.1-service-sdm
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
