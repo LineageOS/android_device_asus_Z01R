@@ -26,6 +26,7 @@ ro.product.system.brand                             u:object_r:customize_prop:s0
 ro.wifimac                                          u:object_r:customize_prop:s0
 persist.asus.                                       u:object_r:customize_prop:s0
 persist.gps.debug_nmea                              u:object_r:customize_prop:s0
+persist.odm.asus.                                   u:object_r:customize_prop:s0
 persist.sys.cta.security                            u:object_r:customize_prop:s0
 persist.sys.setupwizard.active                      u:object_r:customize_prop:s0
 sys.asus.                                           u:object_r:customize_prop:s0
