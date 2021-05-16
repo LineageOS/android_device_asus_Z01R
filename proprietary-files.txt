@@ -1070,7 +1070,7 @@ vendor/lib64/libqcrildatactl.so|b0cdd2916cf2e490440ebdb04c8965b24d210f1a
 vendor/lib64/libqcrilFramework.so|da3c0216ddad60f48b1fc90b31a6d6d1114e95be
 vendor/lib64/libqrtr.so|6f7abe88e19e44f6b933de1cac0c7a3437318f04
 vendor/lib64/libqsocket.so|391748e46f7dbbf267dbc5a5c89f0d2a8b4fca4e
-vendor/lib64/libril-qc-hal-qmi.so|14dda5bc33440106c2d7eb9826549a0ec1aab5cf
+vendor/lib64/libril-qc-hal-qmi.so|76975245677f3659a771db104e03c0ab2baf7762
 vendor/lib64/libril-qc-logger.so|ee79a6c722389ac5cec23348e6f484f093f38896
 vendor/lib64/libril-qc-ltedirectdisc.so|c278b3a5403b6c96019645663f21f583dfcee33d
 vendor/lib64/libril-qc-radioconfig.so|bace202544a957425eb36946bd3b2f931daf6f76
@@ -1296,7 +1296,7 @@ system_ext/etc/seccomp_policy/wfdservice.policy|ff82c22afdfc6a1f6f19db0d446f97e1
 system_ext/etc/wfdconfigsink.xml|eeaf6d97db961a2af25614390bf7c183b736e9db
 system_ext/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|d1b42bfb512a6573155308ce0eab892d1ceb2ccc
 system_ext/lib/libmmosal.so|16d59ee5fa26ce20132284bc2c862c9b842e2ee2
-system_ext/lib/libmmparser_lite.so|1fda8f69013363665502a7acf556634b478b7158
+system_ext/lib/libmmparser_lite.so|27f2ef75c3582c1c6ba370e819697de7dab92cef
 system_ext/lib/libmmrtpdecoder.so|db34a6876b6437bb419e9beedb421f6c1edbef23
 system_ext/lib/libmmrtpencoder.so|5f9d17ea249cf55bc30019f1db2ab317d5c92d32
 system_ext/lib/libwfdavenhancements.so|65e96c62e668bddd49e631af8aefabba5ca0bb23
@@ -1317,7 +1317,7 @@ system_ext/lib/libwfduibcsrc.so|1c0f49a5a6313552535ec55b0a4245b3f9556573
 system_ext/lib/libwfduibcsrcinterface.so|1a39040b4257407cc35a54e4c98362840af4c0d3
 system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so|48815a18144f60747555bb93650726206c54323f
 system_ext/lib64/libmmosal.so|ef19a38be8283c87eabe96f74bc8a71881ab1f0a
-system_ext/lib64/libmmparser_lite.so|741e10ebee74bed806325b12f8334a513149cc16
+system_ext/lib64/libmmparser_lite.so|03437c5126ff9e171401654ee8a5d650a82b25d1
 system_ext/lib64/libmmrtpdecoder.so|4af3071ff57297051bf55ed0f04013f0c53289e6
 system_ext/lib64/libmmrtpencoder.so|65cb0c94b6f97478f13264098641633acffc7416
 system_ext/lib64/libwfdclient.so|23de4d1f62be3486e2193cf8bc175de2ece4acd1
@@ -1342,7 +1342,7 @@ vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|576ce4393b7746b77
 vendor/etc/seccomp_policy/wfdhdcphalservice.policy|a489ab323be4be2df3de9f84a6b5e6cef924f4c4
 vendor/etc/seccomp_policy/wfdvndservice.policy|b46f0c22a1f9b65c6750205e161c0a3f84ac716b
 vendor/etc/seccomp_policy/wifidisplayhalservice.policy|f113f27e0e301a18baf0ade08c23071a27c7dc52
-vendor/etc/wfdconfig.xml|de5e4d403a6cebca99fbd56fb8814319114fc523
+vendor/etc/wfdconfig.xml|9e13371f7ae509cc0bbb3f2ace93c5ea5d87bf0f
 vendor/lib/libFileMux_proprietary.so|e59edd4604a7c73147118161cab5b7ac6bb16c82
 vendor/lib/libmmosal.so|57185feced72009af2df1b09117702c9fae7182b
 vendor/lib/libmmrtpdecoder_proprietary.so|9232f505ea8f0c1e9f81a049c583fba32a450d73
