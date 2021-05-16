@@ -730,6 +730,7 @@ system_ext/lib64/com.qualcomm.qti.imscmservice@2.1.so|9e29f18494de25de70a751a40b
 system_ext/lib64/com.qualcomm.qti.imscmservice@2.2.so|35e9fb8eb4b1e9c63464223b0c2d26f69b851050
 system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so|0ecaf1014dbb6fe1576673a4ccffbc5562d6b7f7
 system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so|f80a490f9abfc486b8d78c4e4a3e4824d0e59c9b
+system_ext/lib64/com.qualcomm.qti.uceservice@2.2.so|937f9288aa558ad7d0d2b4f0fe1429439fee3f94
 system_ext/lib64/lib-imsvideocodec.so|5a10d0c9e117178a875b530832070b4e89d1e2b8
 system_ext/lib64/lib-imsvt.so|e8b734aafd78813baa7f8c6c7cd8f61d0884e0a6
 system_ext/lib64/lib-imsvtextutils.so|7fe2cf5ac5f84c3c61b4458099efcf900801c2e2
