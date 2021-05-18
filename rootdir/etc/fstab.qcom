@@ -45,7 +45,8 @@
 /dev/block/bootdevice/by-name/bluetooth                 /vendor/bt_firmware       vfat    ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait,slotselect
 /devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.0.auto*     /storage/usbotg    vfat    nosuid,nodev         wait,voldmanaged=usbotg:auto
 /dev/block/bootdevice/by-name/ADF                       /vendor/ADF               ext4    noatime,nosuid,nodev,barrier=1                       wait
-/dev/block/bootdevice/by-name/asdf                      /vendor/asdf              ext4    noatime,nosuid,nodev,barrier=1                       wait
+/dev/block/bootdevice/by-name/APD                       /APD                      ext4    noatime,nosuid,nodev,barrier=1                       wait
+/dev/block/bootdevice/by-name/asdf                      /asdf                     ext4    noatime,nosuid,nodev,barrier=1                       wait
 
 
 # Need to have this entry in here even though the mount point itself is no longer needed.

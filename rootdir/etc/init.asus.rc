@@ -15,6 +15,16 @@ on init
 on charger
     write /sys/class/backlight/panel0-backlight/brightness 150
 
+on fs
+    wait /dev/block/bootdevice/by-name/APD
+    chown root system /APD
+    chmod 0771 /APD
+    restorecon_recursive /APD
+    wait dev/block/bootdevice/by-name/asdf
+    chown root system /asdf
+    chmod 0771 /asdf
+    restorecon_recursive /asdf
+
 service cvphalservice /system/bin/true
     disabled
 # Custom ROM changes - end
