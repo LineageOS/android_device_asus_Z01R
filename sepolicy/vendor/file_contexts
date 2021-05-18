@@ -1,6 +1,10 @@
 # Camera
 /vendor/lib/DataSet(/.*)?                                                   u:object_r:dataset_file:s0
 
+# Data
+/data/local/tmp/.bs                                                         u:object_r:batterystats_file:s0
+/data/local/tmp/bat_safety                                                  u:object_r:batterystats_file:s0
+
 # Devices
 /dev/block/platform/soc/1d84000.ufshc/by-name/batinfo                       u:object_r:batinfo_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/factory		                u:object_r:factory_block_device:s0
@@ -10,7 +14,6 @@
 /dev/lightsensor                                                            u:object_r:sensor_device:s0
 /dev/proximitySensor                                                        u:object_r:sensor_device:s0
 /dev/smcinvoke                                                              u:object_r:smcinvoke_device:s0
-
 
 # Executables
 /vendor/bin/customize_late                                                  u:object_r:customize_late_exec:s0
