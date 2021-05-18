@@ -1,5 +1,18 @@
+# Asus Mounts
+/(ADF|vendor/ADF)                                                           u:object_r:adf_file:s0
+/(APD|vendor/APD)                                                           u:object_r:apd_file:s0
+/(asdf|vendor/asdf)                                                         u:object_r:asdf_file:s0
+/(factory|vendor/factory)                                                   u:object_r:fac_file:s0
+/xrom                                                                       u:object_r:system_file:s0
+
 # Camera
 /vendor/lib/DataSet(/.*)?                                                   u:object_r:dataset_file:s0
+
+# Data
+/APD/\.bh                                                                   u:object_r:batterystats_file:s0
+/APD/\.bs                                                                   u:object_r:batterystats_file:s0
+/APD/bat_safety                                                             u:object_r:batterystats_file:s0
+/asdf/CHGLimit_kernel                                                       u:object_r:batterystats_file:s0
 
 # Devices
 /dev/block/platform/soc/1d84000.ufshc/by-name/batinfo                       u:object_r:batinfo_block_device:s0
@@ -11,18 +24,9 @@
 /dev/proximitySensor                                                        u:object_r:sensor_device:s0
 /dev/smcinvoke                                                              u:object_r:smcinvoke_device:s0
 
-
 # Executables
 /vendor/bin/customize_late                                                  u:object_r:customize_late_exec:s0
 /vendor/bin/customize_mount		                                            u:object_r:customize_mount_exec:s0
-
-# Files in rootfs
-/ADF(/.*)?		                                                            u:object_r:demoapp_file:s0
-/APD(/.*)?		                                                            u:object_r:demoapp_file:s0
-/asdf(/.*)?		                                                            u:object_r:log_file:s0
-/batinfo		                                                            u:object_r:batinfo_file:s0
-/(factory|vendor/factory)(/.*)?		                                        u:object_r:fac_file:s0
-/xrom(/.*)?		                                                            u:object_r:system_file:s0
 
 # Fingerprint related nodes
 /sys/devices/platform/soc/0.goodix_gf5228/proximity_state                   u:object_r:sysfs_fingerprint:s0

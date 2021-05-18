@@ -1,16 +1,19 @@
+# Asus mounts
+type adf_file, vendor_file_type, file_type;
+type apd_file, file_type;
+type asdf_file, file_type;
+type fac_file, vendor_file_type, file_type;
+allow fac_file self:filesystem associate;
+
 # Camera
 type dataset_file, vendor_file_type, file_type;
+
+# Data
+type batterystats_file, file_type;
 
 # Proc symlinks
 type proc_evtlog, proc_type, sysfs_type, fs_type;
 type proc_touchscreen, proc_type, sysfs_type, fs_type;
-
-# Files in rootfs
-type batinfo_file, file_type;
-type demoapp_file, file_type;
-type fac_file, vendor_file_type, file_type;
-allow fac_file self:filesystem associate;
-type log_file, file_type;
 
 # Sysfs
 type sysfs_firmware, sysfs_type, fs_type;
