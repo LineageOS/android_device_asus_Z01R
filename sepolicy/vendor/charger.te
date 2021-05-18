@@ -1,0 +1,2 @@
+allow charger block_device:dir search;
+allow charger log_file:lnk_file read;
