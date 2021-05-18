@@ -1,6 +1,12 @@
 allow kernel block_device:dir search;
 allow kernel batinfo_block_device:dir search;
 allow kernel batinfo_block_device:blk_file { open read write };
+allow kernel batterystats_file:dir r_dir_perms;
+allow kernel batterystats_file:file create_file_perms;
 allow kernel log_file:lnk_file read;
+allow kernel log_file:dir rw_dir_perms;
+allow kernel log_file:file create_file_perms;
+allow kernel mnt_user_file:dir r_dir_perms;
+allow kernel storage_file:dir r_dir_perms;
 allow kernel sysfs_battery_supply:dir search;
 allow kernel sysfs_battery_supply:file r_file_perms;
