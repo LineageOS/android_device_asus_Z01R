@@ -169,12 +169,10 @@ ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_RIL_VARIANT := caf
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := odm oem
+BOARD_ROOT_EXTRA_FOLDERS := APD asdf odm oem
 
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/ADF:/ADF \
-    /vendor/APD:/APD \
-    /vendor/asdf:/asdf \
     /vendor/factory:factory
 
 # Security patch level

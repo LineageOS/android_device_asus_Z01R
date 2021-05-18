@@ -1,3 +1,6 @@
+allow init adf_file:dir mounton;
+allow init apd_file:dir mounton;
+allow init asdf_file:dir mounton;
 allow init block_device:blk_file write;
 allow init bt_firmware_file:filesystem getattr;
 allow init fac_file:dir mounton;
