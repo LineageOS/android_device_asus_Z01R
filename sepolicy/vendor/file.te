@@ -4,6 +4,7 @@ type apd_file, file_type;
 type asdf_file, file_type;
 type fac_file, vendor_file_type, file_type;
 allow fac_file self:filesystem associate;
+type log_file, file_type;
 
 # Camera
 type dataset_file, vendor_file_type, file_type;
