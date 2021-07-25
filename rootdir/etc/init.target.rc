@@ -59,6 +59,15 @@ on fs
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
+    chown system system /vendor/ADF
+    chmod 0775 /vendor/ADF
+    restorecon_recursive /vendor/ADF
+    chown root system /APD
+    chmod 0771 /APD
+    restorecon_recursive /APD
+    chown root system /asdf
+    chmod 0771 /asdf
+    restorecon_recursive /asdf
 
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
