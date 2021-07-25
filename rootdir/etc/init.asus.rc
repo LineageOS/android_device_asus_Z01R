@@ -15,16 +15,6 @@ on init
 on charger
     write /sys/class/backlight/panel0-backlight/brightness 150
 
-on fs
-    wait /dev/block/bootdevice/by-name/APD
-    chown root system /APD
-    chmod 0771 /APD
-    restorecon_recursive /APD
-    wait dev/block/bootdevice/by-name/asdf
-    chown root system /asdf
-    chmod 0771 /asdf
-    restorecon_recursive /asdf
-
 service cvphalservice /system/bin/true
     disabled
 # Custom ROM changes - end
@@ -146,10 +136,6 @@ on fs
     chmod 770 /mnt/vendor/persist
 	chmod 770 /mnt/vendor/persist/data
 
-    chown system system /vendor/ADF
-    chmod 0775 /vendor/ADF
-    restorecon_recursive /vendor/ADF
-
     # We don't use Asus Product Demo, so we don't import that script and just disable charger limit
     write /proc/driver/charger_limit_enable 0
 
@@ -236,10 +222,10 @@ on charger
     chown system system /vendor/factory
     chmod 0770 /vendor/factory
     start customize_early
-    chown root root /vendor/asdf
-    chmod 0775 /vendor/asdf
-	write /vendor/asdf/CHGLimit 0
-	write /vendor/asdf/CHGLimit_kernel 0
+    chown root root /asdf
+    chmod 0775 /asdf
+    write /asdf/CHGLimit 0
+    write /asdf/CHGLimit_kernel 0
     write /proc/boot_completed_prop 1
 
 # ASUS_BSP +++ bob_mode_switch
