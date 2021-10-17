@@ -30,15 +30,19 @@
         android:label="AsusPocketMode"
         android:persistent="true">
 
-        <receiver android:name=".BootCompletedReceiver">
+        <receiver
+            android:name=".BootCompletedReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
-        <service android:name=".PocketModeService"
-                 android:permission="PocketModeService">
+        <service
+            android:name=".PocketModeService"
+            android:exported="false"
+            android:permission="PocketModeService">
         </service>
 
     </application>
