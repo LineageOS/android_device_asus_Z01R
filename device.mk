@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# APEX
+PRODUCT_COMPRESSED_APEX := false
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -260,10 +263,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl \
     FM2 \
-    libqcomfm_jni \
-    qcom.fmradio
+#    libqcomfm_jni \
+#    qcom.fmradio
 
-PRODUCT_BOOT_JARS += qcom.fmradio
+#PRODUCT_BOOT_JARS += qcom.fmradio
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -503,10 +506,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_TARGET_VNDK_VERSION := 29
 
 # VR
-PRODUCT_PACKAGES += \
-    android.hardware.vr@1.0-impl \
-    android.hardware.vr@1.0-service \
-    vr.sdm845
+#PRODUCT_PACKAGES += \
+#    android.hardware.vr@1.0-impl \
+#    android.hardware.vr@1.0-service \
+#    vr.sdm845
 
 # WiFi
 PRODUCT_PACKAGES += \
