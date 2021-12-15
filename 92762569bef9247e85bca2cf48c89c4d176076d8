@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "700f2a23_17c7bf60",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2021-12-15T23:53:03Z",
+      "side": 1,
+      "message": "Doesn\u0027t fix the charging errors afterall",
+      "revId": "92762569bef9247e85bca2cf48c89c4d176076d8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
