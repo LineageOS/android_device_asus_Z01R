@@ -70,6 +70,9 @@
     <!-- Boolean indicating whether framework needs to set the tx power limit for meeting SAR requirements -->
     <bool translatable="false" name="config_wifi_framework_enable_sar_tx_power_limit">true</bool>
 
+    <!-- Indicate the driver support NL80211_REG_CHANGED event. -->
+    <bool translatable="false" name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
+
     <!-- Default access point SSID used for tethering -->
     <string name="wifi_tether_configure_ssid_default" translatable="false">Asus Zenfone 5z</string>
 </resources>
