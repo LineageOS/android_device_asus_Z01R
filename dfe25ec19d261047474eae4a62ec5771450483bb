@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ecbced1d_32536f11",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-01-10T06:26:41Z",
+      "side": 1,
+      "message": "libtinyxml is on vendor by default, no?",
+      "range": {
+        "startLine": 235,
+        "startChar": 0,
+        "endLine": 235,
+        "endChar": 23
+      },
+      "revId": "dfe25ec19d261047474eae4a62ec5771450483bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "13a346a9_da31cac3",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-01-10T06:26:41Z",
+      "side": 1,
+      "message": "where does this dep come from?",
+      "range": {
+        "startLine": 276,
+        "startChar": 4,
+        "endLine": 276,
+        "endChar": 11
+      },
+      "revId": "dfe25ec19d261047474eae4a62ec5771450483bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af6feb14_fb9486e0",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-01-10T06:26:41Z",
+      "side": 1,
+      "message": "libjson is on vendor by default, no?",
+      "range": {
+        "startLine": 426,
+        "startChar": 0,
+        "endLine": 426,
+        "endChar": 20
+      },
+      "revId": "dfe25ec19d261047474eae4a62ec5771450483bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
