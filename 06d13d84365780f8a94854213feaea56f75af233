@@ -16,6 +16,24 @@
       "message": "unfortunately it seems adsprpcd_file here is a neverallow I guess because of the vendor file type... so we probably have to do this mount/bind workaround or define google camera separately just like crosshatch does... but then so many gcam mods authors have a bunch of different app names which would be a pain to support, so I\u0027m more inclined to do this workaround.",
       "revId": "06d13d84365780f8a94854213feaea56f75af233",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "581ad53e_2ebc4b3d",
+        "filename": "sepolicy/vendor/appdomain.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2022-01-10T18:00:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ee95312_67210eab",
+      "revId": "06d13d84365780f8a94854213feaea56f75af233",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
