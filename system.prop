@@ -5,9 +5,6 @@ ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=7
 tunnel.audio.encode=true
 
-# BPF
-ro.kernel.ebpf.supported=true
-
 # Bluetooth
 persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.a2dp.aac_whitelist=false
