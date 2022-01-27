@@ -187,7 +187,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5 \
     libdng_sdk.vendor \
     libgui_vendor \
-    Snap \
     vendor.qti.hardware.camera.device@1.0
 
 # Common init scripts
