@@ -49,6 +49,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "aa2e8452_33aebea9",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 29415
+      },
+      "writtenOn": "2022-01-29T07:20:59Z",
+      "side": 1,
+      "message": "android.hardware.health@2.1 is a shared library of android.hardware.health@2.1-service, and seeing as that\u0027s a vendor service means the shared libraries will be vendor as well so this is redundant.",
+      "revId": "dfe25ec19d261047474eae4a62ec5771450483bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "af6feb14_fb9486e0",
         "filename": "device.mk",
         "patchSetId": 1
