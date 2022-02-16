@@ -48,6 +48,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 BOARD_KERNEL_CMDLINE := \
+    androidboot.boot_devices=soc/1d84000.ufshc \
     androidboot.configfs=true \
     androidboot.console=ttyMSM0 \
     androidboot.hardware=qcom \
