@@ -1,0 +1,18 @@
+# Firmware - from Z01R's WW_user_100.10.107.123_20210131
+
+abl.img;AB
+aop.img;AB
+bluetooth.img;AB
+cmnlib64.img;AB
+cmnlib.img;AB
+devcfg.img;AB
+dsp.img;AB
+hyp.img;AB
+ImageFv.img;AB
+keymaster.img;AB
+modem.img;AB
+qupfw.img;AB
+storsec.img;AB
+tz.img;AB
+xbl_config.img;AB
+xbl.img;AB
