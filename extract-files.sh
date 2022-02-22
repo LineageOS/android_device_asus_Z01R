@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
+# Copyright (C) 2017-2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -86,5 +86,9 @@ extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTIO
 
 BLOB_ROOT="$ANDROID_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 
+
+if [ -z "${SECTION}" ]; then
+    extract_firmware "${MY_DIR}/proprietary-firmware.txt" "${SRC}"
+fi
 
 "${MY_DIR}/setup-makefiles.sh"
