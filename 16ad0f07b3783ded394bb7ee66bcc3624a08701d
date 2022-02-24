@@ -16,6 +16,24 @@
       "message": "What happened here?",
       "revId": "16ad0f07b3783ded394bb7ee66bcc3624a08701d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "310585d2_49e483e2",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2022-02-24T10:03:05Z",
+      "side": 0,
+      "message": "Thanks for the review Bruno! I missed that when doing a diff and accidentally deleted it when I changed the copyright header. I\u0027ll fix it.",
+      "parentUuid": "1e3e7906_d6984f3a",
+      "revId": "16ad0f07b3783ded394bb7ee66bcc3624a08701d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
