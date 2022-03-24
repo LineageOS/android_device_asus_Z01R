@@ -16,6 +16,24 @@
       "message": "4.9 should support Clang no problem?",
       "revId": "793be619d52bc6125aee66dcd4b31fb62092e037",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad083523_4dfca69e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2022-03-24T10:24:09Z",
+      "side": 1,
+      "message": "Whilst that is true and I only had to fix one problem with the tfa98xx driver for it to compile? the touchscreen driver messes up and causes kernel panics, so it would need to still be diagnosed and fixed and tbh right meow I don\u0027t have the time for it...\n\nthe fts touchscreen driver on Z01R sucks really bad. It only intermittently works on recovery too, so one of these days I want to attempt maybe a full rebase on a different version like the Xiaomi sdm845 (albeit they have a different model, so unsure if it\u0027ll work) and see if it\u0027ll work better for us",
+      "parentUuid": "860825cf_f2566c26",
+      "revId": "793be619d52bc6125aee66dcd4b31fb62092e037",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
