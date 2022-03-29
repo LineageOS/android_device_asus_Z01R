@@ -68,7 +68,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/asus/sdm845
-TARGET_KERNEL_CONFIG := sdm845-perf_defconfig vendor/asus/Z01R.config
+TARGET_KERNEL_CONFIG := sdm845-perf_defconfig vendor/asus/Z01R.config vendor/debugfs.config
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm845
