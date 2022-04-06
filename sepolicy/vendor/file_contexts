@@ -25,7 +25,6 @@
 /dev/smcinvoke                                                              u:object_r:smcinvoke_device:s0
 
 # Executables
-/vendor/bin/customize_early                                                 u:object_r:customize_early_exec:s0
 /vendor/bin/customize_late                                                  u:object_r:customize_late_exec:s0
 /vendor/bin/customize_mount		                                            u:object_r:customize_mount_exec:s0
 
