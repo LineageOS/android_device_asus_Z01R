@@ -16,6 +16,24 @@
       "message": "can i gate new updates \"please\" ",
       "revId": "d94149f1d917be497b3522ac1350265de0ffedef",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46973fc9_a4144b8d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2022-04-25T02:37:00Z",
+      "side": 1,
+      "message": "Please check my XDA thread as Gerrit is for code review\nhttps://forum.xda-developers.com/t/unofficial-zs620kl-lineageos-19-1-android-12-1-for-the-asus-zenfone-5z.4427513/",
+      "parentUuid": "4460be7f_abfdee46",
+      "revId": "d94149f1d917be497b3522ac1350265de0ffedef",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
