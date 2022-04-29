@@ -320,7 +320,7 @@ vendor/bin/hvdcp_opti
 vendor/bin/init.qti.chg_policy.sh
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
-# CNE - from PNX - RKQ1.200906.002
+# CNE - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 system_ext/framework/com.quicinc.cne.api-V1.1-java.jar|88da95df5925ab3c173f951cfe56c95699908359
 system_ext/framework/com.quicinc.cne.constants-V1.0-java.jar|b30a8b9a9fad4dfb8ce231084ea0baf99f54931d
 system_ext/framework/com.quicinc.cne.constants-V2.0-java.jar|e8e9b049f09aee835084cc4bca081c3905221d7a
@@ -435,11 +435,11 @@ vendor/etc/qdcm_calib_data_nt35597_video_mode_dsi_truly_panel_with_DSC.xml
 vendor/etc/qdcm_calib_data_Sharp_4k_cmd_mode_dsc_dsi_panel.xml
 vendor/etc/qdcm_calib_data_Sharp_4k_video_mode_dsc_dsi_panel.xml
 
-# Display (HDR) - from PNX - RKQ1.200906.002
+# Display (HDR) - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 vendor/lib/libhdr_tm.so|1e8a647523db0a09c9587a77f1f7b132a03c2354
 vendor/lib64/libhdr_tm.so|7ac38563480eab0583cb440e667a44cfa596167a
 
-# Display (SDM) - from PNX - RKQ1.200906.002
+# Display (SDM) - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 vendor/lib/libdisplayqos.so|7b83c36716bae758c71d34b85401d7d77afa2c23
 vendor/lib/libqseed3.so|ea8d3775ab13c9ebfcdc2a02e60f56cc49a9d695
 vendor/lib/libsdedrm.so|b11f16f16cdeaecb492b7ff2274cc02bd604bf0f
@@ -457,7 +457,7 @@ vendor/lib64/libsdm-disp-vndapis.so|4c6916fed1e304effa4c06c7207fb0e1b604f3ae
 vendor/lib64/libsdmextension.so|70c18b044897825bc1f15f2b6f73b64b639b6d40
 vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 
-# Display postprocessing - from PNX - RKQ1.200906.002
+# Display postprocessing - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 vendor/bin/hw/vendor.display.color@1.0-service|a9d360976833d863f74df381298de696daea8acb
 vendor/bin/mm-pp-dpps|e825298dc12603df29c35aa6ad86fd0d0a7646a2
 vendor/bin/ppd|8b60669c32f091dd5832579892c91dc3eb0e8130
@@ -479,7 +479,7 @@ vendor/lib64/vendor.display.color@1.4.so|1396673668977af0a8afeaa64f891c3b356f958
 vendor/lib64/vendor.display.color@1.5.so|f1c12eb133698917385d48913358eaffd9a10879
 vendor/lib64/vendor.display.postproc@1.0.so|e56b66d744dd77bd87afbb30cab558acf15709fb
 
-# DPM - from PNX - RKQ1.200906.002
+# DPM - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 system_ext/bin/dpmd|bc22fa258f3975744e248dc7d9f26a00a9981ca7
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
@@ -584,12 +584,12 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
-# GPS - from PNX - RKQ1.200906.002
+# GPS - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti|bd3d5174f69cf65047c8d8b159554515b0f3d022
 vendor/bin/loc_launcher|bf13787d95c2fec6fadb2552fa63b12ab606575c
 vendor/bin/lowi-server|1898971a9a10d8a849a436e1bcbf1ab60b8ac0de
 vendor/bin/mlid|1345e5df78c7fb2583af0c4e046ae6d21a4e75da
-vendor/bin/slim_daemon|102d6b5b4f8748cb5579056d8c3ec49a72e57009
+vendor/bin/slim_daemon|5c1ae25efa727d52ad19826f94eb695d9c3c540c
 vendor/bin/xtra-daemon|5cfbfc2ba4e9f18e966987662471c5bfa737dcaa
 vendor/bin/xtwifi-client|442e0c8166eea0a0d6cfd9432f945faa59c34d80
 vendor/bin/xtwifi-inet-agent|f805841e5c8ca3b0af620486a64a37148daa0980
@@ -635,7 +635,7 @@ vendor/lib64/vendor.qti.gnss@3.0.so|b67a1ff507cfb4165a9dc970dc54aa26cc731e6f
 vendor/lib64/vendor.qti.gnss@4.0-service.so|3c75d133af5193436167380aa89abcf05d079968
 vendor/lib64/vendor.qti.gnss@4.0.so|7d343c73e6720434045cc38ea0e570ae9d03cd51
 
-# Graphics (Adreno) - from PNX - RKQ1.200906.002
+# Graphics (Adreno) - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 vendor/lib/egl/eglSubDriverAndroid.so|cc5acc02889131a29b624b4c19ab90b8273f393d
 vendor/lib/egl/libEGL_adreno.so|ae30bbf20dc911308407da99cb263e8de6b2eecb
 vendor/lib/egl/libGLESv1_CM_adreno.so|b94ba8188a14dd262abac1b8d667bce3319cf344
@@ -680,7 +680,7 @@ vendor/firmware/a630_zap.b02
 vendor/firmware/a630_zap.elf
 vendor/firmware/a630_zap.mdt
 
-# Graphics (Vulkan) - from PNX - RKQ1.200906.002
+# Graphics (Vulkan) - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 vendor/lib/hw/vulkan.adreno.so|b2680e5b899d75fa3f82b457635e15c6998202a4
 vendor/lib64/hw/vulkan.adreno.so|fcc99045aaf7eed0925ac2b64ff2af085212954a
 
@@ -688,7 +688,7 @@ vendor/lib64/hw/vulkan.adreno.so|fcc99045aaf7eed0925ac2b64ff2af085212954a
 -product/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk
 -product/priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk
 
-# IMS - from PNX - RKQ1.200906.002
+# IMS - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 -system_ext/app/uceShimService/uceShimService.apk|644eec82ed9ecf1c1324241271ac5c9b5fe68f8b
 system_ext/lib64/com.qualcomm.qti.imscmservice@1.0.so|41a6b6ad78341405de60c1fd3c8f202fb3908329
 system_ext/lib64/com.qualcomm.qti.imscmservice@2.0.so|7ec78e4d8fd428ac7fab2b12f34dd0d65b5e53db
@@ -711,7 +711,7 @@ system_ext/lib64/vendor.qti.hardware.radio.ims@1.4.so|1df84a178e8f86ca928c5790c0
 system_ext/lib64/vendor.qti.ims.callinfo@1.0.so|789718b5600f048cbe12f7807bc5a88fbd801954
 system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so|0f5b149fd936f04262aa74b3a953d3a06e4452f7
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|393c5affc1e8e36470705ec44396d1ffa603a541
--system_ext/priv-app/ims/ims.apk|f87eba10af95d6d7fe3b0f1b9e145e00ccdf69f8
+-system_ext/priv-app/ims/ims.apk|d8e82158fe6b64db98a6add2df1f1ceab9a8b7bd
 vendor/bin/ims_rtp_daemon|2c995a884bbde9f37a44a10ac8fb694b30af97ea
 vendor/bin/imsdatadaemon|eb09aed86816127ef752c07c027d3ede9000f549
 vendor/bin/imsqmidaemon|72f9810942d727b7608a96dc481346ec3c97b9c6
@@ -823,18 +823,19 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
 
-# Neural networks
-vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
-vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc
-vendor/lib64/libhexagon_nn_stub.so
-vendor/lib64/unnhal-acc-adreno.so
-vendor/lib64/unnhal-acc-common.so
-vendor/lib64/unnhal-acc-hvx.so
+# Neural networks - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
+vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti|2f4c5509649e72b1085c9eabd92a2b0b32090c0e
+vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc|4b7f2c5f914f3eef38f19936c0a06efc09b5b28c
+-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml|ac07e83ba7c2a87a2f216f04ec84df4539ea8507
+vendor/lib64/libhexagon_nn_stub.so|a3676113882842116279fe902af00e630ec1778c
+vendor/lib64/unnhal-acc-adreno.so|7ad6daa9bf39c5a199b2afb1bd60c1ae53ffbb06
+vendor/lib64/unnhal-acc-common.so|32fdec585f2d710e37ffe327894aec6a7ea220eb
+vendor/lib64/unnhal-acc-hvx.so|3e44efdca5e1c20ca4bf00c6a5f19fc1863c9830
 
 # NFC
 vendor/lib/libpn553_fw.so
 
-# OMX - from PNX - RKQ1.200906.002
+# OMX - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 vendor/lib/libAlacSwDec.so|e49062c9fd9377e8264bf8f7901394653b9f02dc
 vendor/lib/libApeSwDec.so|f14f08a55b32cc252417e3970b1d2cb296d48fa0
 vendor/lib/libFlacSwDec.so|bba6d4155029b2fd1a3d2dfe9f75f422f0d8a35e
@@ -919,7 +920,7 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# QMI - from PNX - RKQ1.200906.002
+# QMI - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
 vendor/bin/irsc_util|c2cb91666e88000df258730cd4a0a81a207a2704
 vendor/etc/sec_config|9114ff721c1b6c5a2d9e3fb8c93a215685f1f7df
@@ -972,12 +973,12 @@ system/lib/libqvrcamera_client.qti.so
 system/lib/libqvrservice_client.qti.so
 system/lib/libqvrservice.so
 
-# RIL - from PNX - RKQ1.200906.002
+# RIL - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|5d0fe3593ef98ebd307d50e0c1a3b4857b607935
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/etc/permissions/telephonyservice.xml|b7831598d3c19c6ce4ef431d1cc44d94c3c35a8d
 system_ext/framework/qcrilhook.jar|6cead102805109095cabe4bf932dec079d93314e
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|fedfbafec61a0672f01b45ab9a43c9e8a153feae
+-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|6675ecd23d1cd1425af6e214b90d700ea5ba1612
 vendor/bin/hw/qcrild|3eea6728924507e6200a2a58c827bf1235eba28f
 vendor/bin/adpl|4ee2aa7fb4363ddfcacf67800e61e5b68aedae20
 vendor/bin/ATFWD-daemon|9b61dc74e23392110b6716e4a1558e2468f344de
@@ -1021,7 +1022,7 @@ vendor/lib64/libqcrildatactl.so|b0cdd2916cf2e490440ebdb04c8965b24d210f1a
 vendor/lib64/libqcrilFramework.so|da3c0216ddad60f48b1fc90b31a6d6d1114e95be
 vendor/lib64/libqrtr.so|6f7abe88e19e44f6b933de1cac0c7a3437318f04
 vendor/lib64/libqsocket.so|391748e46f7dbbf267dbc5a5c89f0d2a8b4fca4e
-vendor/lib64/libril-qc-hal-qmi.so|76975245677f3659a771db104e03c0ab2baf7762
+vendor/lib64/libril-qc-hal-qmi.so|14dda5bc33440106c2d7eb9826549a0ec1aab5cf
 vendor/lib64/libril-qc-logger.so|ee79a6c722389ac5cec23348e6f484f093f38896
 vendor/lib64/libril-qc-ltedirectdisc.so|c278b3a5403b6c96019645663f21f583dfcee33d
 vendor/lib64/libril-qc-radioconfig.so|bace202544a957425eb36946bd3b2f931daf6f76
@@ -1212,14 +1213,15 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 
-# Widevine DRM
-vendor/bin/hw/android.hardware.drm@1.2-service.widevine
-vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
-vendor/lib64/mediadrm/libwvdrmengine.so
-vendor/lib64/libwvhidl.so
-vendor/lib/mediadrm/libwvdrmengine.so
+# Widevine DRM - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine|92e4797cb000e86ba74fba9da2c014d7ec8fa1a6
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff19064a81e07c4be82ceaf4bb5
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
+vendor/lib64/mediadrm/libwvdrmengine.so|f25fe9c6038fb99b0308998e0a8dba3b7c32fa50
+vendor/lib64/libtrustedapploader.so|fbd6f6db5b91357a5cc6d621d3ce48ba27ec3f75
+vendor/lib64/libwvhidl.so|f32257498c35e1336b48a03463f8c8cea7df7b18
 
-# VPP - from PNX - RKQ1.200906.002
+# VPP - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 vendor/bin/vppservice|555301b19a86374900159423c88efd7bd9cea2f9
 vendor/etc/configstore/vpp.configstore.xml|d5095f33c326017a21fff186d19a2ce146b85d94
 vendor/etc/init/vppservice.rc|9daea1a00124d65ecb6978936785273edb74a8ed
