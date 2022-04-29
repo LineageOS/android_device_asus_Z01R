@@ -235,8 +235,6 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl:64 \
-    android.hardware.drm@1.0-service \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.4-service.clearkey
 
@@ -367,7 +365,7 @@ PRODUCT_PACKAGES += \
 
 # Neural Network
 PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.2.vendor
+    android.hardware.neuralnetworks@1.3.vendor
 
 # NFC
 PRODUCT_PACKAGES += \
