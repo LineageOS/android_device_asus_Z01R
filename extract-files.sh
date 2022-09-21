@@ -72,7 +72,7 @@ function blob_fixup() {
 
     # Add shim for missing symbol in lib-imsvt.so
     system_ext/lib64/lib-imsvideocodec.so)
-        ${PATCHELF} --add-needed "lib-imsvtshim.so" "${2}"
+        ${PATCHELF} --add-needed "libgui_shim.so" "${2}"
         ;;
     esac
 }
