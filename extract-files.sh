@@ -82,6 +82,13 @@ function blob_fixup() {
         [ "$2" = "" ] && return 0
         grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
         ;;
+    system_ext/lib64/lib-imscamera.so | system_ext/lib64/lib-imsvideocodec.so)
+        [ "$2" = "" ] && return 0
+        # Missing symbol GraphicBufferProducer in libgui_shim.so
+        grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
+        # Patch lib-ims* to use libqdMetaData.system
+        grep -q "libqdMetaData.system.so" "${2}" || "${PATCHELF}" --replace-needed "libqdMetaData.so" "libqdMetaData.system.so" "${2}"
+        ;;
         *)
             return 1
             ;;
