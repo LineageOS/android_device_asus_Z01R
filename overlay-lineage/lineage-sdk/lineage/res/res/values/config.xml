@@ -73,6 +73,8 @@
         <item>com.asus.camera</item>
         <item>com.google.android.GoogleCamera</item>
         <item>org.codeaurora.snapcam</item>
+        <item>org.lineageos.aperture</item>
+        <item>org.lineageos.aperture.dev</item>
     </string-array>
 
     <!-- The list of vendor package signatures that should also be considered
