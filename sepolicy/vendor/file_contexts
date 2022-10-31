@@ -22,7 +22,6 @@
 /dev/goodix_fp                                                              u:object_r:fingerprint_device:s0
 /dev/lightsensor                                                            u:object_r:sensor_device:s0
 /dev/proximitySensor                                                        u:object_r:sensor_device:s0
-/dev/smcinvoke                                                              u:object_r:smcinvoke_device:s0
 
 # Executables
 /vendor/bin/customize_late                                                  u:object_r:customize_late_exec:s0
