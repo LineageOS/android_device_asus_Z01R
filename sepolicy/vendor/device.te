@@ -1,6 +1,5 @@
 type batinfo_block_device, dev_type;
 type factory_block_device, dev_type;
 type fingerprint_device, dev_type;
-type smcinvoke_device, dev_type;
 type sensor_device, dev_type;
 type sysconf_block_device, dev_type;
