@@ -7,6 +7,7 @@ tunnel.audio.encode=true
 
 # Bluetooth
 ro.bluetooth.a2dp_offload.supported=true
+vendor.bluetooth.soc=cherokee
 
 # Camera
 camera.beautylive.support_flip=1
