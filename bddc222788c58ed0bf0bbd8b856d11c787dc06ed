@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3842dae2_cb089e51",
+        "filename": "overlay-lineage/lineage-sdk/lineage/res/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 15173
+      },
+      "writtenOn": "2023-01-30T13:20:44Z",
+      "side": 1,
+      "message": "You never closed the string-array, hence the build failure on 2023-01-30.",
+      "revId": "bddc222788c58ed0bf0bbd8b856d11c787dc06ed",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
