@@ -166,10 +166,6 @@ vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbtnv.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 
-# Bluetooth (aptX) - from crosshatch - google/crosshatch/crosshatch:11/RQ2A.210405.006/7214111
-system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-
 # Camera
 vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/vstab_db_0_1080p_video_30fps.config
