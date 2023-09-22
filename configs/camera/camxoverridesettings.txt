@@ -18,3 +18,4 @@ multiCamera3ASync=1
 dualCamLtmEnable=TRUE
 disableASDStatsProcessing=0
 disablePreFlashOnForTouchAE=TRUE
+overrideForceSensorMode=4
