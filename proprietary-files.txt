@@ -178,7 +178,6 @@ vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 
 # Camera
-vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/vstab_db_0_1080p_video_30fps.config
 vendor/etc/vstab_db_0_1080p_video_60fps.config
 vendor/etc/vstab_db_0_21601080p_video_30fps.config
