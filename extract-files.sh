@@ -63,6 +63,8 @@ function blob_fixup() {
         "${PATCHELF}" --remove-needed libkeymaster_messages.so "${2}"
         # Update libstdc++.vendor target name
         "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+        # fingerprint: use libhidlbase-v32 for goodix
+        grep -q "libhidlbase-v32.so" "${2}" || "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
         ;;
 
     # Use libutils-v33 for pm-service
