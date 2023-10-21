@@ -55,12 +55,14 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-    # Remove unused dependencies
     vendor/lib64/hw/fingerprint.default.so | vendor/lib64/libgoodixhwfingerprint.so | vendor/lib64/libgoodixfingerprintd_binder.so | vendor/lib64/libvendor.goodix.hardware.fingerprintextension@1.0.so)
+        # Remove unused dependencies
         "${PATCHELF}" --remove-needed libbacktrace.so "${2}"
         "${PATCHELF}" --remove-needed libunwind.so "${2}"
         "${PATCHELF}" --remove-needed libkeystore_binder.so "${2}"
         "${PATCHELF}" --remove-needed libkeymaster_messages.so "${2}"
+        # Update libstdc++.vendor target name
+        "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
         ;;
     esac
 }
