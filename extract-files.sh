@@ -80,6 +80,11 @@ function blob_fixup() {
     system_ext/lib64/lib-imsvideocodec.so)
         ${PATCHELF} --add-needed "libgui_shim.so" "${2}"
         ;;
+
+    # Use libhidlbase-v32 for select Android P blobs
+    system_ext/lib*/com.qualcomm.qti.ant@1.0.so)
+        "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+        ;;
     esac
 }
 
