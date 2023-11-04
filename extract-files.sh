@@ -57,14 +57,14 @@ function blob_fixup() {
     case "${1}" in
     vendor/lib64/hw/fingerprint.default.so | vendor/lib64/libgoodixhwfingerprint.so | vendor/lib64/libgoodixfingerprintd_binder.so | vendor/lib64/libvendor.goodix.hardware.fingerprintextension@1.0.so)
         # Remove unused dependencies
-        "${PATCHELF}" --remove-needed libbacktrace.so "${2}"
-        "${PATCHELF}" --remove-needed libunwind.so "${2}"
-        "${PATCHELF}" --remove-needed libkeystore_binder.so "${2}"
-        "${PATCHELF}" --remove-needed libkeymaster_messages.so "${2}"
+        "${PATCHELF_0_17_2}" --remove-needed libbacktrace.so "${2}"
+        "${PATCHELF_0_17_2}" --remove-needed libunwind.so "${2}"
+        "${PATCHELF_0_17_2}" --remove-needed libkeystore_binder.so "${2}"
+        "${PATCHELF_0_17_2}" --remove-needed libkeymaster_messages.so "${2}"
         # Update libstdc++.vendor target name
-        "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+        "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
         # fingerprint: use libhidlbase-v32 for goodix
-        grep -q "libhidlbase-v32.so" "${2}" || "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+        grep -q "libhidlbase-v32.so" "${2}" || "${PATCHELF_0_17_2}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
         ;;
 
     # Use libutils-v33 for pm-service
