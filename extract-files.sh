@@ -63,6 +63,8 @@ function blob_fixup() {
         "${PATCHELF}" --remove-needed libkeymaster_messages.so "${2}"
         # Update libstdc++.vendor target name
         "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+        # Use libhidlbase shim for fingerprint HAL
+        sed -i "s/libhidltransport.so/libhidlbase_shim.so/" "${2}"
         ;;
 
     # Use libutils-v33 for pm-service
