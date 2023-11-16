@@ -449,14 +449,11 @@
         <item>7</item>
         <item>10</item>
     </integer-array>
+
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
         <item>5</item>
-        <item>10</item>
-    </integer-array>
-    <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
-    <integer-array name="config_keyboardTapVibePattern">
         <item>10</item>
     </integer-array>
 
