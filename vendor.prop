@@ -183,5 +183,10 @@ vendor.usb.use_gadget_hal=0
 # Vendor
 ro.vendor.qti.va_aosp.support=1
 
+# Wifi
+wifi.interface=wlan0
+wifi.interface.1=wlan2
+wifi.interface.2=wlan1
+
 # Zygote
 zygote.critical_window.minute=10
