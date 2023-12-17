@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ed85f7b_0465abeb",
+        "filename": "proprietary-firmware.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-12-17T20:59:52Z",
+      "side": 1,
+      "message": "Firmware extraction does not support pinning yet btw.",
+      "revId": "709351d192d2d57123837d899043682bb0f7ae33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
