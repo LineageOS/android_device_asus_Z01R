@@ -16,6 +16,24 @@
       "message": "Firmware extraction does not support pinning yet btw.",
       "revId": "709351d192d2d57123837d899043682bb0f7ae33",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc7e4eba_1ba901f3",
+        "filename": "proprietary-firmware.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-12-18T03:10:18Z",
+      "side": 1,
+      "message": "thanks Michael for the notice. I\u0027ll take off the sha1sum. I can always deal with that in the future if needed",
+      "parentUuid": "3ed85f7b_0465abeb",
+      "revId": "709351d192d2d57123837d899043682bb0f7ae33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
