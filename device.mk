@@ -371,12 +371,6 @@ PRODUCT_PACKAGES += \
     vendor_factory_mountpoint \
     vendor_firmware_mnt_mountpoint
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor \
-    android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.0.vendor
-
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \

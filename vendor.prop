@@ -157,9 +157,6 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 
-# Perf
-ro.vendor.extension_library=libqti-perfd-client.so
-
 # Radio
 persist.radio.multisim.config=dsds
 persist.vendor.radio.add_power_save=1
