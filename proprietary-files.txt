@@ -732,7 +732,7 @@ vendor/lib64/unnhal-acc-common.so|32fdec585f2d710e37ffe327894aec6a7ea220eb
 vendor/lib64/unnhal-acc-hvx.so|3e44efdca5e1c20ca4bf00c6a5f19fc1863c9830
 
 # NFC
-vendor/lib/libpn553_fw.so
+vendor/lib/libpn553_fw.so:vendor/lib64/libpn553_fw.so
 
 # OMX - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 vendor/lib/libOmxVpp.so|7a9a96445b55f28013ea8f4ed767c7e245420c4f
