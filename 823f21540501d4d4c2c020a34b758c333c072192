@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ed9c0c8_b831e953",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2024-02-03T13:06:27Z",
+      "side": 1,
+      "message": "you set WIFI_HIDL_FEATURE_DUAL_INTERFACE, so why shouldn\u0027t the hal advertise combinations?",
+      "revId": "823f21540501d4d4c2c020a34b758c333c072192",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
