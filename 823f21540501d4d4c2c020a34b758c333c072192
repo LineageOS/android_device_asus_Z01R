@@ -16,6 +16,24 @@
       "message": "you set WIFI_HIDL_FEATURE_DUAL_INTERFACE, so why shouldn\u0027t the hal advertise combinations?",
       "revId": "823f21540501d4d4c2c020a34b758c333c072192",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dae35d18_d6fd5a15",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-02-03T15:15:31Z",
+      "side": 1,
+      "message": "I\u0027m having a problem with hotspot crashing and one of the things I was told to try is legacy WiFi HIDL HAL, so I\u0027m testing if this is the solution or if it\u0027s something else",
+      "parentUuid": "8ed9c0c8_b831e953",
+      "revId": "823f21540501d4d4c2c020a34b758c333c072192",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
