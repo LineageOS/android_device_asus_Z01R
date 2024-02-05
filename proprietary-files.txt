@@ -256,7 +256,6 @@ vendor/lib/libarcsoft_low_light_shot.so
 vendor/lib/libarcsoft_nighthawk.so
 vendor/lib/libarcsoft_picselfie_algorithm.so
 vendor/lib/libarcsoft_piczoom.so
-vendor/lib/libcamera2ndk_vendor.so
 vendor/lib/libcamera_nn_stub.so
 vendor/lib/libcamxfdalgov7.so
 vendor/lib/libcamxfdalgov8.so

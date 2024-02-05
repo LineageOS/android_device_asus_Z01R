@@ -178,6 +178,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5 \
+    libcamera2ndk_vendor:32 \
     libdng_sdk.vendor \
     libgui_shim \
     libgui_vendor \
