@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61372f6d_e59c397f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-02-06T04:55:00Z",
+      "side": 1,
+      "message": "oops, forgot to ammend this after accidentally cherry-picking the original commit from a device with A-only partition...",
+      "revId": "2a8ea45812f72f7951232964779ec2412fab2df1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
