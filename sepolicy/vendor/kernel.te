@@ -1,0 +1,15 @@
+allow kernel apd_file:lnk_file read;
+allow kernel apd_file:dir rw_dir_perms;
+allow kernel apd_file:file create_file_perms;
+allow kernel asdf_file:lnk_file read;
+allow kernel asdf_file:dir rw_dir_perms;
+allow kernel asdf_file:file create_file_perms;
+allow kernel batterystats_file:file create_file_perms;
+allow kernel block_device:dir search;
+allow kernel batinfo_block_device:dir search;
+allow kernel batinfo_block_device:blk_file { open read write };
+allow kernel log_file:lnk_file read;
+allow kernel log_file:dir rw_dir_perms;
+allow kernel log_file:file create_file_perms;
+allow kernel sysfs_battery_supply:dir search;
+allow kernel sysfs_battery_supply:file r_file_perms;
