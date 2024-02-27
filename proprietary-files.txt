@@ -671,10 +671,6 @@ vendor/firmware/a630_zap.mdt
 vendor/lib/hw/vulkan.adreno.so|b2680e5b899d75fa3f82b457635e15c6998202a4
 vendor/lib64/hw/vulkan.adreno.so|fcc99045aaf7eed0925ac2b64ff2af085212954a
 
-# HotwordEnrollment
--product/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk
--product/priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk
-
 # IMS - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 -system_ext/app/uceShimService/uceShimService.apk|644eec82ed9ecf1c1324241271ac5c9b5fe68f8b
 system_ext/lib64/com.qualcomm.qti.imscmservice@1.0.so|41a6b6ad78341405de60c1fd3c8f202fb3908329
