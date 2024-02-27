@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b215a215_3f018092",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-02-27T21:37:05Z",
+      "side": 1,
+      "message": "nope, doesn\u0027t work for Z01R... it still says for Hey Google and Voice Match: \"Hey Google is not supported on this device\"",
+      "revId": "65f339dde898071abd41926c8c64e6d715e95871",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
