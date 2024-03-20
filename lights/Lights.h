@@ -11,6 +11,7 @@
 
 #include <fstream>
 #include <mutex>
+#include <functional>
 #include <unordered_map>
 
 using ::aidl::android::hardware::light::HwLightState;
