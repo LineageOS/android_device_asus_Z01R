@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a4aa2d7e_4d38b604",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-03-24T08:08:07Z",
+      "side": 1,
+      "message": "Uhhh, I think you should pick Mike\u0027s chance instead that bumps USB to 1.3 dual role.",
+      "revId": "4d78bfa5856928bb780462a5bca9ebc14d8d6e8d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
