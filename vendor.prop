@@ -108,6 +108,9 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=cherokee
 
+# Camera
+vendor.camera.aux.packageexcludelist=com.adobe.scan.android,org.telegram.messenger,org.thunderdog.challegram,us.zoom.videomeetings
+
 # Chipset
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SDM845
