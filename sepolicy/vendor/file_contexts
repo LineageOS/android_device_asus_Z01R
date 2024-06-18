@@ -34,7 +34,7 @@
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/hbm_status        u:object_r:sysfs_graphics:s0
 
 # HALs
-/vendor/bin/hw/android\.hardware\.light@2\.0-service\.asus_Z01R                                         u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/android\.hardware\.light-service\.asus_Z01R                                         u:object_r:hal_light_default_exec:s0
 /vendor/bin/hw/lineage\.touch@1\.0-service\.asus_Z01R	                                                u:object_r:hal_lineage_touch_asus_Z01R_exec:s0
 
 # Sysfs
