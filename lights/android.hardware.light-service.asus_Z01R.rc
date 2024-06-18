@@ -16,10 +16,8 @@ on boot
 	chmod 0664 /sys/class/leds/red/pwm_us
 	chmod 0664 /sys/class/leds/green/pwm_us
 
-service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.asus_Z01R
-    interface android.hardware.light@2.0::ILight default
+service vendor.light-default /vendor/bin/hw/android.hardware.light-service.asus_Z01R
     class hal
     user system
     group system
-    # shutting off lights while powering-off
     shutdown critical
