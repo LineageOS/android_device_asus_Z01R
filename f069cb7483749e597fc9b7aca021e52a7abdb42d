@@ -16,6 +16,24 @@
       "message": "Since you move to AIDL light in the next commit, you should remove this here or in the next commit",
       "revId": "f069cb7483749e597fc9b7aca021e52a7abdb42d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3cdb857b_a8ac8032",
+        "filename": "framework_compatibility_matrix.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-06-28T14:42:13Z",
+      "side": 1,
+      "message": "Thanks for the review! I indeed missed this. I removed it in the next commit",
+      "parentUuid": "02316b63_c3132e1d",
+      "revId": "f069cb7483749e597fc9b7aca021e52a7abdb42d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
