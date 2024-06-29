@@ -75,11 +75,6 @@ function blob_fixup() {
     vendor/bin/pm-service)
         grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
         ;;
-
-    # Add shim for missing symbol in lib-imsvt.so
-    system_ext/lib64/lib-imsvideocodec.so)
-        ${PATCHELF} --add-needed "libgui_shim.so" "${2}"
-        ;;
     esac
 }
 
