@@ -72,8 +72,8 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 # ANT+ (system)
 product/lib/com.qualcomm.qti.ant@1.0.so:system_ext/lib/com.qualcomm.qti.ant@1.0.so
 product/lib64/com.qualcomm.qti.ant@1.0.so:system_ext/lib64/com.qualcomm.qti.ant@1.0.so
--system/lib/libantradio.so:system_ext/lib/libantradio.so
--system/lib64/libantradio.so:system_ext/lib64/libantradio.so
+system/lib/libantradio.so:system_ext/lib/libantradio.so
+system/lib64/libantradio.so:system_ext/lib64/libantradio.so
 
 # ANT+ (vendor)
 vendor/lib/com.qualcomm.qti.ant@1.0.so;MODULE_SUFFIX=_vendor
@@ -535,8 +535,8 @@ vendor/etc/firmware/goodixfp.b07
 vendor/etc/firmware/goodixfp.mdt
 
 # FM
--product/lib/vendor.qti.hardware.fm@1.0.so:system_ext/lib/vendor.qti.hardware.fm@1.0.so
--product/lib64/vendor.qti.hardware.fm@1.0.so:system_ext/lib64/vendor.qti.hardware.fm@1.0.so
+product/lib/vendor.qti.hardware.fm@1.0.so:system_ext/lib/vendor.qti.hardware.fm@1.0.so
+product/lib64/vendor.qti.hardware.fm@1.0.so:system_ext/lib64/vendor.qti.hardware.fm@1.0.so
 system/lib/fm_helium.so:system_ext/lib/fm_helium.so
 system/lib/libfm-hci.so:system_ext/lib/libfm-hci.so
 system/lib64/fm_helium.so:system_ext/lib64/fm_helium.so
@@ -563,8 +563,8 @@ vendor/bin/xtwifi-client|442e0c8166eea0a0d6cfd9432f945faa59c34d80
 vendor/bin/xtwifi-inet-agent|f805841e5c8ca3b0af620486a64a37148daa0980
 vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
 vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc|d3844699c845ce5de4c8b50548a2095f92dd0235
--vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml|1c344aacaa6d17a1585ba58b2e6d438dcfe31fad
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
+vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml|1c344aacaa6d17a1585ba58b2e6d438dcfe31fad
+vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so|6e4305828e4d42111aaa28167f0d260bfa13b83d
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|b94476f03424846bcf2bcecbf290d992a5cdbc09
@@ -720,7 +720,7 @@ vendor/lib64/libmulawdec.so
 # Neural networks - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti|2f4c5509649e72b1085c9eabd92a2b0b32090c0e
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc|4b7f2c5f914f3eef38f19936c0a06efc09b5b28c
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml|ac07e83ba7c2a87a2f216f04ec84df4539ea8507
+vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml|ac07e83ba7c2a87a2f216f04ec84df4539ea8507
 vendor/lib64/libhexagon_nn_stub.so|a3676113882842116279fe902af00e630ec1778c
 vendor/lib64/unnhal-acc-adreno.so|7ad6daa9bf39c5a199b2afb1bd60c1ae53ffbb06
 vendor/lib64/unnhal-acc-common.so|32fdec585f2d710e37ffe327894aec6a7ea220eb
@@ -793,7 +793,7 @@ vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 
 # Power-off alarm
--product/app/PowerOffAlarm/PowerOffAlarm.apk
+product/app/PowerOffAlarm/PowerOffAlarm.apk
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
@@ -1117,7 +1117,7 @@ vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 
 # Time services
--vendor/app/TimeService/TimeService.apk
+vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib/libtime_genoff.so
@@ -1146,7 +1146,7 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 # Widevine DRM - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine|92e4797cb000e86ba74fba9da2c014d7ec8fa1a6
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff19064a81e07c4be82ceaf4bb5
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
 vendor/lib64/libtrustedapploader.so|fbd6f6db5b91357a5cc6d621d3ce48ba27ec3f75
 vendor/lib64/libwvhidl.so|f32257498c35e1336b48a03463f8c8cea7df7b18|7327b3ff3fbed63a0925ca10b0a2a19bf36e1276
 vendor/lib64/mediadrm/libwvdrmengine.so|f25fe9c6038fb99b0308998e0a8dba3b7c32fa50|3ef7e7af2c14df751f03c8f81a7ca73d2bcdba1f
