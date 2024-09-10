@@ -86,6 +86,10 @@ function blob_fixup() {
             # Patch lib-ims* to use libqdMetaData.system
             grep -q "libqdMetaData.system.so" "${2}" || "${PATCHELF}" --replace-needed "libqdMetaData.so" "libqdMetaData.system.so" "${2}"
             ;;
+        vendor/lib64/libwvhidl.so|vendor/lib64/mediadrm/libwvdrmengine.so)
+            [ "$2" = "" ] && return 0
+            grep -q libcrypto_shim.so "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;
         *)
             return 1
             ;;
