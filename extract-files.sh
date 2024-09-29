@@ -16,9 +16,7 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 ANDROID_ROOT="${MY_DIR}/../../.."
 
-# If XML files don't have comments before the XML header, use this flag
-# Can still be used with broken XML files by using blob_fixup
-export TARGET_DISABLE_XML_FIXING=true
+export TARGET_ENABLE_CHECKELF=false
 
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
@@ -63,32 +61,31 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-    vendor/lib64/hw/fingerprint.default.so | vendor/lib64/libgoodixhwfingerprint.so | vendor/lib64/libgoodixfingerprintd_binder.so | vendor/lib64/libvendor.goodix.hardware.fingerprintextension@1.0.so)
-        [ "$2" = "" ] && return 0
-        # Remove unused dependencies
-        "${PATCHELF_0_17_2}" --remove-needed libbacktrace.so "${2}"
-        "${PATCHELF_0_17_2}" --remove-needed libunwind.so "${2}"
-        "${PATCHELF_0_17_2}" --remove-needed libkeystore_binder.so "${2}"
-        "${PATCHELF_0_17_2}" --remove-needed libkeymaster_messages.so "${2}"
-        # Update libstdc++.vendor target name
-        "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
-        [ "$2" = "" ] && return 0
-        # fingerprint: use libhidlbase-v32 for goodix
-        grep -q "libhidlbase-v32.so" "${2}" || "${PATCHELF_0_17_2}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
-        ;;
-
-    # Use libutils-v33 for pm-service
-    vendor/bin/pm-service)
-        [ "$2" = "" ] && return 0
-        grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
-        ;;
-    system_ext/lib64/lib-imscamera.so | system_ext/lib64/lib-imsvideocodec.so)
-        [ "$2" = "" ] && return 0
-        # Missing symbol GraphicBufferProducer in libgui_shim.so
-        grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
-        # Patch lib-ims* to use libqdMetaData.system
-        grep -q "libqdMetaData.system.so" "${2}" || "${PATCHELF}" --replace-needed "libqdMetaData.so" "libqdMetaData.system.so" "${2}"
-        ;;
+        vendor/lib64/hw/fingerprint.default.so | vendor/lib64/libgoodixhwfingerprint.so | vendor/lib64/libgoodixfingerprintd_binder.so | vendor/lib64/libvendor.goodix.hardware.fingerprintextension@1.0.so)
+            [ "$2" = "" ] && return 0
+            # Remove unused dependencies
+            "${PATCHELF_0_17_2}" --remove-needed libbacktrace.so "${2}"
+            "${PATCHELF_0_17_2}" --remove-needed libunwind.so "${2}"
+            "${PATCHELF_0_17_2}" --remove-needed libkeystore_binder.so "${2}"
+            "${PATCHELF_0_17_2}" --remove-needed libkeymaster_messages.so "${2}"
+            # Update libstdc++.vendor target name
+            "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            [ "$2" = "" ] && return 0
+            # fingerprint: use libhidlbase-v32 for goodix
+            grep -q "libhidlbase-v32.so" "${2}" || "${PATCHELF_0_17_2}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+            ;;
+        vendor/bin/pm-service)
+            [ "$2" = "" ] && return 0
+            # Use libutils-v33 for pm-service
+            grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
+            ;;
+        system_ext/lib64/lib-imscamera.so | system_ext/lib64/lib-imsvideocodec.so)
+            [ "$2" = "" ] && return 0
+            # Missing symbol GraphicBufferProducer in libgui_shim.so
+            grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
+            # Patch lib-ims* to use libqdMetaData.system
+            grep -q "libqdMetaData.system.so" "${2}" || "${PATCHELF}" --replace-needed "libqdMetaData.so" "libqdMetaData.system.so" "${2}"
+            ;;
         *)
             return 1
             ;;
