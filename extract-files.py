@@ -47,7 +47,6 @@ lib_fixups: lib_fixups_user_type = {
         'libOmxCore',
         'liboemcrypto',
         'libqsap_sdk',
-        'libril',
         'libwpa_client',
     ): lib_fixup_remove,
 }
