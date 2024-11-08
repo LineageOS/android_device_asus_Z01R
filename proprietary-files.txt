@@ -566,11 +566,15 @@ vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc|d3844699c845ce5de4c8b50
 vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml|1c344aacaa6d17a1585ba58b2e6d438dcfe31fad
 vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
+vendor/lib/libcacertclient.so|1d9c1fc6b730810fbb800d8cc20aa2b352233998
+vendor/lib/vendor.qti.hardware.cacert@1.0.so|1b9f8729736153987cc36f74015e00d3c614a721
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so|6e4305828e4d42111aaa28167f0d260bfa13b83d
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|b94476f03424846bcf2bcecbf290d992a5cdbc09
 vendor/lib64/libaoa.so|548073afa1ce13cb9d9b252dd933e91d835f02d8
 vendor/lib64/libbatching.so|eafd89f91d275c9946a66f0f322ea4c0fa1cc5d0
 vendor/lib64/libcacertclient.so|90281ef665d6a66ad7aa0806d97c20866fe1a83d
+vendor/lib64/libcdfw.so|cfd91b5f028f9ab050f15f265f60f52cca7e42ad
+vendor/lib64/libcdfw_remote_api.so|2939e767c15fd965322d6e11045fa3fb851b29d4
 vendor/lib64/libdataitems.so|f13cb93394d8aae1eef85c4730b5c8f9ace092a9
 vendor/lib64/libgdtap.so|510075724d368816c89a5f9e76b2529484e03d36
 vendor/lib64/libgeofencing.so|a6fffe98ddc82de53cf353c4f3fca602702a8330
@@ -602,6 +606,7 @@ vendor/lib64/vendor.qti.gnss@2.1.so|391a0e7bdd477ba519aaddc1b0711840e3362dc8
 vendor/lib64/vendor.qti.gnss@3.0.so|b67a1ff507cfb4165a9dc970dc54aa26cc731e6f
 vendor/lib64/vendor.qti.gnss@4.0-service.so|3c75d133af5193436167380aa89abcf05d079968
 vendor/lib64/vendor.qti.gnss@4.0.so|7d343c73e6720434045cc38ea0e570ae9d03cd51
+vendor/lib64/vendor.qti.hardware.cacert@1.0.so|398e5510db4d739de008b7230aa6e688d6c51a8a
 
 # Graphics (Adreno) - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 vendor/lib/egl/eglSubDriverAndroid.so|cc5acc02889131a29b624b4c19ab90b8273f393d
@@ -800,6 +805,14 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
+# QCC - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
+vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service|66eed303012e050a8ee2eb8550a49dbd7665b2e6
+vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc|afeb332a4750a11587658fcc9a75a27f63bbccdd
+vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so|d1fccf72e4d84f31b7f0ea2d762be4ac5e185df3
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|19a1f7ffb8118c207aa8cb2318996605771c339a
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so|8c85aec8456f69296722c10ae034bd228cd70be2
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so|711f50db51cd10607f9065998cac4521950c4d5a
+
 # QMI - from FP3 - 6.A.028.0
 system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
 system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
@@ -994,7 +1007,11 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor|460e589128fce
 # Sensors
 system/lib/libeye_tracking_dsp_sample_stub.so
 system/lib/libsns_device_mode_stub.so
+system/lib/libsns_fastRPC_util.so
 system/lib/libsns_low_lat_stream_stub.so
+system/lib64/libsns_device_mode_stub.so
+system/lib64/libsns_fastRPC_util.so
+system/lib64/libsns_low_lat_stream_stub.so
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
