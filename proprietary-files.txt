@@ -848,22 +848,6 @@ vendor/lib64/libqmi_encdec.so|8a365cf7472c187c02fa0649e09fee529ded7563
 vendor/lib64/libqmiservices.so|2e259463cbeb329caec303b642ab4068c8d10be5
 vendor/lib64/libril-qc-logger.so|7f80da37d120faffd72838b76d74102c7321e3a3
 
-# QVR
-system/bin/qvrservice
-system/etc/qvr/qvrservice_config.txt
-system/lib/libqvr_cam_cdsp_driver_stub.so
-system/lib/libqvr_cdsp_driver_stub.so
-system/lib/libqvr_eyetracking_plugin.so
-system/lib/libqvrcamera_client.qti.so
-system/lib/libqvrservice.so
-system/lib/libqvrservice_client.qti.so
-system/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
-system/lib/rfsa/adsp/libeye_tracking_dsp_sample_skel.so
-system/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
-system/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
-system/lib64/libqvrcamera_client.qti.so
-system/lib64/libqvrservice_client.qti.so
-
 # RIL - from FP3 - 6.A.025.0
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|341ac4f8b754883df97f2e9920f1e9a255a6a160
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
