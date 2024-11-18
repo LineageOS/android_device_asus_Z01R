@@ -4,7 +4,6 @@
 # libOmxVpp depends on libOmxCore, which is a gnu makefile target
 # libantradio has Unresolved symbol: jniThrowException@LIBNATIVEHELPER_1
 # libswregistrationalgo has Unresolved symbols: __aeabi_ldivmod __aeabi_uldivmod
-# libvendor.goodix.hardware.fingerprintextension@1.0, libgoodixhwfingerprint depend on ld-android, which is a gnu makefile target
 # libxditk_arch has Unresolved symbol: __page_size
 
 # ACDB
@@ -520,8 +519,8 @@ vendor/lib64/hw/fingerprint.default.so;FIX_SONAME
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixfingerprintd_binder.so
-vendor/lib64/libgoodixhwfingerprint.so;DISABLE_CHECKELF
-vendor/lib64/libvendor.goodix.hardware.fingerprintextension@1.0.so;DISABLE_CHECKELF
+vendor/lib64/libgoodixhwfingerprint.so
+vendor/lib64/libvendor.goodix.hardware.fingerprintextension@1.0.so
 
 # Fingerprint (Firmware)
 vendor/etc/firmware/goodixfp.b00
