@@ -43,6 +43,9 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
     (
+        'ld-android',
+        'libOmxCore',
+        'liboemcrypto',
         'libqsap_sdk',
         'libril',
         'libwpa_client',

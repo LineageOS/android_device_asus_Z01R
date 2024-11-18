@@ -1,9 +1,15 @@
 # All unpinned blobs below are extracted - from Z01R's WW_user_100.10.107.123_20210131
 
-# libcne depends on libwpa_client, which is a gnu makefile target
-# libwqe depends on libwpa_client, which is a gnu makefile target
-# lowi-server depends on libwpa_client, which is a gnu makefile target
+# 32bit libmmcamera_faceproc is unable to resolved the following symbols:
+# __aeabi_memcpy@LIBC_PRIVATE, __aeabi_memset@LIBC_PRIVATE, __gnu_Unwind_Find_exidx@LIBC_PRIVATE
+# is_keybox_valid depends on liboemcrypto, which we don't include due to Widevine L1 not working on unlocked bootloader
+# libOmxVpp depends on libOmxCore, which is a gnu makefile target
+# libantradio has Unresolved symbol: jniThrowException@LIBNATIVEHELPER_1
+# libcne libwqe, lowi-server, imsdatadaemon depend on libwpa_client, which is a gnu makefile target
 # libril-qcril-hook-oem depends on libril, which is a gnu makefile target
+# libswregistrationalgo has Unresolved symbols: __aeabi_ldivmod __aeabi_uldivmod
+# libvendor.goodix.hardware.fingerprintextension@1.0, libgoodixhwfingerprint depend on ld-android, which is a gnu makefile target
+# libxditk_arch has Unresolved symbol: __page_size
 
 # ACDB
 vendor/etc/acdbdata/MTP/ER2/MTP_Bluetooth_cal_ER2.acdb
@@ -72,8 +78,8 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 # ANT+ (system)
 product/lib/com.qualcomm.qti.ant@1.0.so:system_ext/lib/com.qualcomm.qti.ant@1.0.so
 product/lib64/com.qualcomm.qti.ant@1.0.so:system_ext/lib64/com.qualcomm.qti.ant@1.0.so
-system/lib/libantradio.so:system_ext/lib/libantradio.so
-system/lib64/libantradio.so:system_ext/lib64/libantradio.so
+system/lib/libantradio.so:system_ext/lib/libantradio.so;DISABLE_CHECKELF
+system/lib64/libantradio.so:system_ext/lib64/libantradio.so;DISABLE_CHECKELF
 
 # ANT+ (vendor)
 vendor/lib/com.qualcomm.qti.ant@1.0.so;MODULE_SUFFIX=_vendor
@@ -271,7 +277,7 @@ vendor/lib/libcamxstatscore.so
 vendor/lib/libcamxswprocessalgo.so
 vendor/lib/libcamxtintlessalgo.so
 vendor/lib/libcom.qti.chinodeutils.so
-vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_faceproc.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera_faceproc2.so
 vendor/lib/libmms_gyro_vstab.so
 vendor/lib/libmms_gyro_vstab_auth.so
@@ -282,12 +288,12 @@ vendor/lib/libmorpho_image_stab4.so
 vendor/lib/libmorpho_video_refiner.so
 vendor/lib/libmpbase.so
 vendor/lib/libst_avatar.so
-vendor/lib/libswregistrationalgo.so
+vendor/lib/libswregistrationalgo.so;DISABLE_CHECKELF
 vendor/lib/libxditk_DITAECInit.so
 vendor/lib/libxditk_DIT_MSMv1.so
 vendor/lib/libxditk_DIT_Manager.so
 vendor/lib/libxditk_ISP.so
-vendor/lib/libxditk_arch.so
+vendor/lib/libxditk_arch.so;DISABLE_CHECKELF
 vendor/lib/libxditk_ditArchLIB.so
 vendor/lib/libxditk_ditBSP.so
 vendor/lib/libxditk_ditBSP_JNI.so
@@ -520,8 +526,8 @@ vendor/lib64/hw/fingerprint.default.so;FIX_SONAME
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixfingerprintd_binder.so
-vendor/lib64/libgoodixhwfingerprint.so
-vendor/lib64/libvendor.goodix.hardware.fingerprintextension@1.0.so
+vendor/lib64/libgoodixhwfingerprint.so;DISABLE_CHECKELF
+vendor/lib64/libvendor.goodix.hardware.fingerprintextension@1.0.so;DISABLE_CHECKELF
 
 # Fingerprint (Firmware)
 vendor/etc/firmware/goodixfp.b00
@@ -748,7 +754,7 @@ vendor/lib/libOmxDsdDec.so|5a58c8b54578c6c7520666df4040a422fea67df9
 vendor/lib/libOmxEvrcDec.so|58d55a09798ae13c90829c7ced2e7fee1c61d8b1
 vendor/lib/libOmxG711Dec.so|254245293c12e4d32217b0704bff5f676f4bb5de
 vendor/lib/libOmxQcelp13Dec.so|6c55114663ba69f2c2a7e6c69989fc79d67977b3
-vendor/lib/libOmxVpp.so|7a9a96445b55f28013ea8f4ed767c7e245420c4f
+vendor/lib/libOmxVpp.so;DISABLE_CHECKELF|7a9a96445b55f28013ea8f4ed767c7e245420c4f
 vendor/lib/libOmxWmaDec.so|eab25fd58910bbeb57812c75fd3c5511c60fa592
 vendor/lib/libdsd2pcm.so|427be2997fcd72e94c33d08b2cf1fde5bf969fd4
 vendor/lib64/libOmxAacDec.so|98b894101c87beb61f0f1e5a9e3c6ea430441bdd
@@ -759,7 +765,7 @@ vendor/lib64/libOmxApeDec.so|61416c5ed237a741e524b36c2b5c58a067896e9b
 vendor/lib64/libOmxEvrcDec.so|e4d98d61ad8588956b7f4f937dd720164d584f7e
 vendor/lib64/libOmxG711Dec.so|53675a26d5386c868127304c6dfe9dd130f106f8
 vendor/lib64/libOmxQcelp13Dec.so|65952f3680f9865ea601de764037637d6ee8c990
-vendor/lib64/libOmxVpp.so|a87440c7838b6f03726d97a4a52b695bb4c6e8f8
+vendor/lib64/libOmxVpp.so;DISABLE_CHECKELF|a87440c7838b6f03726d97a4a52b695bb4c6e8f8
 vendor/lib64/libOmxWmaDec.so|7b2a714a74fea03a403a7d0edef61db2f70d7d4e
 
 # Peripheral manager
@@ -942,7 +948,7 @@ system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/li
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|4cf9e97f526c6278c5e2136e00d1fb800fb941aa
 system_ext/priv-app/ims/ims.apk|16b82e1e0113beb7fb3a62a9a5513b317675d96e
 vendor/bin/ims_rtp_daemon|32a3ce381b0f85f53a2e9afd7215b3585afef0d6
-vendor/bin/imsdatadaemon|3f044f84eb4049f1ce8a26af6a6026c1776d22dd
+vendor/bin/imsdatadaemon;DISABLE_CHECKELF|3f044f84eb4049f1ce8a26af6a6026c1776d22dd
 vendor/bin/imsqmidaemon|756dcc2d6c7fa26916bc28dedf0c513b1d5e5bfe
 vendor/bin/imsrcsd|bf29aac14856f29268c01599e5f6c7c6ae520685
 vendor/etc/init/ims_rtp_daemon_legacy.rc|104b2a879db4d3dd44e74a3d7f6e69f6972c9129
@@ -1171,5 +1177,5 @@ vendor/bin/asuskeyd
 vendor/bin/customize_early
 vendor/bin/customize_late
 vendor/bin/customize_mount
-vendor/bin/is_keybox_valid
+vendor/bin/is_keybox_valid;DISABLE_CHECKELF
 vendor/bin/onFgAppChanged
