@@ -1005,13 +1005,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|fa120eaa7807ff43f3974a
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor|460e589128fce0b0e83bb3c75aa32f7e1a9494fd
 
 # Sensors
-system/lib/libeye_tracking_dsp_sample_stub.so
-system/lib/libsns_device_mode_stub.so
-system/lib/libsns_fastRPC_util.so
-system/lib/libsns_low_lat_stream_stub.so
-system/lib64/libsns_device_mode_stub.so
-system/lib64/libsns_fastRPC_util.so
-system/lib64/libsns_low_lat_stream_stub.so
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
