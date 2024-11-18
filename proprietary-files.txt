@@ -744,7 +744,6 @@ vendor/lib/libOmxDsdDec.so|5a58c8b54578c6c7520666df4040a422fea67df9
 vendor/lib/libOmxEvrcDec.so|58d55a09798ae13c90829c7ced2e7fee1c61d8b1
 vendor/lib/libOmxG711Dec.so|254245293c12e4d32217b0704bff5f676f4bb5de
 vendor/lib/libOmxQcelp13Dec.so|6c55114663ba69f2c2a7e6c69989fc79d67977b3
-vendor/lib/libOmxVideoDSMode.so|5862b9d707ca00cd87b70a7f581df49fa3304d2c
 vendor/lib/libOmxVpp.so|7a9a96445b55f28013ea8f4ed767c7e245420c4f
 vendor/lib/libOmxWmaDec.so|eab25fd58910bbeb57812c75fd3c5511c60fa592
 vendor/lib/libdsd2pcm.so|427be2997fcd72e94c33d08b2cf1fde5bf969fd4
