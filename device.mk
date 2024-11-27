@@ -179,7 +179,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6:64 \
     libcamera2ndk_vendor:32 \
     libdng_sdk.vendor \
-    libgui_shim \
     libgui_vendor \
     vendor.qti.hardware.camera.device@1.0
 
@@ -219,6 +218,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.sdm845 \
     libdisplayconfig.qti \
     libqdMetaData \
+    libqdMetaData.system \
     libtinyxml \
     memtrack.sdm845 \
     vendor.display.config@1.0.vendor \
@@ -422,6 +422,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl:64 \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
+
+# Shims
+PRODUCT_PACKAGES += \
+    libgui_shim
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
