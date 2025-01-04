@@ -311,8 +311,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.asus_Z01R \
-    lights.sdm845
+    android.hardware.light-service.asus_Z01R
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
