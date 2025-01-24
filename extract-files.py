@@ -49,6 +49,8 @@ lib_fixups: lib_fixups_user_type = {
 
 
 blob_fixups: blob_fixups_user_type = {
+    ('system_ext/lib/libantradio.so', 'system_ext/lib64/libantradio.so'): blob_fixup()
+        .add_needed('libnativehelper_shim.so'),
     ('vendor/lib64/hw/fingerprint.default.so', 'vendor/lib64/libgoodixhwfingerprint.so', 'vendor/lib64/libgoodixfingerprintd_binder.so', 'vendor/lib64/libvendor.goodix.hardware.fingerprintextension@1.0.so'): blob_fixup()
         .remove_needed('ld-android.so')
         .remove_needed('libbacktrace.so')
