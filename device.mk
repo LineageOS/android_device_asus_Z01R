@@ -374,7 +374,10 @@ PRODUCT_PACKAGES += \
     vendor_ADF_mountpoint \
     vendor_APD_mountpoint \
     vendor_asdf_mountpoint \
-    vendor_factory_mountpoint
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_factory_mountpoint \
+    vendor_firmware_mnt_mountpoint
 
 # Power
 PRODUCT_PACKAGES += \
