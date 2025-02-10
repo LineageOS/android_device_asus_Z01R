@@ -1,6 +1,5 @@
 # All unpinned blobs below are extracted - from Z01R's WW_user_100.10.107.123_20210131
 
-# libOmxVpp depends on libOmxCore, which is a gnu makefile target
 # libswregistrationalgo has Unresolved symbols: __aeabi_ldivmod __aeabi_uldivmod
 # libxditk_arch has Unresolved symbol: __page_size
 
@@ -736,7 +735,7 @@ vendor/lib64/unnhal-acc-hvx.so|3e44efdca5e1c20ca4bf00c6a5f19fc1863c9830
 vendor/lib/libpn553_fw.so
 
 # OMX - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
-vendor/lib/libOmxVpp.so;DISABLE_CHECKELF|7a9a96445b55f28013ea8f4ed767c7e245420c4f
+vendor/lib/libOmxVpp.so|7a9a96445b55f28013ea8f4ed767c7e245420c4f
 
 # Peripheral manager
 vendor/bin/pm-proxy
