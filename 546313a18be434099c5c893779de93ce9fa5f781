@@ -34,6 +34,24 @@
       "parentUuid": "4160c0da_bb3bdaba",
       "revId": "546313a18be434099c5c893779de93ce9fa5f781",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd955636_753eea73",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-02-17T21:46:29Z",
+      "side": 1,
+      "message": "Thank you for the suggestion, but unfortunately it didn\u0027t work for Z01R... I\u0027ll check into it more, as we might need a different value than 4 but I think you\u0027re right that the solution is a override setting we need",
+      "parentUuid": "17a5beeb_3df3664c",
+      "revId": "546313a18be434099c5c893779de93ce9fa5f781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
