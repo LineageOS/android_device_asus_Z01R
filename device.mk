@@ -156,14 +156,8 @@ PRODUCT_PACKAGES += \
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl:64 \
-    android.hardware.boot@1.0-service \
-    android.hardware.boot@1.0-impl.recovery \
-    bootctrl.sdm845.recovery \
-    bootctrl.sdm845
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
+    android.hardware.boot-service.qti \
+    android.hardware.boot-service.qti.recovery
 
 # Camera
 PRODUCT_PACKAGES += \
