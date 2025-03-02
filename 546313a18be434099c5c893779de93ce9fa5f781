@@ -52,6 +52,24 @@
       "parentUuid": "17a5beeb_3df3664c",
       "revId": "546313a18be434099c5c893779de93ce9fa5f781",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "85ada721_b82ae38f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33194
+      },
+      "writtenOn": "2025-03-02T20:14:33Z",
+      "side": 1,
+      "message": "Hello.\n\nDid you verify if other camera modes function in other apps as expected? On sake (ZenFone 8) a value of 4 does in fact give 60fps (I tested with gcam), but it breaks photo in some 3rd party apps (in gcam at least), even though it\u0027s fine in Apeture. I haven\u0027t confirmed 60fps in apeture just yet, will test soon.\n\nA better of way to do this instead of hardcoding the sensor mode would be to have Apeture set a \"sessionid\", and in the device side, set what value they use for what frame rate or camera mode via overlay (this obviously requires more work, if at all possible). Gcam mods do something very similar to this, and also slowmo frame rates may also work. Ex. the sessionid value for 60fps for sake is 33282, and enchilada 192528.",
+      "parentUuid": "cd955636_753eea73",
+      "revId": "546313a18be434099c5c893779de93ce9fa5f781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
