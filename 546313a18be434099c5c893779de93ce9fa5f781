@@ -88,6 +88,24 @@
       "parentUuid": "85ada721_b82ae38f",
       "revId": "546313a18be434099c5c893779de93ce9fa5f781",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4c4f409_41ab48e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33194
+      },
+      "writtenOn": "2025-03-03T05:30:36Z",
+      "side": 1,
+      "message": "Only Aperture has the problem? Hmm. Usually all apps without special configs end up the same. Perhaps it has something to do with how the camera app accesses the camera? From my past experiences with different camera apps, they all behave differently and enabling 60fps causes all the uniquely wrong behaviours. Your guess is as good as mine.\n\nAs for sessionid, I usually find them in Gcam mods or configs tailored to said device, and then extract the values from those, or via config backups if they\u0027re not exposed in the UI. I\u0027m not familiar with how people find them in the first place, or whether sessionids are even applicable outside of Gcam... that\u0027s likely a question for Gcam mod authors.",
+      "parentUuid": "3e634b30_862ac4ca",
+      "revId": "546313a18be434099c5c893779de93ce9fa5f781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
