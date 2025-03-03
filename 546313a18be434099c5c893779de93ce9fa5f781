@@ -70,6 +70,24 @@
       "parentUuid": "cd955636_753eea73",
       "revId": "546313a18be434099c5c893779de93ce9fa5f781",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e634b30_862ac4ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-03-03T04:06:03Z",
+      "side": 1,
+      "message": "I put out a test build for community members to test and it\u0027s on Gerrit for review \n\nCan you please tell me how to get the session ID\u0027s? I could give that a try as it seems on Z01R it\u0027s only Aperture that has the 60fps problem",
+      "parentUuid": "85ada721_b82ae38f",
+      "revId": "546313a18be434099c5c893779de93ce9fa5f781",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
