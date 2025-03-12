@@ -2,6 +2,24 @@ soong_namespace {
     imports: ["hardware/qcom/bootctrl"],
 }
 
+mkdir {
+    name: "vendor_ADF_mountpoint",
+    dir: "ADF",
+    vendor: true,
+}
+
+mkdir {
+    name: "vendor_APD_mountpoint",
+    dir: "APD",
+    vendor: true,
+}
+
+mkdir {
+    name: "vendor_asdf_mountpoint",
+    dir: "asdf",
+    vendor: true,
+}
+
 install_symlink {
     name: "firmware_wlan_mac.bin_symlink",
     vendor: true,
