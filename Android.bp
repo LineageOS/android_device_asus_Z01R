@@ -20,6 +20,12 @@ mkdir {
     vendor: true,
 }
 
+mkdir {
+    name: "vendor_factory_mountpoint",
+    dir: "factory",
+    vendor: true,
+}
+
 install_symlink {
     name: "firmware_wlan_mac.bin_symlink",
     vendor: true,
