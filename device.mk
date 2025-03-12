@@ -369,6 +369,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
+# Partitions
+PRODUCT_PACKAGES += \
+    vendor_ADF_mountpoint \
+    vendor_APD_mountpoint \
+    vendor_asdf_mountpoint
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
