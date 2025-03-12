@@ -373,7 +373,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor_ADF_mountpoint \
     vendor_APD_mountpoint \
-    vendor_asdf_mountpoint
+    vendor_asdf_mountpoint \
+    vendor_factory_mountpoint
 
 # Power
 PRODUCT_PACKAGES += \
