@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30795d91_05779434",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-03-29T16:11:12Z",
+      "side": 1,
+      "message": "WPA3 still when toggled on immediately toggles off",
+      "revId": "0166e7ee2682f6a805ec4048c3b21dbef0dd4707",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
