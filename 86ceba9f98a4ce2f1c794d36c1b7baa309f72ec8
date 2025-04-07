@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "775c783e_dce94351",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-04-07T14:28:44Z",
+      "side": 1,
+      "message": "[  362.652276] /postinstall/system/bin/otapreopt_script: Error: boot-complete not detected.\n[  362.652279]\n[  362.652763] 03-09 16:03:38.331   605   605 I update_engine_sideload: [INFO:dynamic_partition_control_android.cc(1132)] Skip FinishedSnapshotWrites() because /metadata is not mounted\n[  362.704794] 03-09 16:03:38.383   605   605 E update_engine_sideload: [ERROR:BootControlClient.cpp(187)] SetActiveBootSlot(0) failed Status(-8, EX_SERVICE_SPECIFIC): \u0027-2: Operation failed\u0027\n[  362.704850] 03-09 16:03:38.383   605   605 E update_engine_sideload: [ERROR:boot_control_android.cc(123)] Unable to call SetActiveBootSlot for slot A: Status(-8, EX_SERVICE_SPECIFIC): \u0027-2: Operation failed\u0027\n[  362.704889] 03-09 16:03:38.383   605   605 I update_engine_sideload: [INFO:postinstall_runner_action.cc(543)] All post-install commands succeeded\n[  362.704929] 03-09 16:03:38.383   605   605 E update_engine_sideload: [ERROR:postinstall_runner_action.cc(517)] Postinstall action failed. ErrorCode::kPostinstallRunnerError\n[  362.704977] 03-09 16:03:38.383   605   605 E update_engine_sideload: [ERROR:snapshot_stub.cpp(169)] UnmapAllSnapshots should never be called.\n[  362.705024] 03-09 16:03:38.383   605   605 I update_engine_sideload: [INFO:postinstall_runner_action.cc(507)] Unmapped all partitions.\n[  362.705164] 03-09 16:03:38.383   605   605 I update_engine_sideload: [INFO:action_processor.cc(116)] ActionProcessor: finished last action PostinstallRunnerAction with code ErrorCode::kPostinstallRunnerError\n[  362.705204] 03-09 16:03:38.383   605   605 I update_engine_sideload: [INFO:update_attempter_android.cc(730)] Processing Done.\n[  362.705253] 03-09 16:03:38.383   605   605 I update_engine_sideload: [INFO:dynamic_partition_control_android.cc(354)] Destroying [] from device mapper\n[  362.705291] 03-09 16:03:38.383   605   605 I update_engine_sideload: [INFO:dynamic_partition_control_android.cc(358)] UnmapAllPartitions done\n[  362.705328] 03-09 16:03:38.384   605   605 I update_engine_sideload: [INFO:dynamic_partition_control_android.cc(366)] SnapshotManager initialized.\n[  362.705506] 03-09 16:03:38.384   605   605 I update_engine_sideload: [INFO:dynamic_partition_control_android.cc(105)] Destroying [] from device mapper\n[  362.705564] 03-09 16:03:38.384   605   605 I BpBinder: onLastStrongRef automatically unlinking death recipients: android.hardware.boot.IBootControl",
+      "revId": "86ceba9f98a4ce2f1c794d36c1b7baa309f72ec8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
