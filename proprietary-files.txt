@@ -1,6 +1,5 @@
 # All unpinned blobs below are extracted - from Z01R's WW_user_100.10.107.123_20210131
 
-# is_keybox_valid depends on liboemcrypto, which we don't include due to Widevine L1 not working on unlocked bootloader
 # libOmxVpp depends on libOmxCore, which is a gnu makefile target
 # libantradio has Unresolved symbol: jniThrowException@LIBNATIVEHELPER_1
 # libswregistrationalgo has Unresolved symbols: __aeabi_ldivmod __aeabi_uldivmod
@@ -1149,5 +1148,4 @@ vendor/bin/asuskeyd
 vendor/bin/customize_early
 vendor/bin/customize_late
 vendor/bin/customize_mount
-vendor/bin/is_keybox_valid;DISABLE_CHECKELF
 vendor/bin/onFgAppChanged
