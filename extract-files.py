@@ -46,7 +46,6 @@ lib_fixups: lib_fixups_user_type = {
         'ld-android',
         'libOmxCore',
         'liboemcrypto',
-        'libqsap_sdk',
     ): lib_fixup_remove,
 }
 
