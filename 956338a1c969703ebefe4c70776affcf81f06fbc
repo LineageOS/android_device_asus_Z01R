@@ -22,6 +22,30 @@
       },
       "revId": "956338a1c969703ebefe4c70776affcf81f06fbc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60c6a1c9_36c5294a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-06-03T14:48:46Z",
+      "side": 1,
+      "message": "A user was saying on the latest official build he can\u0027t VOIP on those apps, all I did was this one revert and now he says the mics work. He said he doesn\u0027t know how to logcat but I sent him a link to logcat from our wiki and I can post it here if he gets back to me, for now I won\u0027t merge though but I\u0027ll try to test it myself when I get more time",
+      "parentUuid": "25f79d32_d5117ab2",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 2
+      },
+      "revId": "956338a1c969703ebefe4c70776affcf81f06fbc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
