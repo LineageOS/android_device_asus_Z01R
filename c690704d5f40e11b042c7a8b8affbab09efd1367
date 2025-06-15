@@ -16,6 +16,24 @@
       "message": "More actions?",
       "revId": "c690704d5f40e11b042c7a8b8affbab09efd1367",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c6e1b98_4ac6115f",
+        "filename": "init/ueventd.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 405,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-06-15T19:01:30Z",
+      "side": 1,
+      "message": "Oops, I copy/pasted from GitHub and it seemed to have copied GitHub buttons lol. Thanks, fixed",
+      "parentUuid": "a794e8ac_da69d1d3",
+      "revId": "c690704d5f40e11b042c7a8b8affbab09efd1367",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
