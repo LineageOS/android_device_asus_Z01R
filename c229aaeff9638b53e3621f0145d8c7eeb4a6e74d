@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd884f51_cc3c9b44",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-06-19T04:37:52Z",
+      "side": 1,
+      "message": "error: vendor.camera.aux.packageexcludelist cannot exceed 91 bytes: com.adobe.scan.android,com.tencent.mm,org.telegram.messenger,org.thunderdog.challegram,us.zoom.videomeetings (108)",
+      "revId": "c229aaeff9638b53e3621f0145d8c7eeb4a6e74d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
