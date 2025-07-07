@@ -452,7 +452,7 @@ PRODUCT_USE_VNDK_OVERRIDE := true
 
 # Touch
 PRODUCT_PACKAGES += \
-    lineage.touch@1.0-service.asus_Z01R
+    vendor.lineage.touch-service.asus_Z01R
 
 # Update engine
 PRODUCT_PACKAGES += \

@@ -1,20 +1,8 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-FileCopyrightText: 2025 The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-#define LOG_TAG "TouchscreenGestureService"
 
 #include "TouchscreenGesture.h"
 
@@ -31,11 +19,10 @@ std::enable_if_t<std::is_integral<T>::value, std::string> encode_binary(T i) {
 }
 }  // anonymous namespace
 
+namespace aidl {
 namespace vendor {
 namespace lineage {
 namespace touch {
-namespace V1_0 {
-namespace implementation {
 
 const std::string kGesturePath = "/proc/driver/gesture_type";
 
@@ -60,19 +47,18 @@ const std::vector<uint8_t> kGestureMasks = {
     0x02,  // Z gesture mask
 };
 
-Return<void> TouchscreenGesture::getSupportedGestures(getSupportedGestures_cb resultCb) {
+ndk::ScopedAStatus TouchscreenGesture::getSupportedGestures(std::vector<Gesture>* _aidl_return) {
     std::vector<Gesture> gestures;
 
     for (const auto& entry : kGestureInfoMap) {
         gestures.push_back({entry.first, entry.second.name, entry.second.keycode});
     }
-    resultCb(gestures);
 
-    return Void();
+    *_aidl_return = gestures;
+    return ndk::ScopedAStatus::ok();
 }
 
-Return<bool> TouchscreenGesture::setGestureEnabled(
-    const ::vendor::lineage::touch::V1_0::Gesture& gesture, bool enabled) {
+ndk::ScopedAStatus TouchscreenGesture::setGestureEnabled(const Gesture& gesture, bool enabled) {
     uint8_t gestureMode;
     uint8_t mask = kGestureMasks[gesture.id];
     std::fstream file(kGesturePath);
@@ -84,11 +70,11 @@ Return<bool> TouchscreenGesture::setGestureEnabled(
     if (gestureMode != 0) gestureMode |= kKeyMaskGestureControl;
     // Strip first digit
     file << encode_binary(gestureMode).substr(1);
-    return !file.fail();
+
+    return ndk::ScopedAStatus::ok();
 }
 
-}  // namespace implementation
-}  // namespace V1_0
 }  // namespace touch
 }  // namespace lineage
 }  // namespace vendor
+}  // namespace aidl
