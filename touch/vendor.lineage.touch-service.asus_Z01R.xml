@@ -3,6 +3,5 @@
         <name>vendor.lineage.touch</name>
         <version>1</version>
         <fqname>IGloveMode/default</fqname>
-        <fqname>ITouchscreenGesture/default</fqname>
     </hal>
 </manifest>
