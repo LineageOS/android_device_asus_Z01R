@@ -25,10 +25,10 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 
 key 103    GESTURE_SWIPE_UP             WAKE    VIRTUAL
-key 22     GESTURE_DOUBLE_CLICK		WAKE	VIRTUAL
-key 46     GESTURE_C			WAKE	VIRTUAL
-key 18     GESTURE_E			WAKE	VIRTUAL
-key 31	   GESTURE_S			WAKE	VIRTUAL
-key 47     GESTURE_V			WAKE	VIRTUAL
-key 17	   GESTURE_W			WAKE	VIRTUAL
-key 44     GESTURE_Z			WAKE	VIRTUAL
+key 22    GESTURE_DOUBLE_CLICK         WAKE    VIRTUAL
+key 46     GESTURE_C                   WAKE    VIRTUAL
+key 18     GESTURE_E                   WAKE    VIRTUAL
+key 31    GESTURE_S                    WAKE    VIRTUAL
+key 47     GESTURE_V                   WAKE    VIRTUAL
+key 17    GESTURE_W                    WAKE    VIRTUAL
+key 44     GESTURE_Z                   WAKE    VIRTUAL
