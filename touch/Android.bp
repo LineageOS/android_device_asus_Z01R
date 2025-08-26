@@ -10,7 +10,6 @@ cc_binary {
     vendor: true,
     relative_install_path: "hw",
     srcs: [
-        "TouchscreenGesture.cpp",
         "GloveMode.cpp",
         "service.cpp",
     ],
