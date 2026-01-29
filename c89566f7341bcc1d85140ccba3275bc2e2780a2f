@@ -16,6 +16,24 @@
       "message": "How does it break BT audio?",
       "revId": "c89566f7341bcc1d85140ccba3275bc2e2780a2f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71def16d_65088679",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2026-01-29T05:07:44Z",
+      "side": 1,
+      "message": "I put out a test build a while ago with the props tweak and this and asked the community to test it for me as I was out of town working and didn\u0027t have my Z01R with me, and they said the VoIP audio issues were fixed where the mic intermittently doesn\u0027t work and audio everywhere was fine\n\nThen I got reports after an official build that BT audio was broken... I got back from work and tested with a revert of the audio tweak props and still no BT audio.\n\nI did a build with a revert of this and BT audio works again\n\nAfter thinking about it more, I think it\u0027s because I couldn\u0027t use that USB 1.3 HAL as it killed Android Auto for me and tbh I couldn\u0027t find a fix for it, so maybe this commit relies on that?",
+      "parentUuid": "85cffc73_b0503580",
+      "revId": "c89566f7341bcc1d85140ccba3275bc2e2780a2f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
