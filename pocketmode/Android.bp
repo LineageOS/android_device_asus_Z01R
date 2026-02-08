@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2025 The LineageOS Project
+// Copyright (C) The LineageOS Project
 // SPDX-License-Identifier: Apache-2.0
 //
 
@@ -13,8 +13,17 @@ android_app {
     privileged: true,
     system_ext_specific: true,
 
+    required: ["privapp-permissions-pocketmode"],
+
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
 
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-pocketmode",
+    src: "privapp-permissions-pocketmode.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
 }
