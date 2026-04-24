@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5df4eb88_fc584513",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2026-04-24T15:22:42Z",
+      "side": 1,
+      "message": "https://gitlab.com/LineageOS/issues/android/-/work_items/10188",
+      "revId": "7266f7215b0743f2841ffdee8ccd1ae5e7b9d109",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
