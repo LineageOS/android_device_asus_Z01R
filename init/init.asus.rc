@@ -210,7 +210,7 @@ on property:sys.boot_completed=1
 
 #ASUS_BSP guochang thermal engine +++
 on property:sys.restart.thermal=1
-	restart thermal-engine
+	restart vendor.thermal-engine
 
 on property:sys.boot_completed=1
 #ASUS_BSP bob_mode_switch +++
