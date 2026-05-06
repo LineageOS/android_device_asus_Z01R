@@ -33,6 +33,7 @@ on fs
     mount_all /vendor/etc/fstab.qcom
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
+    swapon_all /vendor/etc/fstab.qcom
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
     chown system system /vendor/ADF
@@ -44,10 +45,6 @@ on fs
     chown root system /asdf
     chmod 0771 /asdf
     restorecon_recursive /asdf
-
-on property:sys.boot_completed=1
-    # Enable ZRAM on boot_complete
-    swapon_all /vendor/etc/fstab.qcom
 
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
